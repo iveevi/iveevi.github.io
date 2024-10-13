@@ -4,8 +4,8 @@
 <head>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Poppins">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<style>
 	body {
 		font-family: 'Poppins', sans-serif;
@@ -19,7 +19,22 @@
 		<h1>Venkataram Sivaram</h1>
 
 		<div style="float: left; width: 25%; padding: 5px;">
-			<img src="media/face.jpg" style="width: auto; height: auto; max-width: 100%; max-height: 100%; border-radius: 50%">
+			<div>
+				<img src="media/face.jpg" style="width: auto; height: auto; max-width: 100%; max-height: 100%; border-radius: 50%">
+				<hr style="color: gainsboro">
+				<div style="display: flex; justify-content: center">
+					<a href="https://github.com/iveevi" target="_blank" style="margin-right: 10%;">
+						<i class="fab fa-github" style="font-size: 200%; color: black;"></i>
+					</a>
+					<a href="https://www.linkedin.com/in/venkataram-sivaram-65a36a226" target="_blank" style="margin-right: 10%;">
+						<i class="fab fa-linkedin" style="font-size: 200%; color: #0077b5;"></i>
+					</a>
+					<a href="veskimo123@gmail.com" target="_blank">
+						<i class="fas fa-envelope" style="font-size: 200%; color: #D44638;"></i>
+					</a>
+				</div>
+				<hr style="color: gainsboro">
+			</div>
 
 			<div style="padding-left: 10%;">
 				<h2>Technical Skills</h2>
@@ -53,6 +68,7 @@
 		</div>
 		<div style="float: right; width: 70%">
 			<h2>About</h2>
+			<hr style="color: gainsboro; margin-top: -15px">
 
 			<div>
 				Greetings! I am a third-year undergraduate
@@ -77,6 +93,7 @@
 			</div>
 
 			<h2>Awards</h2>
+			<hr style="color: gainsboro; margin-top: -15px">
 
 			<ul>
 				<li>
@@ -90,13 +107,14 @@
 			</ul>
 
 			<h2>Research</h2>
+			<hr style="color: gainsboro; margin-top: -15px">
 
-			<div style="display: flex; align-items: flex-start; gap: 15px;">
+			<div style="display: flex; align-items: flex-start; gap: 30px; margin-top: 15px;">
 				<div style="flex: 0 0 25%;">
 					<img src="media/ngf.jpg" style="width: 100%; border-radius: 10px; border: solid grey;">
 				</div>
 				<div div style="flex: 1;">
-					<b><a href="./ngf/index.html">Neural Geometry Fields for Meshes</a></b>
+					<b style="font-size: larger;"><a href="./ngf/index.html">Neural Geometry Fields for Meshes</a></b>
 					<br>
 					<b>Venkataram Sivaram</b>, Ravi Ramamoorthi, and Tzu-Mao Li
 					<br>
@@ -104,12 +122,12 @@
 				</div>
 			</div>
 			
-			<div style="display: flex; align-items: flex-start; gap: 15px; margin-top: 2.5%;">
+			<div style="display: flex; align-items: flex-start; gap: 30px; margin-top: 2.5%;">
 				<div style="flex: 0 0 25%;">
 					<img src="media/restir-dr.jpg" style="width: 100%; border-radius: 10px; border: solid grey;">
 				</div>
 				<div div style="flex: 1;">
-					<b><a href="https://weschang.com/publications/restir-dr/">
+					<b style="font-size: larger"><a href="https://weschang.com/publications/restir-dr/">
 						Parameter-space ReSTIR for Differentiable and Inverse Rendering
 					</a></b>
 					<br>
@@ -121,8 +139,9 @@
 			</div>
 
 			<h2>Experience</h2>
+			<hr style="color: gainsboro; margin-top: -15px">
 
-			I previously interned at NVIDIA (Summer 2024) as
+			I previously interned at <b>NVIDIA</b> (Summer 2024) as
 			a 3D Graphics Software Intern, where I worked on
 			the <a
 			href="https://github.com/shader-slang/slang">Slang
@@ -132,11 +151,12 @@
 			with a wonderful team while I was managed by <a href="https://www.linkedin.com/in/bdmills/">Brandon Mills</a>.
 
 			<h2>Open Source Projects</h2>
+			<hr style="color: gainsboro; margin-top: -15px">
 
-			<div style="overflow-y: auto; height: 500px">
-				<div style="border: 2px solid black; border-radius: 5px; padding: 5pt; margin: 10pt">
+			<div style="display: flex; align-items: flex-start; gap: 15px;">
+				<div style="flex: 1; padding: 5px">
 					<a href="https://github.com/iveevi/javelin">
-						<b>Javelin</b>
+						<b style="font-size: larger;">Javelin</b>
 					</a>
 					<br>
 					Graphics engine system tailored for shader
@@ -145,9 +165,9 @@
 					near-identical manner to GLSL using C++ overloading and
 					template metaprogramming.
 				</div>
-				<div style="border: 2px solid black; border-radius: 5px; padding: 5pt; margin: 10pt">
+				<div style="flex: 1; padding: 5px">
 					<a href="https://github.com/iveevi/kobra">
-						<b>Kobra</b>
+						<b style="font-size: larger;">Kobra</b>
 					</a>
 					<br>
 					3D rendering engine written in C++ using the Vulkan
@@ -155,20 +175,22 @@
 					so that more time can be spent towards experimentation
 					rather than implementation.
 				</div>
-				<div style="border: 2px solid black; border-radius: 5px; padding: 5pt; margin: 10pt">
+			</div>
+			
+			<div style="display: flex; align-items: flex-start; gap: 15px; margin-top: 15px;">
+				<div style="flex: 1; padding: 5px">
 					<a href="https://github.com/iveevi/zhetapi">
-						<b>Zhetapi</b>
+						<b style="font-size: larger;">Zhetapi</b>
 					</a>
 					<br>
 					Modern C++ machine learning and numerical analysis
 					library with an emphasis on intuitive usage. Older
 					version also provides a scripting language to easily
 					interface with core functionality.
-					</article>
 				</div>
-				<div style="border: 2px solid black; border-radius: 5px; padding: 5pt; margin: 10pt">
+				<div style="flex: 1; padding: 5px">
 					<a href="https://github.com/iveevi/littlevk">
-						<b>littlevk</b>
+						<b style="font-size: larger;">littlevk</b>
 					</a>
 					<br>
 					Light-weight, ergonomic, single-header wrapper
@@ -176,18 +198,21 @@
 					applications using Vulkan. Leverages C++20 features
 					to promote smoother user experience.
 				</div>
-				<div style="border: 2px solid black; border-radius: 5px; padding: 5pt; margin: 10pt">
+			</div>
+			
+			<div style="display: flex; align-items: flex-start; gap: 15px; margin-top: 15px;">
+				<div style="flex: 1; padding: 5px">
 					<a href="https://github.com/iveevi/metacpp">
-						<b>metacpp</b>
+						<b style="font-size: larger;">metacpp</b>
 					</a>
 					<br>
 					Exploratory project to evaluate Lisp
 					programs at compile-time with C++
 					metaprogramming. Turns out it is quite too slow...
 				</div>
-				<div style="border: 2px solid black; border-radius: 5px; padding: 5pt; margin: 10pt">
+				<div style="flex: 1; padding: 5px">
 					<a href="https://github.com/iveevi/smake">
-						<b>SMake</b>
+						<b style="font-size: larger;">SMake</b>
 					</a>
 					<br>
 					Simplified build system to handle configuration,
@@ -195,9 +220,12 @@
 					simple configuration format allows for easy
 					access to new users.
 				</div>
-				<div style="border: 2px solid black; border-radius: 5px; padding: 5pt; margin: 10pt">
+			</div>
+			
+			<div style="display: flex; align-items: flex-start; gap: 15px; margin-top: 15px;">
+				<div style="flex: 1; padding: 5px">
 					<a href="https://github.com/iveevi/tuicpp">
-						<b>tuicpp</b>
+						<b style="font-size: larger;">tuicpp</b>
 					</a>
 					<br>
 					Wrapper library around <a
@@ -206,9 +234,9 @@
 					constructs like text windows, prompts, and
 					tables.
 				</div>
-				<div style="border: 2px solid black; border-radius: 5px; padding: 5pt; margin: 10pt">
+				<div style="flex: 1; padding: 5px">
 					<a href="https://github.com/iveevi/murphy">
-						<b>Murphy</b>
+						<b style="font-size: larger;">Murphy</b>
 					</a>
 					<br>
 					Exploratory project where curves are morphed to
