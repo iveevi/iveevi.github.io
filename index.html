@@ -7,35 +7,82 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<style>
-	body {
-		font-family: 'Poppins', sans-serif;
-	}
+		body {
+			font-family: 'Poppins', sans-serif;
+		}
+
+		.container {
+			display: flex;
+			width: 70%;
+			margin: auto;
+		}
+
+		.left-column {
+			flex: 1;
+			padding: 5px;
+			display: flex;
+			flex-direction: column;
+			align-items: center; /* Center content horizontally */
+		}
+
+		.right-column {
+			flex: 2;
+			padding: 5px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start; /* Align items to the left */
+		}
+
+		.nav-links {
+			display: flex;
+			width: 100%;
+			align-items: center;
+			justify-content: space-evenly; /* Spread links evenly */
+		}
+
+		hr {
+			width: 100%;
+			color: #7db177;
+		}
+		
+		h1 {
+			color: #7db177;
+		}
+
+		h2 {
+			color: #7db177;
+		}
+		
+		h3 {
+			color: #7db177;
+		}
+		
+		a {
+			color: #4d604b;
+		}
 	</style>
 </head>
 
 <body style="padding: 5%; display: flex; flex-direction: column; justify-content: center;">
-<div>
-	<div style="display: flexbox; align-items: center; justify-content: center; width: 70%; margin: auto">
-		<h1>Venkataram Sivaram</h1>
-
-		<div style="float: left; width: 25%; padding: 5px;">
-			<div>
-				<img src="media/face.jpg" style="width: auto; height: auto; max-width: 100%; max-height: 100%; border-radius: 50%">
-				<hr style="color: gainsboro">
-				<div style="display: flex; justify-content: center">
-					<a href="https://github.com/iveevi" target="_blank" style="margin-right: 10%;">
-						<i class="fab fa-github" style="font-size: 200%; color: black;"></i>
-					</a>
-					<a href="https://www.linkedin.com/in/venkataram-sivaram-65a36a226" target="_blank" style="margin-right: 10%;">
-						<i class="fab fa-linkedin" style="font-size: 200%; color: #0077b5;"></i>
-					</a>
-					<a href="veskimo123@gmail.com" target="_blank">
-						<i class="fas fa-envelope" style="font-size: 200%; color: #D44638;"></i>
-					</a>
-				</div>
-				<hr style="color: gainsboro">
+	<div class="container">
+		<div class="left-column">
+			<div style="height: 60px; align-content: center;">
+				<h1 style="margin: 0; font-variant: small-caps;">Venkataram Sivaram</h1>
 			</div>
-
+			<img src="media/face.jpg" style="width: 80%; height: auto; padding: 5%; max-width: 100%; max-height: 100%; border-radius: 50%">
+			<hr style="width: 50%">
+			<div style="display: flex; width: 30%; justify-content: space-evenly;">
+				<a href="https://github.com/iveevi" target="_blank" style="margin-right: 10%;">
+					<i class="fab fa-github" style="font-size: 200%; color: black;"></i>
+				</a>
+				<a href="https://www.linkedin.com/in/venkataram-sivaram-65a36a226" target="_blank" style="margin-right: 10%;">
+					<i class="fab fa-linkedin" style="font-size: 200%; color: #0077b5;"></i>
+				</a>
+				<a href="mailto:veskimo123@gmail.com" target="_blank">
+					<i class="fas fa-envelope" style="font-size: 200%; color: #D44638;"></i>
+				</a>
+			</div>
+			<hr style="width: 50%">
 			<div style="padding-left: 10%;">
 				<h2>Technical Skills</h2>
 
@@ -66,34 +113,41 @@
 				</ul>
 			</div>
 		</div>
-		<div style="float: right; width: 70%">
-			<h2>About</h2>
-			<hr style="color: gainsboro; margin-top: -15px">
+		<div class="right-column">
+			<div class="nav-links" style="height: 60px;">
+				<a href="#about" style="text-decoration: none; color: #7db177; font-variant: small-caps; font-size: larger;">About</a>
+				<a href="#awards" style="text-decoration: none; color: #7db177; font-variant: small-caps; font-size: larger;">Awards</a>
+				<a href="#research" style="text-decoration: none; color: #7db177; font-variant: small-caps; font-size: larger;">Research</a>
+				<a href="#experience" style="text-decoration: none; color: #7db177; font-variant: small-caps; font-size: larger;">Experience</a>
+				<a href="#projects" style="text-decoration: none; color: #7db177; font-variant: small-caps; font-size: larger;">Projects</a>
+			</div>
 
+			<h2 id="about" style="margin-top: 50px;">About</h2>
+			<hr style="margin-top: -15px;">
 			<div>
 				Greetings! I am a third-year undergraduate
 				student at UC San Diego studying computer
 				science with a minor in mathematics. Since
 				joining the university, I have been a part of
-				the <a href="ffhttps://visualcomputing.ucsd.edu/index.shtml">Center
+				the <a href="https://visualcomputing.ucsd.edu/index.shtml">Center
 				for Visual Computing</a>, where I have been
 				fortunate to work with professors
 				<a href="https://cseweb.ucsd.edu/~ravir">Ravi Ramamoorthi</a> and
 				<a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a>.
 
 				<br><br>
-				My prominent research interests include:
+				My primary research interests include:
 				<ul style="margin: 5px;">
 					<li>Real-time, inverse, and differentiable rendering</li>
 					<li>Languages and systems for graphics and heterogeneous computing</li>
-					<li>Interactive simulation of natural phenoma</li>
+					<li>Interactive simulation of natural phenomena</li>
 					<li>Reinforcement learning and machine learning</li>
 					<li>Computer vision systems for robotics</li>
 				</ul>
 			</div>
-
-			<h2>Awards</h2>
-			<hr style="color: gainsboro; margin-top: -15px">
+			
+			<h2 id="awards" style="color: #7db177">Awards</h2>
+			<hr style="margin-top: -15px;">
 
 			<ul>
 				<li>
@@ -106,8 +160,8 @@
 				</li>
 			</ul>
 
-			<h2>Research</h2>
-			<hr style="color: gainsboro; margin-top: -15px">
+			<h2 id="research">Research</h2>
+			<hr style="margin-top: -15px;">
 
 			<div style="display: flex; align-items: flex-start; gap: 30px; margin-top: 15px;">
 				<div style="flex: 0 0 25%;">
@@ -138,20 +192,23 @@
 				</div>
 			</div>
 
-			<h2>Experience</h2>
-			<hr style="color: gainsboro; margin-top: -15px">
+			<h2 id="experience">Experience</h2>
+			<hr style="margin-top: -15px;">
 
-			I previously interned at <b>NVIDIA</b> (Summer 2024) as
-			a 3D Graphics Software Intern, where I worked on
-			the <a
-			href="https://github.com/shader-slang/slang">Slang
-			project</a>. Here, I explored realistic
-			applications of shader modules, dynamic
-			shader linking, and link-time specialization. I worked
-			with a wonderful team while I was managed by <a href="https://www.linkedin.com/in/bdmills/">Brandon Mills</a>.
+			<div>
+				I previously interned at <b>NVIDIA</b> (Summer 2024) as
+				a 3D Graphics Software Intern, where I worked on
+				the <a
+				href="https://github.com/shader-slang/slang">Slang
+				project</a>. Here, I explored realistic
+				applications of shader modules, dynamic
+				shader linking, and link-time specialization. I worked
+				with a wonderful team while I was managed by <a href="https://www.linkedin.com/in/bdmills/">Brandon Mills</a>.
+			</div>
 
-			<h2>Open Source Projects</h2>
-			<hr style="color: gainsboro; margin-top: -15px">
+
+			<h2 id="projects">Open Source Projects</h2>
+			<hr style="margin-top: -15px">
 
 			<div style="display: flex; align-items: flex-start; gap: 15px;">
 				<div style="flex: 1; padding: 5px">
@@ -246,7 +303,6 @@
 			</div>
 		</div>
 	</div>
-</div>
 </body>
 
 </html>
