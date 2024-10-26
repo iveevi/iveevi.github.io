@@ -73,8 +73,9 @@
 			<div style="height: 60px; align-content: center;">
 				<h1 style="margin: 0; font-variant: small-caps;">Venkataram Sivaram</h1>
 			</div>
+
 			<img src="media/face.jpg" style="width: 80%; height: auto; margin: 5%; max-width: 100%; max-height: 100%; border-radius: 50%; border: 5px solid #7db177">
-			<hr style="width: 50%">
+			<hr style="width: 90%">
 			<div style="display: flex; width: 30%; justify-content: space-evenly;">
 				<a href="https://github.com/iveevi" target="_blank" style="margin-right: 10%;">
 					<i class="fab fa-github" style="font-size: 200%; color: black;"></i>
@@ -86,35 +87,51 @@
 					<i class="fas fa-envelope" style="font-size: 200%; color: #D44638;"></i>
 				</a>
 			</div>
-			<hr style="width: 50%">
+			<hr style="width: 90%">
 			<div style="padding-left: 10%;">
 				<h2>Technical Skills</h2>
 
-				<h3>Languages</h3>
-				<ul style="margin: -10px;">
-					<li>C and C++</li>
-					<li>Python</li>
-					<li>CUDA</li>
-					<li>Rust</li>
-					<li>GLSL</li>
-					<li>Java</li>
-					<li>Bash</li>
-				</ul>
+				<div style="display: flex; gap: 20px; width: 80%;">
+					<div>
+						<h3>Languages</h3>
+						<ul style="margin: -10px;">
+							<li>Python</li>
+							<li>C and C++</li>
+							<li>CUDA</li>
+							<li>Rust</li>
+							<li>GLSL</li>
+							<li>Java</li>
+							<li>Bash</li>
+						</ul>
+					</div>
+				
+					<div>
+						<h3>Libraries</h3>
+						<ul style="margin: -10px;">
+							<li>PyTorch</li>
+							<li>Vulkan</li>
+							<li>OpenGL</li>
+							<li>TensorFlow</li>
+						</ul>
+					</div>
+				
+					<div>
+						<h3>Systems</h3>
+						<ul style="margin: -10px;">
+							<li>Linux</li>
+							<li>Windows</li>
+							<li>QEMU/KVM</li>
+						</ul>
+					</div>
+				</div>
+				
+				<h2>Miscellaneous</h2>
 
-				<h3>Libraries</h3>
-				<ul style="margin: -10px;">
-					<li>PyTorch</li>
-					<li>Vulkan</li>
-					<li>OpenGL</li>
-					<li>TensorFlow</li>
-				</ul>
-
-				<h3>Systems</h3>
-				<ul style="margin: -10px;">
-					<li>Linux</li>
-					<li>Windows</li>
-					<li>QEMU/KVM</li>
-				</ul>
+				<div style="width: 80%;">
+					In my free time, I enjoy tennis, long walks, traveling and photography.
+					<br><br>
+					<a href="gallery.html">Photo Gallery</a>
+				</div>
 			</div>
 		</div>
 		<div class="right-column">
@@ -129,13 +146,16 @@
 			<h2 id="about" style="margin-top: 50px;">About</h2>
 			<hr style="margin-top: -15px;">
 			<div>
-				Greetings! I am a third-year undergraduate
-				student at UC San Diego studying computer
-				science with a minor in mathematics. Since
-				joining the university, I have been a part of
-				the <a href="https://visualcomputing.ucsd.edu/index.shtml">Center
-				for Visual Computing</a>, where I have been
-				fortunate to work with professors
+				Hi there!
+				<br>
+				I am currently a third-year undergraduate
+				student at the University of California, San
+				Diego (UCSD), pursuing a Bachelor of Science in
+				Computer Science with a minor in Mathematics.
+				Since joining UCSD, I have been actively
+				involved in Computer Graphics research at the
+				<a href="https://visualcomputing.ucsd.edu/index.shtml">Center for Visual Computing</a>,
+				where I have been fortunate to be advised by Professors
 				<a href="https://cseweb.ucsd.edu/~ravir">Ravi Ramamoorthi</a> and
 				<a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a>.
 
@@ -199,17 +219,25 @@
 			<h2 id="experience">Experience</h2>
 			<hr style="margin-top: -15px;">
 
+			<h3>Industry</h3>
 			<div>
-				I previously interned at <b>NVIDIA</b> (Summer 2024) as
-				a 3D Graphics Software Intern, where I worked on
-				the <a
-				href="https://github.com/shader-slang/slang">Slang
-				project</a>. Here, I explored realistic
-				applications of shader modules, dynamic
-				shader linking, and link-time specialization. I worked
-				with a wonderful team while I was managed by <a href="https://www.linkedin.com/in/bdmills/">Brandon Mills</a>.
+				I interned at NVIDIA in the summer of 2024 as a
+				3D Graphics Software Intern. Here, I worked on
+				the <a href="https://github.com/shader-slang/slang">Slang project</a>,
+				exploring innovative applications of shader
+				modules, dynamic shader linking, and link-time
+				specialization while collaborating with a
+				wonderful team led by
+				<a href="https://www.linkedin.com/in/bdmills/">Brandon Mills</a>.
 			</div>
 
+			<h3>Teaching</h3>
+
+			<div>
+				Undergraduate Tutor for Computer Graphics
+				<a href="https://cseweb.ucsd.edu/~tzli/cse167/fa2024/">CSE 167</a>
+				(Fall 2024), UC San Diego.
+			</div>
 
 			<h2 id="projects">Open Source Projects</h2>
 			<hr style="margin-top: -15px">
@@ -220,11 +248,15 @@
 						<b style="font-size: larger;">Javelin</b>
 					</a>
 					<br>
-					Graphics engine system tailored for shader
-					programming. Provides a JIT framework to generate
-					shaders at runtime, that is programmed in a
-					near-identical manner to GLSL using C++ overloading and
-					template metaprogramming.
+					Robust Just-In-Time (JIT) compilation
+					framework to effortlessly generate
+					graphics shaders at runtime using
+					advanced C++ overloading and template
+					metaprogramming. This framework presents
+					a portable dialect of C++ that closely
+					resembles GLSL shader programming
+					enhancing efficiency in graphics
+					application development.
 					<br>
 					<img src="media/javelin.png" style="width: 80%; border-radius: 10px; border: 2px solid #4d604b; margin-top: 10px;">
 				</div>
@@ -233,10 +265,14 @@
 						<b style="font-size: larger;">Kobra</b>
 					</a>
 					<br>
-					3D rendering engine written in C++ using the Vulkan
-					API. It is designed with research development in mind,
-					so that more time can be spent towards experimentation
-					rather than implementation.
+					A 3D rendering engine developed in C++
+					using the Vulkan API, designed
+					specifically for prioritizing research
+					and development. It enables users to
+					allocate their time and efforts on
+					experimentation rather than
+					implementation, facilitating creative
+					exploration in 3D graphics.
 					<br>
 					<img src="media/bathroom.png" style="width: 60%; border-radius: 10px; border: 2px solid #4d604b; margin-top: 10px;">
 				</div>
@@ -248,10 +284,12 @@
 						<b style="font-size: larger;">Zhetapi</b>
 					</a>
 					<br>
-					Modern C++ machine learning and numerical analysis
-					library with an emphasis on intuitive usage. Older
-					version also provides a scripting language to easily
-					interface with core functionality.
+					Modern C++ library  designed for machine
+					learning and numerical analysis,
+					offering intuitive usability. Zhetapi
+					also features a dedicated Python-like
+					scripting language to streamline access
+					to its core library functionalities.
 					<br>
 					<img src="media/zhetapi_logo.svg" style="width: 50%; margin-top: 10px;">
 				</div>
@@ -260,10 +298,11 @@
 						<b style="font-size: larger;">littlevk</b>
 					</a>
 					<br>
-					Light-weight, ergonomic, single-header wrapper
-					for jump-starting graphics and visualization
-					applications using Vulkan. Leverages C++20 features
-					to promote smoother user experience.
+					Lightweight, ergonomic, single-header
+					wrapper for jump-starting graphics and
+					visualization applications using Vulkan.
+					Leverages C++20 features to ensure a
+					smoother user experience.
 					<br>
 					<img src="media/littlevk.png" style="width: 70%; border-radius: 10px; border: 2px solid #4d604b; margin-top: 10px;">
 				</div>
@@ -275,10 +314,11 @@
 						<b style="font-size: larger;">SMake</b>
 					</a>
 					<br>
-					Simplified build system to handle configuration,
-					building, and running projects quickly. The
-					simple configuration format allows for easy
-					access to new users.
+					Simplified build system for quickly
+					configuring, building, and running C++
+					projects. The user-friendly
+					configuration allows easy access for new
+					users.
 					<br>
 					<img src="media/smake.svg" style="width: 50%; margin-top: 10px;">
 				</div>
@@ -289,7 +329,7 @@
 					<br>
 					Exploratory project to evaluate Lisp
 					programs at compile-time with C++
-					metaprogramming. Turns out it is quite too slow...
+					metaprogramming.
 					<br>
 					<img src="media/metacpp.png" style="width: 50%; margin-top: 10px;">
 				</div>
@@ -301,11 +341,11 @@
 						<b style="font-size: larger;">tuicpp</b>
 					</a>
 					<br>
-					Wrapper library around <a
-					href="https://en.wikipedia.org/wiki/Ncurses">ncurses</a>
-					which provides abstractions for common
-					constructs like text windows, prompts, and
-					tables.
+					Wrapper library for
+					<a href="https://en.wikipedia.org/wiki/Ncurses">ncurses</a>
+					that offers intuitive abstractions for
+					common constructs such as text windows,
+					prompts, and tables.
 					<br>
 					<img src="media/editor_window.gif" style="width: 80%; border-radius: 10px; border: 2px solid #4d604b; margin-top: 10px;">
 				</div>
@@ -314,9 +354,11 @@
 						<b style="font-size: larger;">Murphy</b>
 					</a>
 					<br>
-					Exploratory project where curves are morphed to
-					match the provided silhouette. Effectively uses
-					differentiable rasterization via edge-sampling.
+					Exploratory graphics project where
+					curves are transformed to match any
+					given silhouette. Effectively uses
+					differentiable rasterization via precise
+					edge sampling for fast convergence.
 					<br>
 					<img src="media/teaser.gif" style="width: 50%; border-radius: 10px; border: 2px solid #4d604b; margin-top: 10px;">
 				</div>
