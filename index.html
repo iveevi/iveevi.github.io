@@ -18,16 +18,13 @@
 		}
 
 		.left-column {
-			flex: 1;
-			padding: 5px;
 			display: flex;
 			flex-direction: column;
 			align-items: center; /* Center content horizontally */
 		}
 
 		.right-column {
-			flex: 3;
-			padding: 5px;
+			padding-left: 50px;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start; /* Align items to the left */
@@ -67,15 +64,15 @@
 	</style>
 </head>
 
-<body style="padding: 5%; display: flex; flex-direction: column; justify-content: center;">
+<body style="padding: 2%; display: flex; flex-direction: column; justify-content: center;">
 	<div class="container">
 		<div class="left-column">
-			<div style="height: 60px; align-content: center;">
-				<h1 style="margin: 0; font-variant: small-caps;">Venkataram Sivaram</h1>
+			<div style="align-content: center;">
+				<h1 style="white-space: nowrap; margin: 0; font-variant: small-caps;">Venkataram Sivaram</h1>
 			</div>
 
-			<img src="media/face.jpg" style="width: 80%; height: auto; margin: 5%; max-width: 100%; max-height: 100%; border-radius: 50%; border: 5px solid #7db177">
-			<hr style="width: 90%">
+			<img src="media/face.jpg" style="width: 400px; margin: 10px; border-radius: 50%; border: 5px solid #7db177">
+			<hr>
 			<div style="display: flex; width: 30%; justify-content: space-evenly;">
 				<a href="https://github.com/iveevi" target="_blank" style="margin-right: 10%;">
 					<i class="fab fa-github" style="font-size: 200%; color: black;"></i>
@@ -87,44 +84,36 @@
 					<i class="fas fa-envelope" style="font-size: 200%; color: #D44638;"></i>
 				</a>
 			</div>
-			<hr style="width: 90%">
-			<div style="padding-left: 20%;">
+			<hr>
+			<div style="padding-left: 50px">
 				<h2>Technical Skills</h2>
 
-				<div style="display: flex; gap: 20px; width: 80%;">
-					<div>
-						<h3>Languages</h3>
-						<ul style="margin: -10px;">
-							<li>Python</li>
-							<li>C and C++</li>
-							<li>CUDA</li>
-							<li>Rust</li>
-							<li>GLSL</li>
-							<li>Slang</li>
-							<li>Java</li>
-							<li>Bash</li>
-							<li>LaTeX</li>
-						</ul>
-					</div>
-				
-					<div>
-						<h3>Libraries</h3>
-						<ul style="margin: -10px;">
-							<li>PyTorch</li>
-							<li>Vulkan</li>
-							<li>OpenGL</li>
-							<li>TensorFlow</li>
-						</ul>
-					<!-- </div>
-				
-					<div> -->
-						<h3>Systems</h3>
-						<ul style="margin: -10px;">
-							<li>Linux</li>
-							<li>Windows</li>
-							<li>QEMU/KVM</li>
-						</ul>
-					</div>
+				<div>
+					<h3>Languages</h3>
+					<ul style="margin: -10px;">
+						<li>Python</li>
+						<li>C and C++</li>
+						<li>CUDA</li>
+						<li>Rust</li>
+						<li>GLSL</li>
+						<li>Slang</li>
+						<li>Java</li>
+						<li>Bash</li>
+						<li>LaTeX</li>
+					</ul>
+					<h3>Libraries</h3>
+					<ul style="margin: -10px;">
+						<li>PyTorch</li>
+						<li>Vulkan</li>
+						<li>OpenGL</li>
+						<li>TensorFlow</li>
+					</ul>
+					<h3>Systems</h3>
+					<ul style="margin: -10px;">
+						<li>Linux</li>
+						<li>Windows</li>
+						<li>QEMU/KVM</li>
+					</ul>
 				</div>
 				
 				<h2>Miscellaneous</h2>
@@ -255,15 +244,10 @@
 						<b style="font-size: larger;">Javelin</b>
 					</a>
 					<br>
-					Robust Just-In-Time (JIT) compilation
-					framework to effortlessly generate
-					graphics shaders at runtime using
-					advanced C++ overloading and template
-					metaprogramming. This framework presents
-					a portable dialect of C++ that closely
-					resembles GLSL shader programming
-					enhancing efficiency in graphics
-					application development.
+					Just-in-time shader programming directly
+					within C++ for Vulkan applications,
+					using metaprogramming and operator
+					overloading.
 					<br>
 					<img src="media/javelin.png" style="width: 80%; border-radius: 10px; border: 2px solid #4d604b; margin-top: 10px;">
 				</div>
@@ -272,14 +256,10 @@
 						<b style="font-size: larger;">Kobra</b>
 					</a>
 					<br>
-					A 3D rendering engine developed in C++
-					using the Vulkan API, designed
-					specifically for prioritizing research
-					and development. It enables users to
-					allocate their time and efforts on
-					experimentation rather than
-					implementation, facilitating creative
-					exploration in 3D graphics.
+					Research-oriented rendering engine
+					written in C++ and using Vulkan, with
+					implementations for modern algorithms
+					like ReSTIR.
 					<br>
 					<img src="media/bathroom.png" style="width: 60%; border-radius: 10px; border: 2px solid #4d604b; margin-top: 10px;">
 				</div>
@@ -291,12 +271,10 @@
 						<b style="font-size: larger;">Zhetapi</b>
 					</a>
 					<br>
-					Modern C++ library  designed for machine
-					learning and numerical analysis,
-					offering intuitive usability. Zhetapi
-					also features a dedicated Python-like
-					scripting language to streamline access
-					to its core library functionalities.
+					Machine learning and numerical analysis
+					library written in C++ along with a
+					Python-like scripting language to
+					promote usability.
 					<br>
 					<img src="media/zhetapi_logo.svg" style="width: 50%; margin-top: 10px;">
 				</div>
@@ -305,11 +283,9 @@
 						<b style="font-size: larger;">littlevk</b>
 					</a>
 					<br>
-					Lightweight, ergonomic, single-header
-					wrapper for jump-starting graphics and
-					visualization applications using Vulkan.
-					Leverages C++20 features to ensure a
-					smoother user experience.
+					Lightweight single-header C++20 wrapper
+					for Vulkan to reduce boilerplate code in
+					graphics applications.
 					<br>
 					<img src="media/littlevk.png" style="width: 70%; border-radius: 10px; border: 2px solid #4d604b; margin-top: 10px;">
 				</div>
@@ -321,11 +297,9 @@
 						<b style="font-size: larger;">SMake</b>
 					</a>
 					<br>
-					Simplified build system for quickly
-					configuring, building, and running C++
-					projects. The user-friendly
-					configuration allows easy access for new
-					users.
+					User-friendly build system for quickly
+					configuring, building, and running C/C++
+					projects.
 					<br>
 					<img src="media/smake.svg" style="width: 50%; margin-top: 10px;">
 				</div>
@@ -334,8 +308,8 @@
 						<b style="font-size: larger;">metacpp</b>
 					</a>
 					<br>
-					Exploratory project to evaluate Lisp
-					programs at compile-time with C++
+					Evaluating simple Lisp programs at
+					compile-time in C++ using template
 					metaprogramming.
 					<br>
 					<img src="media/metacpp.png" style="width: 50%; margin-top: 10px;">
@@ -361,11 +335,9 @@
 						<b style="font-size: larger;">Murphy</b>
 					</a>
 					<br>
-					Exploratory graphics project where
-					curves are transformed to match any
-					given silhouette. Effectively uses
-					differentiable rasterization via precise
-					edge sampling for fast convergence.
+					Transforming curves to match arbitrary
+					silhouettes using differentiable
+					rasterization.
 					<br>
 					<img src="media/teaser.gif" style="width: 50%; border-radius: 10px; border: 2px solid #4d604b; margin-top: 10px;">
 				</div>
