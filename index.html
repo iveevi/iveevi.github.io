@@ -1,357 +1,789 @@
 <!DOCTYPE html>
+
 <html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-<head>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-	<style>
-		body {
-			font-family: 'Poppins', sans-serif;
-		}
+		<style>
+			body {
+				font-family: 'Funnel Sans', sans-serif;
+				margin: 0;
+				padding: 0;
+				overflow-x: hidden;
+			}
+			
+			.container {
+				display: flex; /* Changed from grid to flex */
+				justify-content: center;
+				min-height: 100vh;
+				min-width: 750px;
+			}
 
-		.container {
-			display: flex;
-			margin: auto;
-		}
+			.left {
+				width: 300px;
+				padding: 15px;
+				display: flex;
+				flex-direction: column;
+				border-right: 3px solid #2988dc;
+				border-left: 3px solid #2988dc;
+				position: fixed; /* Fixed position */
+				top: 0;
+				bottom: 0;
+				left: 0;
+				overflow-y: auto; /* Allow scrolling within the sidebar if needed */
+				background-color: #c3dbef; /* Ensures content doesn't show through */
+			}
 
-		.left-column {
-			display: flex;
-			flex-direction: column;
-			align-items: center; /* Center content horizontally */
-		}
+			.right {
+				padding: 15px;
+				margin-left: 330px; /* Width of left column (300px) + padding (15px) + gap (15px) */
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				max-width: 600px;
+				min-width: 400px;
+				/* border: 1px solid blue; */
+			}
 
-		.right-column {
-			padding-left: 50px;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start; /* Align items to the left */
-		}
+			.profile {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				width: 100%;
+				/* border: 1px solid green; */
+			}
 
-		.nav-links {
-			display: flex;
-			width: 100%;
-			align-items: center;
-			justify-content: space-evenly; /* Spread links evenly */
-		}
+			.profile img {
+				max-width: 90%;
+				height: auto;
+				border-radius: 50%;
+				border: 5px solid #2988dc;
+			}
 
-		hr {
-			width: 100%;
-			color: #4d604b;
-		}
+			.icon-heading {
+				display: flex;
+				align-items: center;
+			}
+			
+			.icon-heading i {
+				margin-right: 10px;
+			}
 
-		h1 {
-			color: #4d604b;
-		}
+			.section-content {
+				margin-left: 10px;
+			}
 
-		h2 {
-			color: #4d604b;
-		}
+			hr {
+				width: 100%;
+				border: 0;
+				height: 2px;
+				background-color: #2988dc;
+				margin-top: -10px;
+			}
 
-		h3 {
-			color: #4d604b;
-		}
+			h2 {
+				color: #2988dc;
+			}
+			
+			.right img {
+				max-width: 100%; /* Ensure images in right column don't overflow */
+			}
 
-		a {
-			color: #7db177;
-		}
+			.experience-entry {
+				margin-bottom: 20px;
+				/* padding-left: 10px; */
+			}
+			
+			.experience-header {
+				display: flex;
+				align-items: center;
+				margin-bottom: 10px;
+			}
+			
+			.experience-title {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			
+			.experience-title h3 {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.experience-period {
+				margin: 5px 0 0 0;
+				font-style: italic;
+				color: #666;
+			}
 
-		html {
-			scroll-behavior: smooth;
-		}
-	</style>
-</head>
+			/* Logo sections */
+			.logo-section {
+				min-width: 70px;
+				padding-right: 5px;
+				display: flex;
+				justify-content: center;
+			}
 
-<body style="padding: 2%; display: flex; flex-direction: column; justify-content: center;">
-	<div class="container">
-		<div class="left-column">
-			<div style="align-content: center;">
-				<h1 style="white-space: nowrap; margin: 0; font-variant: small-caps;">Venkataram Sivaram</h1>
-			</div>
+			.logo-section img {
+				height: 50px;
+			}
+			
+			/* Research sections */
+			.research-header {
+				display: flex;
+				align-items: flex-start;
+				padding: 10px;
+			}
 
-			<img src="media/face.jpg" style="width: 90%; margin: 10px; border-radius: 50%; border: 5px solid #7db177">
-			<hr>
-			<div style="display: flex; width: 30%; justify-content: space-evenly;">
-				<a href="https://github.com/iveevi" target="_blank" style="margin-right: 10%;">
-					<i class="fab fa-github" style="font-size: 200%; color: black;"></i>
-				</a>
-				<a href="https://www.linkedin.com/in/venkataram-sivaram-65a36a226" target="_blank" style="margin-right: 10%;">
-					<i class="fab fa-linkedin" style="font-size: 200%; color: #0077b5;"></i>
-				</a>
-				<a href="mailto:veskimo123@gmail.com" target="_blank">
-					<i class="fas fa-envelope" style="font-size: 200%; color: #D44638;"></i>
-				</a>
-			</div>
-			<hr>
-			<div style="padding-left: 10px">
-				<h2>Technical Skills</h2>
+			.research-section {
+				min-width: 225px;
+				margin: 5px;
+				margin-bottom: 25px;
+				display: flex;
+				justify-content: center;
+			}
 
-				<div style="font-size: small;">
-					<h3>Languages</h3>
-					<ul style="margin: -10px;">
-						<li>Python</li>
-						<li>C and C++</li>
-						<li>CUDA</li>
-						<li>Rust</li>
-						<li>GLSL</li>
-						<li>Slang</li>
-						<li>Java</li>
-						<li>Bash</li>
-						<li>LaTeX</li>
-					</ul>
-					<h3>Libraries</h3>
-					<ul style="margin: -10px;">
-						<li>PyTorch</li>
-						<li>Vulkan</li>
-						<li>OpenGL</li>
-						<li>TensorFlow</li>
-					</ul>
-					<h3>Systems</h3>
-					<ul style="margin: -10px;">
-						<li>Linux</li>
-						<li>Windows</li>
-						<li>QEMU/KVM</li>
-					</ul>
+			.research-section img {
+				width: 200px;
+				border-radius: 10px;
+				box-shadow: 5px 5px 15px #2988dc77;
+			}
+
+			/* Research authors */
+			.author-list {
+				display: flex;
+				flex-wrap: wrap;  /* Allows wrapping to new lines */
+				gap: 8px;         /* Adjusts spacing between rows and columns */
+				padding-right: 50px;
+			}
+
+			.author {
+				display: inline-block;
+				background-color: #2988dc33;
+				padding: 5px;
+				border-radius: 5px;
+			}
+
+			.author-self {
+				display: inline-block;
+				background-color: #2988dc77;
+				padding: 5px;
+				border-radius: 5px;
+				font-weight: bold;
+			}
+
+			/* Skill tags */
+			.tag-section {
+				padding-top: 5px;
+			}
+
+			.tag {
+				border-radius: 5px;
+				font-weight: bold;
+				padding: 2px 10px;
+				margin-right: 5px;
+				display: inline-block;
+			}
+
+			.cpp::before { content: "C++"; }
+			.vulkan::before { content: "Vulkan"; }
+			.cuda::before { content: "CUDA"; }
+			.cmake::before { content: "CMake"; }
+			.glsl::before { content: "GLSL"; }
+			.python::before { content: "Python"; }
+
+			/* TODO: generate from hue palette */
+			.cpp { background-color: lightsalmon; }
+			.vulkan { background-color: lightgreen; }
+			.cuda { background-color: lightblue; }
+			.cmake { background-color: gold; }
+			.glsl { background-color: violet; }
+			.python { background-color: lavender; }
+
+			/* Skill bars */
+			.bar-container {
+				width: 500px; /* Adjust as needed */
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+				justify-content: space-between;
+			}
+			.bar-wrapper {
+				width: calc(50% - 5px); /* Two bars per row */
+				position: relative;
+			}
+			.bar {
+				position: relative;
+				height: 30px;
+				border-radius: 5px;
+				background-color: #e3edf7; /* Light background */
+				overflow: hidden;
+			}
+			.bar::before {
+				content: attr(data-label); /* Dynamically insert text */
+				position: absolute;
+				left: 10px;
+				top: 50%;
+				transform: translateY(-50%);
+				font-weight: bold;
+				color: black;
+			}
+			.fill {
+				height: 100%;
+				border-radius: 5px;
+			}
+			.proficiency {
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				transform: translateY(-50%);
+				color: black;
+				font-style: italic;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="left">
+				<div class="profile">
+					<img src="media/miscellaneous/face.jpg">
+					<h1>Venkataram Sivaram</h1>
 				</div>
 
-				<h2>Miscellaneous</h2>
+				<div style="margin: 20px;">
+					<!-- Overview -->
+					<h2>Outline</h2>
+					<hr>
+					<div class="section-content">
+						<a href="#About">
+							<h3 class="icon-heading">
+								<i class="fa-fw fa-solid fa-user"></i>
+								About
+							</h3>
+						</a>
+						<a href="#Education">
+							<h3 class="icon-heading">
+								<i class="fa-fw fa-solid fa-graduation-cap"></i>
+								Education
+							</h3>
+						</a>
+						<a href="#Awards">
+							<h3 class="icon-heading">
+								<i class="fa-fw fa-solid fa-trophy"></i>
+								Awards
+							</h3>
+						</a>
+						<a href="#Research">
+							<h3 class="icon-heading">
+								<i class="fa-fw fa-solid fa-flask"></i>
+								Research
+							</h3>
+						</a>
+						<a href="#Experience">
+							<h3 class="icon-heading">
+								<i class="fa-fw fa-solid fa-briefcase"></i>
+								Experience
+							</h3>
+						</a>
+						<a href="#Projects">
+							<h3 class="icon-heading">
+								<i class="fa-fw fa-solid fa-laptop-code"></i>
+								Projects
+							</h3>
+						</a>
+						<a href="#Blogs">
+							<h3 class="icon-heading">
+								<i class="fa-fw fa-solid fa-pen-to-square"></i>
+								Blogs
+							</h3>
+						</a>
+						<a href="#Photos">
+							<h3 class="icon-heading">
+								<i class="fa-fw fa-solid fa-images"></i>
+								Photos
+							</h3>
+						</a>
+					</div>
 
-				<div style="width: 100%;">
-					In my free time, I enjoy tennis, long walks, traveling and photography :)
-					<br><br>
-					<a href="gallery.html" style="text-decoration: none; font-size: 30px;">
-						<div style="font-variant: small-caps;">
-							<i class="fas fa-camera"></i>
-							Photo Gallery
+					<!-- Contact -->
+					<h2>Contact</h2>
+					<hr>
+					<div class="section-content">
+						<a href="https://github.com/iveevi">
+							<h3 class="icon-heading">
+								<i class="fa-fw fa-brands fa-github"></i>
+								GitHub
+							</h3>
+						</a>
+						<a href="https://www.linkedin.com/in/venkataram-sivaram-65a36a226">
+							<h3 class="icon-heading">
+								<i class="fa-fw fa-brands fa-linkedin"></i>
+								LinkedIn
+							</h3>
+						</a>
+						<a href="mailto:veskimo123@gmail.com">
+							<h3 class="icon-heading">
+								<i class="fa-fw fa-solid fa-envelope"></i>
+								Email
+							</h3>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="right">
+				<!-- TODO: cool rendered image at top... -->
+				<img src="media/miscellaneous/clutch.jpg" style="border: 5px solid #2988dc; border-radius: 5px;">
+				
+				<!-- About -->
+				<h2 id="About" class="icon-heading">
+					<i class="fa-fw fa-solid fa-user"></i>About
+				</h2>
+				<hr>
+				<div class="section-content">
+					<div style="max-width: 500px;">
+						Hi there!
+						<br><br>
+						I am currently a third-year undergraduate
+						student at the University of California, San
+						Diego (UCSD), pursuing a Bachelor of Science in
+						Computer Science with a minor in Mathematics.
+						Since joining UCSD, I have been actively
+						involved in Computer Graphics research at the
+						<a href="https://visualcomputing.ucsd.edu/index.shtml">Center for Visual Computing</a>,
+						where I have been fortunate to be advised by Professors
+						<a href="https://cseweb.ucsd.edu/~ravir">Ravi Ramamoorthi</a> and
+						<a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a>.
+
+						<br><br>
+						My primary research interests include:
+						<ul style="margin: 5px;">
+							<li>Real-time, inverse, and differentiable rendering</li>
+							<li>Languages and systems for graphics and heterogeneous computing</li>
+							<li>Interactive simulation of natural phenomena</li>
+							<li>Reinforcement learning and machine learning</li>
+							<li>Computer vision systems for robotics</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Education -->
+				<h2 id="Education" class="icon-heading">
+					<i class="fa-fw fa-solid fa-graduation-cap"></i>Education
+				</h2>
+				<hr>
+				<div class="section-content" style="padding-top: 10px;">
+					<div class="experience-header">
+						<div class="logo-section">
+							<img src="media/logos/UCSD.svg">
 						</div>
-					</a>
+						<div class="experience-title">
+							<h3>Bachelor of Sciences, Computer Science</h3>
+							<p class="experience-period">Fall 2022 to Spring 2025</p>
+							<br>
+							Minor in Mathematics
+						</div>
+					</div>
 				</div>
+				
+				<!-- Awards -->
+				<h2 id="Awards" class="icon-heading">
+					<i class="fa-fw fa-solid fa-trophy"></i>Awards
+				</h2>
+				<hr>
+				<div class="section-content" style="padding-top: 10px;">
+					<div class="experience-header">
+						<div class="logo-section">
+							<img src="media/logos/CRA.png">
+						</div>
+						<div class="experience-title">
+							<h3>Outstanding Undergraduate Researcher Award</h3>
+							<p class="experience-period">2025</p>
+						</div>
+					</div>
+							
+					<div class="experience-header">
+						<div class="logo-section">
+							<img src="media/logos/UCSD.svg">
+						</div>
+						<div class="experience-title">
+							<h3>CSE Undergraduate Student Research Award</h3>
+							<p class="experience-period">2024</p>
+						</div>
+					</div>
+					
+					<div class="experience-header">
+						<div class="logo-section">
+							<img src="media/logos/CRA.png">
+						</div>
+						<div class="experience-title">
+							<h3>Honorable Mention, Outstanding Undergraduate Researcher Award</h3>
+							<p class="experience-period">2024</p>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Research -->
+				<h2 id="Research" class="icon-heading">
+					<i class="fa-fw fa-solid fa-flask"></i>Research
+				</h2>
+				<hr>
+				<div class="section-content" style="padding-top: 10px;">
+					<div class="research-header">
+						<div class="research-section">
+							<img src="media/research/geosplat.jpg"  style="width: 180px; padding: 10px;">
+						</div>
+						<div class="experience-title" style="padding-top: 10px;">
+							<h3>Geometry Field Splatting</h3>
+							<p class="experience-period">CVPR 2025</p>
+							<br>
+							<div class="author-list">
+								<span class="author">Kaiwen Jiang</span>
+								<span class="author-self">Venkataram Sivaram</span>
+								<span class="author">Cheng Peng</span>
+								<span class="author">Ravi Ramamoorthi</span>
+							</div>
+						</div>
+					</div>
+					<div class="research-header">
+						<div class="research-section">
+							<img src="media/research/ngf.jpg" style="width: 180px; padding: 10px;">
+						</div>
+						<div class="experience-title" style="padding-top: 10px;">
+							<h3>Neural Geometry Fields</h3>
+							<p class="experience-period">ACM SIGGRAPH 2024 Conference Track</p>
+							<br>
+							<div class="author-list">
+								<span class="author-self">Venkataram Sivaram</span>
+								<span class="author">Tzu-Mao Li</span>
+								<span class="author">Ravi Ramamoorthi</span>
+							</div>
+						</div>
+					</div>
+					<div class="research-header">
+						<div class="research-section">
+							<img src="media/research/restir-dr.jpg">
+						</div>
+						<div class="experience-title" style="padding-top: 10px;">
+							<h3>Parameter-Space ReSTIR</h3>
+							<p class="experience-period">ACM SIGGRAPH 2023 Conference Track</p>
+							<br>
+							<div class="author-list">
+								<span class="author">Wesley Chang</span>
+								<span class="author-self">Venkataram Sivaram</span>
+								<span class="author">Derek Nowrouzezahrai</span>
+								<span class="author">Toshiya Hachisuka</span>
+								<span class="author">Ravi Ramamoorthi</span>
+								<span class="author">Tzu-Mao Li</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TODO: treemap of interests -->
+				
+				<!-- Experience -->
+				<div id="Experience" style="width: 100%;">
+					<h2 class="icon-heading">
+						<i class="fa-fw fa-solid fa-briefcase"></i>Experience
+					</h2>
+					<hr>
+					<div class="section-content">
+						<h3 class="icon-heading"><i class="fa-fw fa-solid fa-building"></i>Industry</h3>
+						<div class="experience-entry">
+							<div class="experience-header">
+								<div class="logo-section">
+									<img src="media/logos/NVIDIA.jpg">
+								</div>
+								<div class="experience-title">
+									<h3>3D Graphics Software Intern</h3>
+									<p class="experience-period">Summer 2024</p>
+									<br>
+									Worked on the Slang project.
+								</div>
+							</div>
+						</div>
+
+						<h3 class="icon-heading"><i class="fa-fw fa-solid fa-chalkboard-user"></i>Teaching</h3>
+						<div class="experience-entry">
+							<div class="experience-header">
+								<div class="logo-section">
+									<img src="media/logos/UCSD.svg">
+								</div>
+								<div class="experience-title">
+									<h3>CSE 167: Introduction to Computer Graphics</h3>
+									<p class="experience-period">Fall 2024</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="experience-entry">
+							<div class="experience-header">
+								<div class="logo-section">
+									<img src="media/logos/UCSD.svg">
+								</div>
+								<div class="experience-title">
+									<h3>CSE 167: Introduction to Computer Graphics</h3>
+									<p class="experience-period">Winter 2025</p>
+								</div>
+							</div>
+						</div>
+						
+						<h3 class="icon-heading"><i class="fa-fw fa-solid fa-book-open-reader"></i>Academic Service</h3>
+						
+						<div class="experience-entry">
+							<div class="experience-header">
+								<div class="logo-section">
+									<img src="media/logos/SIGGRAPH.jpg">
+								</div>
+								<div class="experience-title">
+									<h3>ACM TOG Reviewer</h3>
+									<p class="experience-period">2025</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Projects -->
+				<h2 id="Projects" class="icon-heading">
+					<i class="fa-fw fa-solid fa-laptop-code"></i>Projects
+				</h2>
+				<hr>
+				<div class="section-content">
+					<h3 class="icon-heading"><i class="fa-fw fa-solid fa-diagram-project"></i>Open Source</h3>
+					<div class="section-content">
+						<div class="experience-header">
+							<div class="logo-section">
+								<!-- <img src="media/projects/Howler.png"> -->
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/javelin"><h3>Javelin</h3></a>
+								<div style="max-width: 500px;">
+									Just-in-time shader programming directly within C++ for Vulkan applications, using metaprogramming and operator overloading. 
+								</div>
+								<div class="tag-section">
+									<span class="tag cpp"></span>
+									<span class="tag vulkan"></span>
+									<span class="tag glsl"></span>
+									<span class="tag cmake"></span>
+								</div>
+							</div>
+						</div>
+						<div class="experience-header">
+							<div class="logo-section">
+								<img src="media/projects/Howler.png">
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/howler"><h3>Howler</h3></a>
+								<div style="max-width: 500px;">
+									Light-weight logging and error reporting system.
+								</div>
+								<div class="tag-section">
+									<span class="tag cpp"></span>
+								</div>
+							</div>
+						</div>
+						<div class="experience-header">
+							<div class="logo-section">
+								<!-- <img src="media/projects/Howler.png"> -->
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/nabu"><h3>Nabu</h3></a>
+								<div style="max-width: 500px;">
+									Compile-time lexing and grammar generator, while easily integrating with application types.
+								</div>
+								<div class="tag-section">
+									<span class="tag cpp"></span>
+								</div>
+							</div>
+						</div>
+						<div class="experience-header">
+							<div class="logo-section">
+								<img src="media/projects/Kobra.png">
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/kobra"><h3>Kobra</h3></a>
+								<div style="max-width: 500px;">
+									Research-oriented rendering engine written in C++ and using Vulkan, with implementations for modern algorithms like ReSTIR.
+									<br>
+									<div class="tag-section">
+										<span class="tag cpp"></span>
+										<span class="tag vulkan"></span>
+										<span class="tag cuda"></span>
+										<span class="tag glsl"></span>
+										<span class="tag cmake"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="experience-header">
+							<div class="logo-section">
+								<!-- <img src="media/projects/Howler.png"> -->
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/littlevk"><h3>littlevk</h3></a>
+								<div style="max-width: 500px;">
+									Lightweight single-header C++20 wrapper for Vulkan to reduce boilerplate code in graphics applications. 
+									<br>
+									<div class="tag-section">
+										<span class="tag cpp"></span>
+										<span class="tag vulkan"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="experience-header">
+							<div class="logo-section">
+								<img src="media/projects/Zhetapi.svg">
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/zhetapi"><h3>Zhetapi</h3></a>
+								<div style="max-width: 500px;">
+									Machine learning and numerical analysis library written in C++ along with a Python-like scripting language to promote usability. 
+									<div class="tag-section">
+										<span class="tag cpp"></span>
+										<span class="tag cuda"></span>
+										<span class="tag cmake"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="experience-header">
+							<div class="logo-section">
+								<img src="media/projects/SMake.svg">
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/smake"><h3>SMake</h3></a>
+								<div style="max-width: 500px;">
+									User-friendly build system for quickly configuring, building, and running C/C++ projects.
+								</div>
+								<div class="tag-section">
+									<span class="tag python"></span>
+								</div>
+							</div>
+						</div>
+						<div class="experience-header">
+							<div class="logo-section">
+								<img src="media/projects/Metacpp.png">
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/metacpp"><h3>metacpp</h3></a>
+								<div style="max-width: 500px;">
+									User-friendly build system for quickly configuring, building, and running C/C++ projects. Evaluating simple Lisp programs at compile-time in C++ using template metaprogramming.
+								</div>
+								<div class="tag-section">
+									<span class="tag cpp"></span>
+								</div>
+							</div>
+						</div>
+						<div class="experience-header">
+							<div class="logo-section">
+								<!-- <img src="media/projects/Howler.png"> -->
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/tuicpp"><h3>tuicpp</h3></a>
+								<div style="max-width: 500px;">
+									Wrapper library for ncurses that offers intuitive abstractions for common constructs such as text windows, prompts, and tables.
+								</div>
+								<div class="tag-section">
+									<span class="tag cpp"></span>
+								</div>
+							</div>
+						</div>
+						<div class="experience-header">
+							<div class="logo-section">
+								<img src="media/projects/Murphy.gif">
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/murphy"><h3>Murphy</h3></a>
+								<div style="max-width: 500px;">
+									Transforming curves to match arbitrary silhouettes using differentiable rasterization.
+								</div>
+								<div class="tag-section">
+									<span class="tag cpp"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<h3 class="icon-heading"><i class="fa-fw fa-solid fa-gears"></i>Technical Skills</h3>
+					<div class="section-content" style="display: flex; justify-content: center;">
+						<div class="bar-container">
+							<div class="bar-wrapper">
+								<div class="bar" data-label="C++">
+									<div class="fill" style="width: 100%; background-color: lightsalmon;"></div>
+									<div class="proficiency">Advanced</div>
+								</div>
+							</div>
+							<div class="bar-wrapper">
+								<div class="bar" data-label="Python">
+									<div class="fill" style="width: 85%; background-color: lavender;"></div>
+									<div class="proficiency">Proficient</div>
+								</div>
+							</div>
+							<div class="bar-wrapper">
+								<div class="bar" data-label="CUDA">
+									<div class="fill" style="width: 75%; background-color: lightblue;"></div>
+									<div class="proficiency">Proficient</div>
+								</div>
+							</div>
+							<div class="bar-wrapper">
+								<div class="bar" data-label="Vulkan">
+									<div class="fill" style="width: 75%; background-color: lightgreen;"></div>
+									<div class="proficiency">Proficient</div>
+								</div>
+							</div>
+							<div class="bar-wrapper">
+								<div class="bar" data-label="CMake">
+									<div class="fill" style="width: 85%; background-color: gold;"></div>
+									<div class="proficiency">Proficient</div>
+								</div>
+							</div>
+							<div class="bar-wrapper">
+								<div class="bar" data-label="GLSL">
+									<div class="fill" style="width: 90%; background-color: violet;"></div>
+									<div class="proficiency">Advanced</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TODO: add a timeline of projects on the side -->
+
+				<!-- Blogs -->
+				<h2 id="Blogs" class="icon-heading">
+					<i class="fa-fw fa-solid fa-pen-to-square"></i>Blogs
+				</h2>
+				<hr>
+
+				<h3 class="icon-heading">
+					<div class="section-content">
+						<i class="fa-fw fa-solid fa-hammer"></i>Under construction!
+					</div>
+				</h3>
+				
+				<!-- Photo Gallery -->
+				<h2 id="Photos" class="icon-heading">
+					<i class="fa-solid fa-images"></i>Photos
+				</h2>
+				<hr>
+
+				<h3 class="icon-heading">
+					<div class="section-content">
+						<i class="fa-fw fa-solid fa-hammer"></i>Under construction!
+					</div>
+				</h3>
 			</div>
 		</div>
-		<div class="right-column">
-			<div class="nav-links" style="height: 60px;">
-				<a href="#about" style="text-decoration: none; color: #4d604b; font-variant: small-caps; font-size: larger;">About</a>
-				<a href="#awards" style="text-decoration: none; color: #4d604b; font-variant: small-caps; font-size: larger;">Awards</a>
-				<a href="#research" style="text-decoration: none; color: #4d604b; font-variant: small-caps; font-size: larger;">Research</a>
-				<a href="#experience" style="text-decoration: none; color: #4d604b; font-variant: small-caps; font-size: larger;">Experience</a>
-				<a href="#projects" style="text-decoration: none; color: #4d604b; font-variant: small-caps; font-size: larger;">Projects</a>
-			</div>
-
-			<h2 id="about" style="margin-top: 50px;">About</h2>
-			<hr style="margin-top: -15px;">
-			<div>
-				Hi there!
-				<br>
-				I am currently a third-year undergraduate
-				student at the University of California, San
-				Diego (UCSD), pursuing a Bachelor of Science in
-				Computer Science with a minor in Mathematics.
-				Since joining UCSD, I have been actively
-				involved in Computer Graphics research at the
-				<a href="https://visualcomputing.ucsd.edu/index.shtml">Center for Visual Computing</a>,
-				where I have been fortunate to be advised by Professors
-				<a href="https://cseweb.ucsd.edu/~ravir">Ravi Ramamoorthi</a> and
-				<a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a>.
-
-				<br><br>
-				My primary research interests include:
-				<ul style="margin: 5px;">
-					<li>Real-time, inverse, and differentiable rendering</li>
-					<li>Languages and systems for graphics and heterogeneous computing</li>
-					<li>Interactive simulation of natural phenomena</li>
-					<li>Reinforcement learning and machine learning</li>
-					<li>Computer vision systems for robotics</li>
-				</ul>
-			</div>
-
-			<h2 id="awards">Awards</h2>
-			<hr style="margin-top: -15px;">
-
-			<ul>
-				<li>
-					Awardee, CRA Outstanding Undergraduate Researcher Award
-					<a href="https://cra.org/about/awards/outstanding-undergraduate-researcher-award/">(CRA, 2025)</a>
-				</li>
-				<li>
-					CSE Undergraduate Student Research Award for Excellence in Research
-					<a href="https://cse.ucsd.edu/undergraduate/cse-undergraduate-student-awards">(UC San Diego, 2024)</a>
-				</li>
-				<li>
-					Honorable Mention, CRA Outstanding Undergraduate Researcher Award
-					<a href="https://cra.org/about/awards/outstanding-undergraduate-researcher-award/">(CRA, 2024)</a>
-				</li>
-			</ul>
-
-			<h2 id="research">Research</h2>
-			<hr style="margin-top: -15px;">
-
-			<div style="display: flex; align-items: flex-start; gap: 30px; margin-top: 15px;">
-				<div style="flex: 0 0 25%;">
-					<img src="media/ngf.jpg" style="width: 100%; border-radius: 10px; border: solid #4d604b;">
-				</div>
-				<div div style="flex: 1;">
-					<b style="font-size: larger;"><a href="./ngf/index.html">Neural Geometry Fields for Meshes</a></b>
-					<br>
-					<b>Venkataram Sivaram</b>, Ravi Ramamoorthi, and Tzu-Mao Li
-					<br>
-					<em>SIGGRAPH North America 2024 (Conference Track)</em>
-				</div>
-			</div>
-
-			<div style="display: flex; align-items: flex-start; gap: 30px; margin-top: 2.5%;">
-				<div style="flex: 0 0 25%;">
-					<img src="media/restir-dr.jpg" style="width: 100%; border-radius: 10px; border: solid #4d604b;">
-				</div>
-				<div div style="flex: 1;">
-					<b style="font-size: larger"><a href="https://weschang.com/publications/restir-dr/">
-						Parameter-space ReSTIR for Differentiable and Inverse Rendering
-					</a></b>
-					<br>
-					Wesley Chang, <b>Venkataram Sivaram</b>, Derek Nowrouzezahrai, Toshiya
-					Hachisuka, Ravi Ramamoorthi, and Tzu-Mao Li
-					<br>
-					<em>SIGGRAPH North America 2023 (Conference Track)</em>
-				</div>
-			</div>
-
-			<h2 id="experience">Experience</h2>
-			<hr style="margin-top: -15px;">
-
-			<h3>Industry</h3>
-			<div>
-				I interned at NVIDIA in the summer of 2024 as a
-				3D Graphics Software Intern. Here, I worked on
-				the <a href="https://github.com/shader-slang/slang">Slang project</a>,
-				exploring innovative applications of shader
-				modules, dynamic shader linking, and link-time
-				specialization while collaborating with a
-				wonderful team led by
-				<a href="https://www.linkedin.com/in/bdmills/">Brandon Mills</a>.
-			</div>
-
-			<h3>Teaching</h3>
-
-			<div style="margin-top: -20px;">
-				<ul>
-					<li>
-						Undergraduate Tutor for Computer Graphics CSE 167 (Winter 2025), UC San Diego.
-					</li>
-					<li>
-						Undergraduate Tutor for Computer Graphics <a href="https://cseweb.ucsd.edu/~tzli/cse167/fa2024/">CSE 167</a> (Fall 2024), UC San Diego.
-					</li>
-				</ul>
-			</div>
-
-			<h2 id="projects">Open Source Projects</h2>
-			<hr style="margin-top: -15px">
-
-			<div style="display: flex; align-items: flex-start; gap: 15px;">
-				<div style="flex: 1; padding: 5px">
-					<a href="https://github.com/iveevi/javelin">
-						<b style="font-size: larger;">Javelin</b>
-					</a>
-					<br>
-					Just-in-time shader programming directly
-					within C++ for Vulkan applications,
-					using metaprogramming and operator
-					overloading.
-					<br>
-					<img src="media/javelin.svg" style="width: 80%; border-radius: 10px; border: 2px solid #4d604b; margin-top: 10px;">
-				</div>
-				<div style="flex: 1; padding: 5px">
-					<a href="https://github.com/iveevi/kobra">
-						<b style="font-size: larger;">Kobra</b>
-					</a>
-					<br>
-					Research-oriented rendering engine
-					written in C++ and using Vulkan, with
-					implementations for modern algorithms
-					like ReSTIR.
-					<br>
-					<img src="media/bathroom.png" style="width: 60%; border-radius: 10px; border: 2px solid #4d604b; margin-top: 10px;">
-				</div>
-			</div>
-
-			<div style="display: flex; align-items: flex-start; gap: 15px; margin-top: 15px;">
-				<div style="flex: 1; padding: 5px">
-					<a href="https://github.com/iveevi/zhetapi">
-						<b style="font-size: larger;">Zhetapi</b>
-					</a>
-					<br>
-					Machine learning and numerical analysis
-					library written in C++ along with a
-					Python-like scripting language to
-					promote usability.
-					<br>
-					<img src="media/zhetapi_logo.svg" style="width: 50%; margin-top: 10px;">
-				</div>
-				<div style="flex: 1; padding: 5px">
-					<a href="https://github.com/iveevi/littlevk">
-						<b style="font-size: larger;">littlevk</b>
-					</a>
-					<br>
-					Lightweight single-header C++20 wrapper
-					for Vulkan to reduce boilerplate code in
-					graphics applications.
-					<br>
-					<img src="media/littlevk.png" style="width: 70%; border-radius: 10px; border: 2px solid #4d604b; margin-top: 10px;">
-				</div>
-			</div>
-
-			<div style="display: flex; align-items: flex-start; gap: 15px; margin-top: 15px;">
-				<div style="flex: 1; padding: 5px">
-					<a href="https://github.com/iveevi/smake">
-						<b style="font-size: larger;">SMake</b>
-					</a>
-					<br>
-					User-friendly build system for quickly
-					configuring, building, and running C/C++
-					projects.
-					<br>
-					<img src="media/smake.svg" style="width: 50%; margin-top: 10px;">
-				</div>
-				<div style="flex: 1; padding: 5px">
-					<a href="https://github.com/iveevi/metacpp">
-						<b style="font-size: larger;">metacpp</b>
-					</a>
-					<br>
-					Evaluating simple Lisp programs at
-					compile-time in C++ using template
-					metaprogramming.
-					<br>
-					<img src="media/metacpp.png" style="width: 50%; margin-top: 10px;">
-				</div>
-			</div>
-
-			<div style="display: flex; align-items: flex-start; gap: 15px; margin-top: 15px;">
-				<div style="flex: 1; padding: 5px">
-					<a href="https://github.com/iveevi/tuicpp">
-						<b style="font-size: larger;">tuicpp</b>
-					</a>
-					<br>
-					Wrapper library for
-					<a href="https://en.wikipedia.org/wiki/Ncurses">ncurses</a>
-					that offers intuitive abstractions for
-					common constructs such as text windows,
-					prompts, and tables.
-					<br>
-					<img src="media/editor_window.gif" style="width: 80%; border-radius: 10px; border: 2px solid #4d604b; margin-top: 10px;">
-				</div>
-				<div style="flex: 1; padding: 5px">
-					<a href="https://github.com/iveevi/murphy">
-						<b style="font-size: larger;">Murphy</b>
-					</a>
-					<br>
-					Transforming curves to match arbitrary
-					silhouettes using differentiable
-					rasterization.
-					<br>
-					<img src="media/teaser.gif" style="width: 50%; border-radius: 10px; border: 2px solid #4d604b; margin-top: 10px;">
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
-
+	</body>
 </html>
