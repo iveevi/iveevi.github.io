@@ -82,8 +82,14 @@
 
 			hr {
 				width: 100%;
-				color: black;
+				border: 0;
+				height: 2px;
+				background-color: #2988dc;
 				margin-top: -10px;
+			}
+
+			h2 {
+				color: #2988dc;
 			}
 			
 			.right img {
@@ -150,12 +156,54 @@
 			.glsl::before { content: "GLSL"; }
 			.python::before { content: "Python"; }
 
+			/* TODO: generate from hue palette */
 			.cpp { background-color: lightsalmon; }
 			.vulkan { background-color: lightgreen; }
 			.cuda { background-color: lightblue; }
 			.cmake { background-color: gold; }
 			.glsl { background-color: violet; }
 			.python { background-color: lavender; }
+
+			/* Skill bars */
+			.bar-container {
+				width: 500px; /* Adjust as needed */
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+				justify-content: space-between;
+			}
+			.bar-wrapper {
+				width: calc(50% - 5px); /* Two bars per row */
+				position: relative;
+			}
+			.bar {
+				position: relative;
+				height: 30px;
+				border-radius: 5px;
+				background-color: #e3edf7; /* Light background */
+				overflow: hidden;
+			}
+			.bar::before {
+				content: attr(data-label); /* Dynamically insert text */
+				position: absolute;
+				left: 10px;
+				top: 50%;
+				transform: translateY(-50%);
+				font-weight: bold;
+				color: black;
+			}
+			.fill {
+				height: 100%;
+				border-radius: 5px;
+			}
+			.proficiency {
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				transform: translateY(-50%);
+				color: black;
+				font-style: italic;
+			}
 		</style>
 	</head>
 
@@ -226,9 +274,24 @@
 					<h2>Contact</h2>
 					<hr>
 					<div class="section-content">
-						<h3 class="icon-heading"><i class="fa-fw fa-brands fa-github"></i>GitHub</h3>
-						<h3 class="icon-heading"><i class="fa-fw fa-brands fa-linkedin"></i>LinkedIn</h3>
-						<h3 class="icon-heading"><i class="fa-fw fa-solid fa-envelope"></i>Email</h3>
+						<a href="https://github.com/iveevi">
+							<h3 class="icon-heading">
+								<i class="fa-fw fa-brands fa-github"></i>
+								GitHub
+							</h3>
+						</a>
+						<a href="https://www.linkedin.com/in/venkataram-sivaram-65a36a226">
+							<h3 class="icon-heading">
+								<i class="fa-fw fa-brands fa-linkedin"></i>
+								LinkedIn
+							</h3>
+						</a>
+						<a href="mailto:veskimo123@gmail.com">
+							<h3 class="icon-heading">
+								<i class="fa-fw fa-solid fa-envelope"></i>
+								Email
+							</h3>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -406,141 +469,200 @@
 				</h2>
 				<hr>
 				<div class="section-content">
-					<div class="experience-header">
-						<div class="logo-section">
-							<img src="media/projects/Howler.png">
-						</div>
-						<div class="experience-title">
-							<h3>Javelin</h3>
-							<div style="max-width: 500px;">
-								Just-in-time shader programming directly within C++ for Vulkan applications, using metaprogramming and operator overloading. 
+					<h3 class="icon-heading"><i class="fa-fw fa-solid fa-diagram-project"></i>Open Source</h3>
+					<div class="section-content">
+						<div class="experience-header">
+							<div class="logo-section">
+								<img src="media/projects/Howler.png">
 							</div>
-							<div class="tag-section">
-								<span class="tag cpp"></span>
-								<span class="tag vulkan"></span>
-								<span class="tag glsl"></span>
-								<span class="tag cmake"></span>
-							</div>
-						</div>
-					</div>
-					<div class="experience-header">
-						<div class="logo-section">
-							<img src="media/projects/Howler.png">
-						</div>
-						<div class="experience-title">
-							<h3>Howler</h3>
-							<div style="max-width: 500px;">
-								Light-weight logging and error reporting system.
-							</div>
-							<div class="tag-section">
-								<span class="tag cpp"></span>
-							</div>
-						</div>
-					</div>
-					<div class="experience-header">
-						<div class="logo-section">
-							<img src="media/projects/Howler.png">
-						</div>
-						<div class="experience-title">
-							<h3>Kobra</h3>
-							<div style="max-width: 500px;">
-								Research-oriented rendering engine written in C++ and using Vulkan, with implementations for modern algorithms like ReSTIR.
-								<br>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/javelin"><h3>Javelin</h3></a>
+								<div style="max-width: 500px;">
+									Just-in-time shader programming directly within C++ for Vulkan applications, using metaprogramming and operator overloading. 
+								</div>
 								<div class="tag-section">
 									<span class="tag cpp"></span>
 									<span class="tag vulkan"></span>
-									<span class="tag cuda"></span>
 									<span class="tag glsl"></span>
 									<span class="tag cmake"></span>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="experience-header">
-						<div class="logo-section">
-							<img src="media/projects/Howler.png">
-						</div>
-						<div class="experience-title">
-							<h3>littlevk</h3>
-							<div style="max-width: 500px;">
-								Lightweight single-header C++20 wrapper for Vulkan to reduce boilerplate code in graphics applications. 
-								<br>
+						<div class="experience-header">
+							<div class="logo-section">
+								<img src="media/projects/Howler.png">
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/howler"><h3>Howler</h3></a>
+								<div style="max-width: 500px;">
+									Light-weight logging and error reporting system.
+								</div>
 								<div class="tag-section">
 									<span class="tag cpp"></span>
-									<span class="tag vulkan"></span>
+								</div>
+							</div>
+						</div>
+						<div class="experience-header">
+							<div class="logo-section">
+								<img src="media/projects/Howler.png">
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/nabu"><h3>Nabu</h3></a>
+								<div style="max-width: 500px;">
+									Compile-time lexing and grammar generator, while easily integrating with application types.
+								</div>
+								<div class="tag-section">
+									<span class="tag cpp"></span>
+								</div>
+							</div>
+						</div>
+						<div class="experience-header">
+							<div class="logo-section">
+								<img src="media/projects/Howler.png">
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/kobra"><h3>Kobra</h3></a>
+								<div style="max-width: 500px;">
+									Research-oriented rendering engine written in C++ and using Vulkan, with implementations for modern algorithms like ReSTIR.
+									<br>
+									<div class="tag-section">
+										<span class="tag cpp"></span>
+										<span class="tag vulkan"></span>
+										<span class="tag cuda"></span>
+										<span class="tag glsl"></span>
+										<span class="tag cmake"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="experience-header">
+							<div class="logo-section">
+								<img src="media/projects/Howler.png">
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/littlevk"><h3>littlevk</h3></a>
+								<div style="max-width: 500px;">
+									Lightweight single-header C++20 wrapper for Vulkan to reduce boilerplate code in graphics applications. 
+									<br>
+									<div class="tag-section">
+										<span class="tag cpp"></span>
+										<span class="tag vulkan"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="experience-header">
+							<div class="logo-section">
+								<img src="media/projects/Howler.png">
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/zhetapi"><h3>Zhetapi</h3></a>
+								<div style="max-width: 500px;">
+									Machine learning and numerical analysis library written in C++ along with a Python-like scripting language to promote usability. 
+									<div class="tag-section">
+										<span class="tag cpp"></span>
+										<span class="tag cuda"></span>
+										<span class="tag cmake"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="experience-header">
+							<div class="logo-section">
+								<img src="media/projects/Howler.png">
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/smake"><h3>SMake</h3></a>
+								<div style="max-width: 500px;">
+									User-friendly build system for quickly configuring, building, and running C/C++ projects.
+								</div>
+								<div class="tag-section">
+									<span class="tag python"></span>
+								</div>
+							</div>
+						</div>
+						<div class="experience-header">
+							<div class="logo-section">
+								<img src="media/projects/Howler.png">
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/metacpp"><h3>metacpp</h3></a>
+								<div style="max-width: 500px;">
+									User-friendly build system for quickly configuring, building, and running C/C++ projects. Evaluating simple Lisp programs at compile-time in C++ using template metaprogramming.
+								</div>
+								<div class="tag-section">
+									<span class="tag cpp"></span>
+								</div>
+							</div>
+						</div>
+						<div class="experience-header">
+							<div class="logo-section">
+								<img src="media/projects/Howler.png">
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/tuicpp"><h3>tuicpp</h3></a>
+								<div style="max-width: 500px;">
+									Wrapper library for ncurses that offers intuitive abstractions for common constructs such as text windows, prompts, and tables.
+								</div>
+								<div class="tag-section">
+									<span class="tag cpp"></span>
+								</div>
+							</div>
+						</div>
+						<div class="experience-header">
+							<div class="logo-section">
+								<img src="media/projects/Howler.png">
+							</div>
+							<div class="experience-title">
+								<a href="https://github.com/iveevi/murphy"><h3>Murphy</h3></a>
+								<div style="max-width: 500px;">
+									Transforming curves to match arbitrary silhouettes using differentiable rasterization.
+								</div>
+								<div class="tag-section">
+									<span class="tag cpp"></span>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="experience-header">
-						<div class="logo-section">
-							<img src="media/projects/Howler.png">
-						</div>
-						<div class="experience-title">
-							<h3>Zhetapi</h3>
-							<div style="max-width: 500px;">
-								Machine learning and numerical analysis library written in C++ along with a Python-like scripting language to promote usability. 
-								<div class="tag-section">
-									<span class="tag cpp"></span>
-									<span class="tag cuda"></span>
-									<span class="tag cmake"></span>
+					
+					<h3 class="icon-heading"><i class="fa-fw fa-solid fa-gears"></i>Technical Skills</h3>
+					<div class="section-content" style="display: flex; justify-content: center;">
+						<div class="bar-container">
+							<div class="bar-wrapper">
+								<div class="bar" data-label="C++">
+									<div class="fill" style="width: 100%; background-color: lightsalmon;"></div>
+									<div class="proficiency">Advanced</div>
 								</div>
 							</div>
-						</div>
-					</div>
-					<div class="experience-header">
-						<div class="logo-section">
-							<img src="media/projects/Howler.png">
-						</div>
-						<div class="experience-title">
-							<h3>SMake</h3>
-							<div style="max-width: 500px;">
-								User-friendly build system for quickly configuring, building, and running C/C++ projects.
+							<div class="bar-wrapper">
+								<div class="bar" data-label="Python">
+									<div class="fill" style="width: 85%; background-color: lavender;"></div>
+									<div class="proficiency">Proficient</div>
+								</div>
 							</div>
-							<div class="tag-section">
-								<span class="tag python"></span>
+							<div class="bar-wrapper">
+								<div class="bar" data-label="CUDA">
+									<div class="fill" style="width: 75%; background-color: lightblue;"></div>
+									<div class="proficiency">Proficient</div>
+								</div>
 							</div>
-						</div>
-					</div>
-					<div class="experience-header">
-						<div class="logo-section">
-							<img src="media/projects/Howler.png">
-						</div>
-						<div class="experience-title">
-							<h3>metacpp</h3>
-							<div style="max-width: 500px;">
-								User-friendly build system for quickly configuring, building, and running C/C++ projects. Evaluating simple Lisp programs at compile-time in C++ using template metaprogramming.
+							<div class="bar-wrapper">
+								<div class="bar" data-label="Vulkan">
+									<div class="fill" style="width: 75%; background-color: lightgreen;"></div>
+									<div class="proficiency">Proficient</div>
+								</div>
 							</div>
-							<div class="tag-section">
-								<span class="tag cpp"></span>
+							<div class="bar-wrapper">
+								<div class="bar" data-label="CMake">
+									<div class="fill" style="width: 85%; background-color: gold;"></div>
+									<div class="proficiency">Proficient</div>
+								</div>
 							</div>
-						</div>
-					</div>
-					<div class="experience-header">
-						<div class="logo-section">
-							<img src="media/projects/Howler.png">
-						</div>
-						<div class="experience-title">
-							<h3>tuicpp</h3>
-							<div style="max-width: 500px;">
-								Wrapper library for ncurses that offers intuitive abstractions for common constructs such as text windows, prompts, and tables.
-							</div>
-							<div class="tag-section">
-								<span class="tag cpp"></span>
-							</div>
-						</div>
-					</div>
-					<div class="experience-header">
-						<div class="logo-section">
-							<img src="media/projects/Howler.png">
-						</div>
-						<div class="experience-title">
-							<h3>Murphy</h3>
-							<div style="max-width: 500px;">
-								Transforming curves to match arbitrary silhouettes using differentiable rasterization.
-							</div>
-							<div class="tag-section">
-								<span class="tag cpp"></span>
+							<div class="bar-wrapper">
+								<div class="bar" data-label="GLSL">
+									<div class="fill" style="width: 90%; background-color: violet;"></div>
+									<div class="proficiency">Advanced</div>
+								</div>
 							</div>
 						</div>
 					</div>
