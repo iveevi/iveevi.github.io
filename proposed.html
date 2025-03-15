@@ -135,6 +135,50 @@
 			.logo-section img {
 				height: 50px;
 			}
+			
+			/* Research sections */
+			.research-header {
+				display: flex;
+				align-items: flex-start;
+				padding: 10px;
+			}
+
+			.research-section {
+				min-width: 225px;
+				margin: 5px;
+				margin-bottom: 25px;
+				display: flex;
+				justify-content: center;
+			}
+
+			.research-section img {
+				width: 200px;
+				border-radius: 10px;
+				box-shadow: 5px 5px 15px #2988dc77;
+			}
+
+			/* Research authors */
+			.author-list {
+				display: flex;
+				flex-wrap: wrap;  /* Allows wrapping to new lines */
+				gap: 8px;         /* Adjusts spacing between rows and columns */
+				padding-right: 50px;
+			}
+
+			.author {
+				display: inline-block;
+				background-color: #2988dc33;
+				padding: 5px;
+				border-radius: 5px;
+			}
+
+			.author-self {
+				display: inline-block;
+				background-color: #2988dc77;
+				padding: 5px;
+				border-radius: 5px;
+				font-weight: bold;
+			}
 
 			/* Skill tags */
 			.tag-section {
@@ -336,7 +380,7 @@
 					<i class="fa-fw fa-solid fa-graduation-cap"></i>Education
 				</h2>
 				<hr>
-				<div class="section-content">
+				<div class="section-content" style="padding-top: 10px;">
 					<div class="experience-header">
 						<div class="logo-section">
 							<img src="media/logos/UCSD.svg">
@@ -355,7 +399,7 @@
 					<i class="fa-fw fa-solid fa-trophy"></i>Awards
 				</h2>
 				<hr>
-				<div class="section-content">
+				<div class="section-content" style="padding-top: 10px;">
 					<div class="experience-header">
 						<div class="logo-section">
 							<img src="media/logos/CRA.png">
@@ -392,11 +436,57 @@
 					<i class="fa-fw fa-solid fa-flask"></i>Research
 				</h2>
 				<hr>
-				<h3 class="icon-heading">
-					<div class="section-content">
-						<i class="fa-fw fa-solid fa-hammer"></i>Under construction!
+				<div class="section-content" style="padding-top: 10px;">
+					<div class="research-header">
+						<div class="research-section">
+							<img src="media/research/geosplat.jpg"  style="width: 180px; padding: 10px;">
+						</div>
+						<div class="experience-title" style="padding-top: 10px;">
+							<h3>Geometry Field Splatting</h3>
+							<p class="experience-period">CVPR 2025</p>
+							<br>
+							<div class="author-list">
+								<span class="author">Kaiwen Jiang</span>
+								<span class="author-self">Venkataram Sivaram</span>
+								<span class="author">Cheng Peng</span>
+								<span class="author">Ravi Ramamoorthi</span>
+							</div>
+						</div>
 					</div>
-				</h3>
+					<div class="research-header">
+						<div class="research-section">
+							<img src="media/research/ngf.jpg" style="width: 180px; padding: 10px;">
+						</div>
+						<div class="experience-title" style="padding-top: 10px;">
+							<h3>Neural Geometry Fields</h3>
+							<p class="experience-period">ACM SIGGRAPH 2024 Conference Track</p>
+							<br>
+							<div class="author-list">
+								<span class="author-self">Venkataram Sivaram</span>
+								<span class="author">Tzu-Mao Li</span>
+								<span class="author">Ravi Ramamoorthi</span>
+							</div>
+						</div>
+					</div>
+					<div class="research-header">
+						<div class="research-section">
+							<img src="media/research/restir-dr.jpg">
+						</div>
+						<div class="experience-title" style="padding-top: 10px;">
+							<h3>Parameter-Space ReSTIR</h3>
+							<p class="experience-period">ACM SIGGRAPH 2023 Conference Track</p>
+							<br>
+							<div class="author-list">
+								<span class="author">Wesley Chang</span>
+								<span class="author-self">Venkataram Sivaram</span>
+								<span class="author">Derek Nowrouzezahrai</span>
+								<span class="author">Toshiya Hachisuka</span>
+								<span class="author">Ravi Ramamoorthi</span>
+								<span class="author">Tzu-Mao Li</span>
+							</div>
+						</div>
+					</div>
+				</div>
 
 				<!-- TODO: treemap of interests -->
 				
