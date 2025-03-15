@@ -163,6 +163,7 @@
 				flex-wrap: wrap;  /* Allows wrapping to new lines */
 				gap: 8px;         /* Adjusts spacing between rows and columns */
 				padding-right: 50px;
+				padding-top: 10px;
 			}
 
 			.author {
@@ -247,6 +248,15 @@
 				transform: translateY(-50%);
 				color: black;
 				font-style: italic;
+			}
+
+			/* Customizing links */
+			a {
+				text-decoration: none;
+			}
+
+			a:link {
+				color: #076ec9;
 			}
 		</style>
 	</head>
@@ -442,14 +452,13 @@
 							<img src="media/research/geosplat.jpg"  style="width: 180px; padding: 10px;">
 						</div>
 						<div class="experience-title" style="padding-top: 10px;">
-							<h3>Geometry Field Splatting</h3>
+							<h3>Geometry Field Splatting with Gaussian Surfels</h3>
 							<p class="experience-period">CVPR 2025</p>
-							<br>
 							<div class="author-list">
-								<span class="author">Kaiwen Jiang</span>
+								<span class="author"><a href="https://raymondjiangkw.github.io/">Kaiwen Jiang</a></span>
 								<span class="author-self">Venkataram Sivaram</span>
 								<span class="author">Cheng Peng</span>
-								<span class="author">Ravi Ramamoorthi</span>
+								<span class="author"><a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a></span>
 							</div>
 						</div>
 					</div>
@@ -458,13 +467,12 @@
 							<img src="media/research/ngf.jpg" style="width: 180px; padding: 10px;">
 						</div>
 						<div class="experience-title" style="padding-top: 10px;">
-							<h3>Neural Geometry Fields</h3>
+							<h3>Neural Geometry Fields for Meshes</h3>
 							<p class="experience-period">ACM SIGGRAPH 2024 Conference Track</p>
-							<br>
 							<div class="author-list">
 								<span class="author-self">Venkataram Sivaram</span>
-								<span class="author">Tzu-Mao Li</span>
-								<span class="author">Ravi Ramamoorthi</span>
+								<span class="author"><a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a></span>
+								<span class="author"><a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a></span>
 							</div>
 						</div>
 					</div>
@@ -473,16 +481,15 @@
 							<img src="media/research/restir-dr.jpg">
 						</div>
 						<div class="experience-title" style="padding-top: 10px;">
-							<h3>Parameter-Space ReSTIR</h3>
+							<h3>Parameter-space ReSTIR for Differentiable and Inverse Rendering</h3>
 							<p class="experience-period">ACM SIGGRAPH 2023 Conference Track</p>
-							<br>
 							<div class="author-list">
-								<span class="author">Wesley Chang</span>
+								<span class="author"><a href="https://weschang.com/">Wesley Chang</a></span>
 								<span class="author-self">Venkataram Sivaram</span>
-								<span class="author">Derek Nowrouzezahrai</span>
-								<span class="author">Toshiya Hachisuka</span>
-								<span class="author">Ravi Ramamoorthi</span>
-								<span class="author">Tzu-Mao Li</span>
+								<span class="author"><a href="https://www.cim.mcgill.ca/~derek/">Derek Nowrouzezahrai</a></span>
+								<span class="author"><a href="https://cs.uwaterloo.ca/~thachisu/">Toshiya Hachisuka</a></span>
+								<span class="author"><a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a></span>
+								<span class="author"><a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a></span>
 							</div>
 						</div>
 					</div>
@@ -506,8 +513,10 @@
 								<div class="experience-title">
 									<h3>3D Graphics Software Intern</h3>
 									<p class="experience-period">Summer 2024</p>
-									<br>
-									Worked on the Slang project.
+									<div style="padding-top: 10px;">
+										Worked with the <a href="https://shader-slang.org/">Slang shader language</a>
+										team on embedded Slang modules, automatic differentiation, and compiler diagnostics.
+									</div>
 								</div>
 							</div>
 						</div>
