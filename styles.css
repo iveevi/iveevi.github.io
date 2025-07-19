@@ -567,6 +567,124 @@ a:hover {
 	}
 }
 
+/* Gallery carousel styles */
+.gallery-carousel {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	overflow: visible;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.carousel-container {
+	position: relative;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16/9;
+	background: none;
+}
+
+.carousel-slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.8s cubic-bezier(.4,0,.2,1);
+}
+
+.carousel-slide.active {
+	opacity: 1;
+	z-index: 1;
+}
+
+.carousel-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	border-radius: 15px;
+	box-shadow: 5px 5px 0px #80002077;
+}
+
+/* Navigation arrows */
+.carousel-nav {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(128, 0, 32, 0.8);
+	color: white;
+	border: none;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+}
+
+.carousel-nav:hover {
+	background: rgba(128, 0, 32, 1);
+	transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-nav.prev {
+	left: 20px;
+}
+
+.carousel-nav.next {
+	right: 20px;
+}
+
+/* Circle indicators */
+.carousel-indicators {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	margin-top: 14px;
+	margin-bottom: 0;
+	background: none;
+	box-shadow: none;
+	border-radius: 0;
+	padding: 0;
+}
+
+.indicator {
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.5);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border: 2px solid rgba(128, 0, 32, 0.3);
+	font-size: 1em;
+	font-weight: 600;
+	color: #800020;
+	user-select: none;
+}
+
+.indicator:hover {
+	background: rgba(255, 255, 255, 0.8);
+	transform: scale(1.2);
+}
+
+.indicator.active {
+	background: #800020;
+	border-color: #800020;
+	color: #fff;
+	transform: scale(1.2);
+}
+
 @media (max-width: 768px) {
 	.profile-section {
 		flex-direction: column;
@@ -580,5 +698,38 @@ a:hover {
 	.projects-grid {
 		grid-template-columns: 1fr;
 		gap: 15px;
+	}
+	
+	.gallery-carousel {
+		border-radius: 10px;
+	}
+	
+	.carousel-container {
+		height: 300px;
+	}
+	
+	.carousel-nav {
+		width: 40px;
+		height: 40px;
+		font-size: 14px;
+	}
+	
+	.carousel-nav.prev {
+		left: 10px;
+	}
+	
+	.carousel-nav.next {
+		right: 10px;
+	}
+	
+	.carousel-indicators {
+		margin-top: 10px;
+		gap: 8px;
+	}
+	
+	.indicator {
+		width: 18px;
+		height: 18px;
+		font-size: 0.9em;
 	}
 } 
