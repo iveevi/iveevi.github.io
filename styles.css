@@ -62,6 +62,11 @@ body {
 	opacity: 0.4;
 }
 
+.nav-link.active {
+	background-color: #800020;
+	color: white !important;
+}
+
 /* Main content */
 .main-content {
 	margin-top: 100px; /* Space for floating navigation */
@@ -206,7 +211,8 @@ hr {
 
 .project {
 	display: flex;
-	align-items: center;
+	flex-direction: column;
+	align-items: flex-start;
 	padding: 15px;
 	margin-bottom: 0;
 	border-radius: 5px;
@@ -214,6 +220,21 @@ hr {
 	box-shadow: 5px 5px 0px #80002077;
 	width: 100%;
 	box-sizing: border-box;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	min-height: 200px; /* Ensure consistent minimum height */
+}
+
+.project-content {
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
+	margin-bottom: 10px;
+	flex-grow: 1; /* Take up available space to push tags to bottom */
+}
+
+.project:hover {
+	transform: translateY(-2px);
+	box-shadow: 7px 7px 0px #80002077;
 }
 
 .project-alt {
@@ -223,20 +244,37 @@ hr {
 .project-description {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	flex: 1;
+	padding-right: 15px; /* Add margin from the right side of the box */
 }
 
 .project-description h3 {
+	margin: 0 0 10px 0;
+	padding: 0;
+	color: #800020;
+	font-size: 1.3em;
+}
+
+.project-title {
+	width: 100%;
+	margin-bottom: 10px;
+	padding-left: 105px; /* Align with the left edge of the icon (90px min-width + 15px padding-right) */
+}
+
+.project-title h3 {
 	margin: 0;
 	padding: 0;
+	color: #800020;
+	font-size: 1.3em;
 }
 
 /* Logo sections */
 .logo-section {
 	min-width: 90px;
-	padding-right: 10px;
+	padding-right: 15px;
 	display: flex;
 	justify-content: center;
+	flex-shrink: 0;
 }
 
 .logo-section img {
@@ -329,14 +367,25 @@ hr {
 /* Skill tags */
 .tag-section {
 	padding-top: 5px;
+	text-align: right;
+	margin-right: 0; /* Ensure no right margin */
+	width: 100%; /* Take full width of the project box */
+	box-sizing: border-box;
 }
 
 .tag {
-	border-radius: 5px;
-	font-weight: bold;
-	padding: 2px 10px;
-	margin-right: 5px;
+	border-radius: 12px;
+	font-weight: 500;
+	font-size: 0.8em;
+	padding: 3px 8px;
+	margin-right: 6px;
+	margin-bottom: 4px;
 	display: inline-block;
+	transition: transform 0.1s ease;
+}
+
+.tag:hover {
+	transform: scale(1.05);
 }
 
 .cpp::before { content: "C++"; }
@@ -346,13 +395,13 @@ hr {
 .glsl::before { content: "GLSL"; }
 .python::before { content: "Python"; }
 
-/* TODO: generate from hue palette */
-.cpp { background-color: lightsalmon; }
-.vulkan { background-color: lightgreen; }
-.cuda { background-color: lightblue; }
-.cmake { background-color: gold; }
-.glsl { background-color: violet; }
-.python { background-color: lavender; }
+/* Modern color palette for skill tags */
+.cpp { background-color: #FF6B6B; color: #8B0000; }
+.vulkan { background-color: #4ECDC4; color: #006666; }
+.cuda { background-color: #45B7D1; color: #003366; }
+.cmake { background-color: #96CEB4; color: #2C5530; }
+.glsl { background-color: #FFEAA7; color: #D63031; }
+.python { background-color: #DDA0DD; color: #4B0082; }
 
 /* Skill cards */
 .skills-grid {
