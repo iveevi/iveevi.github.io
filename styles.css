@@ -185,6 +185,7 @@ hr {
 	flex-direction: column;
 	justify-content: center;
 	margin-right: 20px;
+	flex: 1;
 }
 
 .experience-title h3 {
@@ -197,6 +198,35 @@ hr {
 	font-style: normal;
 	font-weight: bold;
 	color: #999;
+	white-space: nowrap;
+	flex-shrink: 0;
+}
+
+/* Ensure proper alignment for academic service flex containers */
+.experience-title > div:first-child {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Force right alignment for academic service years */
+#AcademicService .experience-period {
+	position: absolute !important;
+	right: 0 !important;
+	top: 0 !important;
+	margin: 0 !important;
+}
+
+#AcademicService .experience-title {
+	flex: 1 !important;
+	margin-right: 20px !important;
+}
+
+#AcademicService .experience-title > div:first-child {
+	position: relative !important;
+	display: block !important;
+	width: 100% !important;
 }
 
 /* Project sections */
@@ -609,6 +639,24 @@ a:hover {
 	box-shadow: 5px 5px 0px #80002077;
 }
 
+.location-label {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	background: rgba(0, 0, 0, 0.7);
+	color: white;
+	padding: 8px 12px;
+	border-radius: 8px;
+	font-size: 0.9em;
+	font-weight: 500;
+	z-index: 5;
+	backdrop-filter: blur(4px);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
 /* Navigation arrows */
 .carousel-nav {
 	position: absolute;
@@ -627,11 +675,19 @@ a:hover {
 	align-items: center;
 	justify-content: center;
 	font-size: 18px;
+	opacity: 0;
+	visibility: hidden;
 }
 
 .carousel-nav:hover {
 	background: rgba(128, 0, 32, 1);
 	transform: translateY(-50%) scale(1.1);
+}
+
+/* Show navigation arrows on carousel hover */
+.gallery-carousel:hover .carousel-nav {
+	opacity: 1;
+	visibility: visible;
 }
 
 .carousel-nav.prev {
