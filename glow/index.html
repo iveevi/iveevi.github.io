@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800">
+
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<link rel="stylesheet" href="../styles.css">
+		<title>Modeling and Rendering Glow Discharge</title>
+		<style>
+			@font-face {
+				font-family: 'IosevkaTerm';
+				src: url('../fonts/iosevka-term-regular.ttf') format('truetype');
+				font-weight: 400;
+				font-style: normal;
+			}
+			
+			@font-face {
+				font-family: 'IosevkaTerm';
+				src: url('../fonts/iosevka-term-italic.ttf') format('truetype');
+				font-weight: 400;
+				font-style: italic;
+			}
+			
+			@font-face {
+				font-family: 'IosevkaTerm';
+				src: url('../fonts/iosevka-term-bold.ttf') format('truetype');
+				font-weight: 700;
+				font-style: normal;
+			}
+			
+			@font-face {
+				font-family: 'IosevkaTerm';
+				src: url('../fonts/iosevka-term-bolditalic.ttf') format('truetype');
+				font-weight: 700;
+				font-style: italic;
+			}
+			
+			pre, code {
+				font-family: 'IosevkaTerm', monospace !important;
+			}
+			.bibtex-content {
+				font-family: 'IosevkaTerm', monospace !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- Navigation Bar -->
+		<nav class="navigation">
+			<div class="nav-content">
+				<a href="../index.html" class="nav-link">
+					<i class="fa-solid fa-home"></i> Home
+				</a>
+				<a href="#Abstract" class="nav-link">
+					<i class="fa-solid fa-align-left"></i> Abstract
+				</a>
+				<a href="#Video" class="nav-link">
+					<i class="fa-solid fa-play"></i> Video
+				</a>
+				<a href="#BibTeX" class="nav-link">
+					<i class="fa-solid fa-code"></i> BibTeX
+				</a>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="main-content">
+				<!-- Paper Title and Authors -->
+				<div class="section" id="Paper">
+					<div class="section-header">
+						<h2 style="text-align: center; margin-bottom: 15px;">
+							Modeling and Rendering Glow Discharge
+						</h2>
+						<div style="text-align: center; margin-bottom: 15px;">
+							<div style="color: #666; font-weight: bold;">
+								ACM SIGGRAPH 2025 (Conference Track)
+							</div>
+						</div>
+
+						<div style="text-align: center; margin-bottom: 20px;">
+							<div style="border-top: 1px solid #b34747; border-bottom: 1px solid #b34747; padding: 15px 0; margin-bottom: 15px; max-width: 800px; margin-left: auto; margin-right: auto;">
+								<div style="margin-bottom: 15px;">
+									<span style="font-weight: bold;">Venkataram Sivaram<sup>1</sup></span> <span style="color: #ccc; margin: 0 4px;">/</span> <span><a href="https://cseweb.ucsd.edu/~ravir/" target="_blank" style="color: #b34747; text-decoration: none;">Ravi Ramamoorthi<sup>1</sup></a></span> <span style="color: #ccc; margin: 0 4px;">/</span> <span><a href="https://cseweb.ucsd.edu/~tzli/" target="_blank" style="color: #b34747; text-decoration: none;">Tzu-Mao Li<sup>1</sup></a></span>
+								</div>
+								<div style="color: #666; font-size: 0.9em;">
+									<sup>1</sup> UC San Diego
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Teaser Image -->
+				<div class="section" id="Teaser">
+					<div class="section-content" style="display: flex; justify-content: center;">
+						<div style="text-align: center; max-width: 800px;">
+							<img src="teaser.png" alt="Neural Geometry Fields Teaser" style="max-width: 100%; height: auto; border-radius: 5px;">
+							<div style="background-color: #f6f0f0; border-radius: 5px; box-shadow: 5px 5px 0px #80002077; padding: 8px 15px; display: flex; justify-content: space-evenly; margin-top: 15px;">
+								<a href="pdf/main.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; color: #b34747; text-decoration: none; font-weight: 500; font-size: 0.9em; transition: opacity 0.2s;">
+									<i class="fas fa-file-pdf"></i>
+									<span>Paper</span>
+								</a>
+								<a href="pdf/supplementary.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; color: #b34747; text-decoration: none; font-weight: 500; font-size: 0.9em; transition: opacity 0.2s;">
+									<i class="fas fa-file-pdf"></i>
+									<span>Supplementary</span>
+								</a>
+								<a target="_blank" style="display: inline-flex; align-items: center; gap: 6px; color: #b34747; text-decoration: none; font-weight: 500; font-size: 0.9em; transition: opacity 0.2s;">
+									<i class="fab fa-github"></i>
+									<span>Coming Soon!</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Abstract -->
+				<div class="section" id="Abstract">
+					<div class="section-header">
+						<h2 style="text-align: left; margin-bottom: 15px;">
+							Abstract
+						</h2>
+					</div>
+					<div class="section-content">
+						<div class="section-content-box" style="box-shadow: 5px 5px 0px #80002077;">
+							<p style="line-height: 1.6; margin: 0;">
+								Previous research in material models for surface and volume scattering has enabled highly realistic scenes in modern rendering systems. However, there has been comparatively little study of light sources in computer graphics despite their critical importance in illuminating and bringing life into these scenes. In the real world, photons are emitted through numerous physical processes including combustion, incandescence, and fluorescence. The qualities of light produced in each of these processes are unique to their physics, making them interesting to study individually.
+								<br><br>
+								In this work, we propose a model for glow discharge, a form of light-emitting electrostatic discharge commonly found in Neon lights and gas discharge lamps. We take inspiration from works in computational physics and develop an efficient point-wise solver for the emission due to glow discharge suitable for traditional volume rendering systems. Our model distills the complex mechanics of this process into a set of flexible and interpretable parameters. We demonstrate that our model can replicate the visual qualities of glow discharge under varying gases.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Video
+				<div class="section" id="Video">
+					<div class="section-header">
+						<h2 style="text-align: left; margin-bottom: 15px;">
+							Supplementary Video
+						</h2>
+					</div>
+					<div class="section-content">
+						<div class="section-content-box" style="box-shadow: 5px 5px 0px #80002077;">
+							<div style="text-align: center; width: 100%;">
+								<div style="position: relative; width: 100%; padding-bottom: 56.25%; border-radius: 5px; overflow: hidden;">
+									<iframe src="https://www.youtube.com/embed/kGrM249s5RY?si=qBnXDlGjZ6WUOfPw" title="Neural Geometry Fields Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 5px;"></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> -->
+
+				<!-- BibTeX -->
+				<div class="section" id="BibTeX">
+					<div class="section-header">
+						<h2 style="text-align: left; margin-bottom: 15px;">
+							BibTeX
+						</h2>
+					</div>
+					<div class="section-content">
+						<div class="section-content-box" style="box-shadow: 5px 5px 0px #80002077;">
+							<div class="bibtex-content" style="padding: 20px; border-radius: 5px; overflow-x: auto; margin: 0; font-size: 0.9em; line-height: 1.4; white-space: pre-wrap;">@inproceedings{10.1145/3721238.3730674,
+  author = {Edavamadathil Sivaram, Venkataram and Ramamoorthi, Ravi and Li, Tzu-Mao},
+  title = {Modeling and Rendering Glow Discharge},
+  year = {2025},
+  isbn = {9798400715402},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3721238.3730674},
+  doi = {10.1145/3721238.3730674},
+  booktitle = {Proceedings of the Special Interest Group on Computer Graphics and Interactive Techniques Conference Conference Papers},
+  articleno = {38},
+  numpages = {11},
+  series = {SIGGRAPH Conference Papers '25}
+}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
