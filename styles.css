@@ -196,8 +196,8 @@ hr {
 .experience-period {
 	margin: 0 0 0 auto;
 	font-style: normal;
-	font-weight: bold;
-	color: #999;
+	font-weight: 600;
+	color: #000;
 	white-space: nowrap;
 	flex-shrink: 0;
 }
