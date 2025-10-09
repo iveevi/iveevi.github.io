@@ -1,0 +1,36 @@
+@font-face {
+	font-family: 'IosevkaTerm';
+	src: url('fonts/iosevka-term/iosevka-term-regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'IosevkaTerm';
+	src: url('fonts/iosevka-term/iosevka-term-italic.ttf') format('truetype');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'IosevkaTerm';
+	src: url('fonts/iosevka-term/iosevka-term-bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'IosevkaTerm';
+	src: url('fonts/iosevka-term/iosevka-term-bolditalic.ttf') format('truetype');
+	font-weight: 700;
+	font-style: italic;
+}
+
+pre, code {
+	font-family: 'IosevkaTerm', monospace !important;
+}
+
+.bibtex-content {
+	font-family: 'IosevkaTerm', monospace !important;
+}
+
