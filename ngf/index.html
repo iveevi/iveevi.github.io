@@ -1,133 +1,85 @@
 <!DOCTYPE html>
 
 <html>
-	<head>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Neural Geometry Fields for Meshes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Roboto:wght@500;700&display=swap">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../paper-styles.css">
+  </head>
 
-		
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-		<link rel="stylesheet" href="../styles.css">
-		<link rel="stylesheet" href="../paper-styles.css">
-		<title>Neural Geometry Fields for Meshes</title>
-	</head>
+  <body>
+    <nav class="navigation">
+      <div class="nav-content">
+        <a href="../index.html#Research" class="nav-link">Home</a>
+        <a href="#Abstract" class="nav-link">Abstract</a>
+        <a href="#Video" class="nav-link">Video</a>
+        <a href="#BibTeX" class="nav-link">BibTeX</a>
+      </div>
+    </nav>
 
-	<body>
-		<!-- Navigation Bar -->
-		<nav class="navigation">
-			<div class="nav-content">
-				<a href="../index.html" class="nav-link">
-					<i class="fa-solid fa-home"></i> Home
-				</a>
-				<a href="#Abstract" class="nav-link">
-					<i class="fa-solid fa-align-left"></i> Abstract
-				</a>
-				<a href="#Video" class="nav-link">
-					<i class="fa-solid fa-play"></i> Video
-				</a>
-				<a href="#BibTeX" class="nav-link">
-					<i class="fa-solid fa-code"></i> BibTeX
-				</a>
-			</div>
-		</nav>
+    <div class="container">
+      <div class="main-content">
+        <div class="section" id="Paper">
+          <div class="section-content">
+            <div class="paper-hero">
+              <h1 class="paper-title">Neural Geometry Fields for Meshes</h1>
+              <div class="paper-authors">
+                <strong>Venkataram Sivaram</strong> / <a href="https://cseweb.ucsd.edu/~ravir/" target="_blank" rel="noopener">Ravi Ramamoorthi</a> / <a href="https://cseweb.ucsd.edu/~tzli/" target="_blank" rel="noopener">Tzu-Mao Li</a>
+              </div>
+              <div class="paper-venue">ACM SIGGRAPH 2024 (Conference Track)</div>
+              <div class="paper-links">
+                <a class="paper-link" href="pdf/main.pdf" target="_blank" rel="noopener">Paper</a>
+                <a class="paper-link" href="pdf/supplementary.pdf" target="_blank" rel="noopener">Supplementary</a>
+                <a class="paper-link" href="https://github.com/iveevi/ngf" target="_blank" rel="noopener">Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-		<div class="container">
-			<div class="main-content">
-				<!-- Paper Title and Authors -->
-				<div class="section" id="Paper">
-					<div class="section-header">
-						<h2 style="text-align: center; margin-bottom: 15px;">
-							Neural Geometry Fields for Meshes
-						</h2>
-						<div style="text-align: center; margin-bottom: 15px;">
-							<div style="color: #666; font-weight: bold;">
-								ACM SIGGRAPH 2024 (Conference Track)
-							</div>
-						</div>
+        <div class="section" id="Teaser">
+          <div class="section-content paper-teaser">
+            <img src="teaser.png" alt="Neural Geometry Fields for Meshes teaser" class="paper-image">
+          </div>
+        </div>
 
-						<div style="text-align: center; margin-bottom: 20px;">
-							<div style="border-top: 1px solid #b34747; border-bottom: 1px solid #b34747; padding: 15px 0; margin-bottom: 15px; max-width: 800px; margin-left: auto; margin-right: auto;">
-								<div style="margin-bottom: 15px;">
-									<span style="font-weight: bold;">Venkataram Sivaram<sup>1</sup></span> <span style="color: #ccc; margin: 0 4px;">/</span> <span><a href="https://cseweb.ucsd.edu/~ravir/" target="_blank" style="color: #b34747; text-decoration: none;">Ravi Ramamoorthi<sup>1</sup></a></span> <span style="color: #ccc; margin: 0 4px;">/</span> <span><a href="https://cseweb.ucsd.edu/~tzli/" target="_blank" style="color: #b34747; text-decoration: none;">Tzu-Mao Li<sup>1</sup></a></span>
-								</div>
-								<div style="color: #666; font-size: 0.9em;">
-									<sup>1</sup> UC San Diego
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+        <div class="section" id="Abstract">
+          <div class="section-header">
+            <h2 style="text-align: left; margin-bottom: 15px;">Abstract</h2>
+          </div>
+          <div class="section-content">
+            <div class="paper-abstract">
+              <p>
+                Recent work on using neural fields to represent surfaces has resulted in significant improvements in representational capability and computational efficiency. However, to our knowledge, most existing work has focused on implicit representations such as signed distance fields or volumes, and little work has explored their application to discrete surface geometry, i.e., 3D meshes, limiting the applicability of neural surface representations.
+                <br><br>
+                We present Neural Geometry Fields, a neural representation for discrete surface geometry represented by triangle meshes. Our idea is to represent the target surface using a coarse set of quadrangular patches, and add surface details using coordinate neural networks by displacing the patches. We then extract a traditional triangular mesh from a neural geometry field instance by sampling the displacement. We show that our representation excels in mesh compression, where it significantly reduces the memory footprint of meshes without compromising on surface details.
+              </p>
+            </div>
+          </div>
+        </div>
 
-				<!-- Teaser Image -->
-				<div class="section" id="Teaser">
-					<div class="section-content" style="display: flex; justify-content: center;">
-						<div style="text-align: center; max-width: 800px;">
-							<img src="teaser.png" alt="Neural Geometry Fields Teaser" style="max-width: 100%; height: auto; border-radius: 5px;">
-							<div style="background-color: #f6f0f0; border-radius: 5px; box-shadow: 5px 5px 0px #80002077; padding: 8px 15px; display: flex; justify-content: space-evenly; margin-top: 15px;">
-								<a href="pdf/main.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; color: #b34747; text-decoration: none; font-weight: 500; font-size: 0.9em; transition: opacity 0.2s;">
-									<i class="fas fa-file-pdf"></i>
-									<span>Paper</span>
-								</a>
-								<a href="pdf/supplementary.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; color: #b34747; text-decoration: none; font-weight: 500; font-size: 0.9em; transition: opacity 0.2s;">
-									<i class="fas fa-file-pdf"></i>
-									<span>Supplementary</span>
-								</a>
-								<a href="https://github.com/iveevi/ngf" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; color: #b34747; text-decoration: none; font-weight: 500; font-size: 0.9em; transition: opacity 0.2s;">
-									<i class="fab fa-github"></i>
-									<span>Code</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
+        <div class="section" id="Video">
+          <div class="section-header">
+            <h2 style="text-align: left; margin-bottom: 15px;">Supplementary Video</h2>
+          </div>
+          <div class="section-content">
+            <div class="paper-video">
+              <iframe src="https://www.youtube.com/embed/kGrM249s5RY?si=qBnXDlGjZ6WUOfPw" title="Neural Geometry Fields Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
 
-				<!-- Abstract -->
-				<div class="section" id="Abstract">
-					<div class="section-header">
-						<h2 style="text-align: left; margin-bottom: 15px;">
-							Abstract
-						</h2>
-					</div>
-					<div class="section-content">
-						<div class="section-content-box" style="box-shadow: 5px 5px 0px #80002077;">
-							<p style="line-height: 1.6; margin: 0;">
-								Recent work on using neural fields to represent surfaces has resulted in significant improvements in representational capability and computational efficiency. However, to our knowledge, most existing work has focused on implicit representations such as signed distance fields or volumes, and little work has explored their application to discrete surface geometry, i.e., 3D meshes, limiting the applicability of neural surface representations.
-								<br><br>
-								We present Neural Geometry Fields, a neural representation for discrete surface geometry represented by triangle meshes. Our idea is to represent the target surface using a coarse set of quadrangular patches, and add surface details using coordinate neural networks by displacing the patches. We then extract a traditional triangular mesh from a neural geometry field instance by sampling the displacement. We show that our representation excels in mesh compression, where it significantly reduces the memory footprint of meshes without compromising on surface details.
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<!-- Video -->
-				<div class="section" id="Video">
-					<div class="section-header">
-						<h2 style="text-align: left; margin-bottom: 15px;">
-							Supplementary Video
-						</h2>
-					</div>
-					<div class="section-content">
-						<div class="section-content-box" style="box-shadow: 5px 5px 0px #80002077;">
-							<div style="text-align: center; width: 100%;">
-								<div style="position: relative; width: 100%; padding-bottom: 56.25%; border-radius: 5px; overflow: hidden;">
-									<iframe src="https://www.youtube.com/embed/kGrM249s5RY?si=qBnXDlGjZ6WUOfPw" title="Neural Geometry Fields Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 5px;"></iframe>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- BibTeX -->
-				<div class="section" id="BibTeX">
-					<div class="section-header">
-						<h2 style="text-align: left; margin-bottom: 15px;">
-							BibTeX
-						</h2>
-					</div>
-					<div class="section-content">
-						<div class="section-content-box" style="box-shadow: 5px 5px 0px #80002077;">
-							<div class="bibtex-content" style="padding: 20px; border-radius: 5px; overflow-x: auto; margin: 0; font-size: 0.9em; line-height: 1.4; white-space: pre-wrap;">@inproceedings{10.1145/3641519.3657399,
+        <div class="section" id="BibTeX">
+          <div class="section-header">
+            <h2 style="text-align: left; margin-bottom: 15px;">BibTeX</h2>
+          </div>
+          <div class="section-content">
+            <div class="section-content-box">
+              <pre class="bibtex-content">@inproceedings{10.1145/3641519.3657399,
   author = {Edavamadathil Sivaram, Venkataram and Li, Tzu-Mao and Ramamoorthi, Ravi},
   title = {Neural Geometry Fields For Meshes},
   year = {2024},
@@ -141,11 +93,11 @@
   numpages = {11},
   keywords = {Neural representation, mesh compression, mesh simplification},
   series = {SIGGRAPH '24}
-}</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
+}</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
