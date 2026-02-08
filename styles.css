@@ -32,6 +32,29 @@ body {
   overflow-x: hidden;
 }
 
+.home-page {
+  position: relative;
+  isolation: isolate;
+}
+
+.home-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("media/miscellaneous/teaser.png");
+  background-repeat: no-repeat;
+  background-position: center 88px;
+  background-size: min(1300px, 96vw);
+  opacity: 0.14;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.home-page > * {
+  position: relative;
+  z-index: 1;
+}
+
 a {
   color: var(--ink);
   text-decoration: underline;
@@ -183,7 +206,6 @@ hr {
   border-radius: 10px;
   border: 1px solid var(--line);
   object-fit: cover;
-  filter: grayscale(100%) contrast(1.05);
 }
 
 .profile-info {
@@ -331,7 +353,6 @@ hr {
   height: 56px;
   width: 56px;
   object-fit: contain;
-  filter: grayscale(100%) contrast(1.05);
 }
 
 .projects-carousel {
@@ -453,7 +474,7 @@ hr {
 
 .research-header {
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 220px 1fr;
   gap: 16px;
   align-items: start;
   margin-bottom: 18px;
@@ -465,8 +486,8 @@ hr {
 }
 
 .research-thumb {
-  width: 180px;
-  height: 150px;
+  width: 220px;
+  height: 170px;
   border: 1px solid var(--line);
   border-radius: 12px;
   overflow: hidden;
@@ -601,16 +622,26 @@ hr {
   position: relative;
   width: 100%;
   padding-bottom: 56.25%;
+  border: 1px solid var(--line);
   border-radius: 12px;
   overflow: hidden;
 }
 
-.paper-video iframe {
+.paper-video iframe,
+.paper-video video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   border: 0;
+  border-radius: 12px;
+  clip-path: inset(0 round 12px);
+  display: block;
+}
+
+.paper-video video {
+  object-fit: cover;
+  background: #000;
 }
 
 .bibtex-content {
@@ -625,10 +656,6 @@ hr {
   border: 1px solid var(--line) !important;
   background: var(--paper) !important;
   box-shadow: none !important;
-}
-
-.research-header img {
-  filter: grayscale(100%) contrast(1.05);
 }
 
 .skills-grid {
@@ -723,7 +750,6 @@ hr {
   border-radius: 12px;
   border: 1px solid var(--line);
   box-shadow: none;
-  filter: grayscale(100%) contrast(1.05);
 }
 
 .location-label {
