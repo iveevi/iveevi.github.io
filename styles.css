@@ -43,7 +43,7 @@ body {
   inset: 0;
   background-image: url("media/miscellaneous/teaser.png");
   background-repeat: no-repeat;
-  background-position: center 88px;
+  background-position: center center;
   background-size: min(1300px, 96vw);
   opacity: 0.14;
   pointer-events: none;
@@ -89,16 +89,9 @@ img {
   height: auto;
 }
 
-hr {
-  border: none;
-  border-top: 1px solid var(--line);
-  margin: 20px 0;
-}
-
+hr,
 .mini-divider {
-  margin: 16px 0;
-  width: 40%;
-  opacity: 0.9;
+  display: none;
 }
 
 .navigation {
@@ -106,7 +99,6 @@ hr {
   top: 0;
   z-index: 1000;
   background: rgba(242, 240, 232, 0.94);
-  border-bottom: 1px solid var(--line);
   backdrop-filter: blur(6px);
 }
 
@@ -119,10 +111,9 @@ hr {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-family: var(--caps-font);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 
 .nav-link {
@@ -154,21 +145,15 @@ hr {
 
 .section {
   padding: 24px 0;
-  border-bottom: 1px solid var(--line);
   scroll-margin-top: 90px;
-}
-
-.section:last-child {
-  border-bottom: none;
 }
 
 .section-header h2 {
   margin: 0 0 14px;
-  font-family: var(--caps-font);
-  font-size: 0.82rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--ink);
 }
 
 .section-content {
@@ -193,33 +178,49 @@ hr {
   gap: 18px;
 }
 
-.profile-section {
+.profile-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 24px;
   width: 100%;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 16px;
+}
+
+.profile-bio {
+  width: 100%;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px 28px;
+}
+
+.profile-bio p {
+  margin: 0;
 }
 
 .profile-image {
-  width: 180px;
-  height: 180px;
+  width: 140px;
+  height: 140px;
   border-radius: 10px;
   border: 1px solid var(--line);
   object-fit: cover;
 }
 
-.profile-info {
+.profile-identity {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.profile-info h1 {
-  margin: 0 0 12px;
+.profile-identity h1 {
+  margin: 0;
   font-size: 2.1rem;
   letter-spacing: 0.01em;
-}
-
-.profile-info p {
-  margin: 0;
 }
 
 .social-links {
@@ -289,7 +290,7 @@ hr {
 .awards-card .experience-period {
   position: static !important;
   margin-left: auto;
-  font-size: 0.72rem;
+  font-size: 0.95rem;
 }
 
 .academic-service-row {
@@ -333,11 +334,10 @@ hr {
 
 .experience-period {
   margin-left: auto;
-  font-family: var(--caps-font);
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--ink-soft);
+  font-family: "Fira Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-muted);
   white-space: nowrap;
 }
 
@@ -398,11 +398,9 @@ hr {
 
 .subsection-title {
   margin: 18px 0 12px;
-  font-family: var(--caps-font);
-  font-size: 0.82rem;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.1rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
   color: var(--ink-soft);
 }
 
@@ -427,7 +425,7 @@ hr {
 .tag {
   border-radius: 999px;
   font-weight: 500;
-  font-size: 0.68rem;
+  font-size: 0.78rem;
   padding: 2px 8px;
   margin-right: 6px;
   margin-bottom: 6px;
@@ -435,9 +433,7 @@ hr {
   border: 1px solid var(--line);
   color: var(--ink-soft);
   background: transparent;
-  font-family: var(--caps-font);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  font-family: "Fira Sans", sans-serif;
 }
 
 .cpp::before { content: "C++"; }
@@ -473,52 +469,13 @@ hr {
 }
 
 .research-header {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 16px;
-  align-items: start;
+  display: block;
   margin-bottom: 18px;
-  padding: 20px 16px;
+  padding: 18px 20px;
 }
 
 .research-header:last-child {
   margin-bottom: 0;
-}
-
-.research-thumb {
-  width: 220px;
-  height: 170px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  overflow: hidden;
-  background: var(--paper);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-self: center;
-  align-self: center;
-}
-
-.research-thumb a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.research-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.research-thumb--zoomed-white {
-  background: #fff;
-}
-
-.research-thumb--zoomed-white img {
-  transform: scale(0.9);
-  transform-origin: center;
 }
 
 .research-meta {
@@ -527,12 +484,25 @@ hr {
   gap: 6px;
 }
 
+.research-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
 .research-venue {
-  font-family: var(--caps-font);
-  font-size: 0.82rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
   color: var(--ink-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.research-title {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .research-title h3 {
@@ -541,23 +511,72 @@ hr {
 }
 
 .research-authors {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: var(--ink-soft);
 }
 
 .research-description {
   margin: 0;
+  color: var(--ink-muted);
 }
 
 .paper-hero {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  gap: 14px;
   text-align: center;
+}
+
+.paper-hero .paper-image {
+  width: 100%;
+  margin: 6px 0;
+}
+
+.paper-abstract {
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  border-radius: 12px;
+  padding: 22px 26px;
 }
 
 .paper-abstract p {
   margin: 0;
+}
+
+.paper-abstract-label {
+  display: block;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+/* Conjoined TL;DR + Abstract: render as a single visual card with TL;DR
+   as the title strip on top. The two stay separate in the DOM. */
+.paper-abstract--tldr {
+  background: #d8d2c4;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-bottom: 18px;
+}
+
+.paper-abstract--full {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top: none;
+  padding-top: 18px;
+}
+
+#TLDR {
+  padding-bottom: 0;
+}
+
+#Abstract {
+  padding-top: 0;
 }
 
 .paper-title {
@@ -566,15 +585,14 @@ hr {
 }
 
 .paper-venue {
-  font-family: var(--caps-font);
-  font-size: 0.88rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
   color: var(--ink-muted);
 }
 
 .paper-authors {
-  font-size: 1.06rem;
+  font-size: 1.25rem;
   color: var(--ink);
 }
 
@@ -590,15 +608,52 @@ hr {
   flex-wrap: wrap;
 }
 
+/* Links row attached as the rounded-bottom strip of the abstract card.
+   The cells split the row equally with thin dividers between them. */
+.paper-abstract + .paper-links {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  padding: 0;
+  gap: 0;
+  display: flex;
+  justify-content: stretch;
+}
+
+.paper-abstract + .paper-links .paper-link {
+  flex: 1 1 0;
+  text-align: center;
+  border: none;
+  border-radius: 0;
+  padding: 12px 16px;
+  background: transparent;
+}
+
+.paper-abstract + .paper-links .paper-link i {
+  margin-right: 8px;
+  width: 1em;
+  text-align: center;
+}
+
+.paper-abstract + .paper-links .paper-link + .paper-link {
+  border-left: 1px solid var(--line);
+}
+
+.paper-abstract + .paper-links .paper-link:hover {
+  background: rgba(20, 20, 20, 0.04);
+  color: var(--ink);
+}
+
 .paper-link {
-  font-family: var(--caps-font);
+  font-family: "Fira Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-muted);
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 4px 10px;
+  padding: 4px 12px;
   text-decoration: none;
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
 }
 
 .paper-link.is-muted {
@@ -695,10 +750,8 @@ hr {
   border: 1px solid var(--line);
   background: transparent;
   color: var(--ink-soft);
-  font-family: var(--caps-font);
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 0.85rem;
   padding: 4px 10px;
   border-radius: 999px;
 }
@@ -761,10 +814,8 @@ hr {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 6px 10px;
-  font-family: var(--caps-font);
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 0.85rem;
   box-shadow: none;
 }
 
@@ -883,16 +934,7 @@ hr {
     margin: 0 44px;
   }
 
-  .research-header {
-    grid-template-columns: 1fr;
-  }
-
-  .research-thumb {
-    width: 100%;
-    height: 180px;
-  }
-
-  .profile-section {
+  .profile-header {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -907,6 +949,16 @@ hr {
 
   .experience-period {
     margin-left: 0;
+  }
+
+  .research-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .research-venue {
+    white-space: normal;
   }
 }
 

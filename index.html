@@ -26,9 +26,6 @@
       <a href="#Projects" class="nav-link">
         <i class="fa-solid fa-diagram-project"></i> Projects
       </a>
-      <a href="#Gallery" class="nav-link">
-        <i class="fa-solid fa-images"></i> Gallery
-      </a>
     </div>
   </nav>
 
@@ -42,9 +39,10 @@
           </h2>
         </div>
         <div class="section-content">
-          <div class="profile-section">
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-              <img src="media/miscellaneous/face.jpg" alt="Venkataram Sivaram" class="profile-image">
+          <div class="profile-header">
+            <img src="media/miscellaneous/face.jpg" alt="Venkataram Sivaram" class="profile-image">
+            <div class="profile-identity">
+              <h1>Venkataram Sivaram</h1>
               <div class="social-links">
                 <a href="https://github.com/iveevi" class="social-link">
                   <i class="fa-brands fa-github"></i>
@@ -57,9 +55,9 @@
                 </a>
               </div>
             </div>
-            <div class="profile-info">
-              <h1>Venkataram Sivaram</h1>
-              <p>
+          </div>
+          <div class="profile-bio">
+            <p>
 		  I am a first-year PhD student at the Computer Science and
 		  Artificial Intelligence Lab (CSAIL) at
 		  Massachusetts Institute of Technology (MIT), advised by
@@ -84,7 +82,8 @@
                   passionate about developing efficient algorithms for 3D
                   graphics and am eagerly exploring the intersection of machine
                   learning and computer graphics.
-                  <hr class="mini-divider">
+                  <br>
+                  <br>
 		  Previously, I was an intern at NVIDIA during Summer 2024 and
 		  2025, where I worked with the <a href="https://shader-slang.org/">Slang</a>
 		  development team. I was also a teaching assistant for CSE
@@ -92,7 +91,57 @@
 		  <br>
 		  <br>
 		  I have reviewed multiple articles for ACM SIGGRAPH and ACM TOG throughout 2024 and 2025.
-              </p>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Research -->
+      <div class="section" id="Research">
+        <div class="section-header">
+          <h2 style="text-align: left; margin-bottom: 15px;">
+            Publications
+          </h2>
+        </div>
+        <div class="section-content">
+          <div class="research-header">
+            <div class="research-meta">
+              <div class="research-title-row">
+                <div class="research-title"><a href="glow/"><h3>Modeling and Rendering Glow Discharge</h3></a></div>
+                <div class="research-venue">SIGGRAPH 2025 (Conference)</div>
+              </div>
+              <div class="research-authors"><strong>Venkataram Sivaram</strong> &middot; <a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a> &middot; <a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a></div>
+              <div class="research-description">A model of glow discharge, the light-emitting electrostatic process underlying Neon lights and gas discharge lamps, formulated as a point-wise emission solver compatible with standard volume rendering. The model exposes a small set of interpretable parameters and reproduces the appearance of glow discharge across a range of gases.</div>
+            </div>
+          </div>
+          <div class="research-header">
+            <div class="research-meta">
+              <div class="research-title-row">
+                <div class="research-title"><a href="https://arxiv.org/abs/2411.17067"><h3>Geometry Field Splatting with Gaussian Surfels</h3></a></div>
+                <div class="research-venue">CVPR 2025</div>
+              </div>
+              <div class="research-authors"><a href="https://raymondjiangkw.github.io/">Kaiwen Jiang</a> &middot; <strong>Venkataram Sivaram</strong> &middot; Cheng Peng &middot; <a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a></div>
+              <div class="research-description">A differentiable renderer for surface reconstruction in which geometry is represented as a field of Gaussian surfels, avoiding the Taylor approximations used in prior formulations. The rendered color is continuous in the surfel parameters, and specular appearance is modeled through a spherical-harmonic encoding of reflection vectors.</div>
+            </div>
+          </div>
+          <div class="research-header">
+            <div class="research-meta">
+              <div class="research-title-row">
+                <div class="research-title"><a href="ngf/"><h3>Neural Geometry Fields for Meshes</h3></a></div>
+                <div class="research-venue">SIGGRAPH 2024 (Conference)</div>
+              </div>
+              <div class="research-authors"><strong>Venkataram Sivaram</strong> &middot; <a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a> &middot; <a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a></div>
+              <div class="research-description">A neural representation for triangle meshes that encodes geometry as a coarse set of quadrangular patches together with coordinate networks that displace each patch to recover fine detail. Standard meshes are obtained by sampling the displacement field, and the representation yields substantial reductions in mesh memory footprint.</div>
+            </div>
+          </div>
+          <div class="research-header">
+            <div class="research-meta">
+              <div class="research-title-row">
+                <div class="research-title"><a href="https://weschang.com/publications/restir-dr/"><h3>Parameter-space ReSTIR for Differentiable and Inverse Rendering</h3></a></div>
+                <div class="research-venue">SIGGRAPH 2023 (Conference)</div>
+              </div>
+              <div class="research-authors"><a href="https://weschang.com/">Wesley Chang</a> &middot; <strong>Venkataram Sivaram</strong> &middot; <a href="https://www.cim.mcgill.ca/~derek/">Derek Nowrouzezahrai</a> &middot; <a href="https://cs.uwaterloo.ca/~thachisu/">Toshiya Hachisuka</a> &middot; <a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a> &middot; <a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a></div>
+              <div class="research-description">Adapts ReSTIR-style temporal reuse to differentiable and inverse rendering by reformulating gradient estimation in parameter space, exploiting the gradual variation of scene parameters across gradient steps. A positivized resampled importance sampling scheme accommodates the signed integrands that arise in gradient computation.</div>
             </div>
           </div>
         </div>
@@ -207,69 +256,6 @@
                   <span class="experience-period" style="position: absolute; right: 0; top: 0;">2024</span>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Research -->
-      <div class="section" id="Research">
-        <div class="section-header">
-          <h2 style="text-align: left; margin-bottom: 15px;">
-            Publications
-          </h2>
-        </div>
-        <div class="section-content">
-          <div class="research-header">
-            <div class="research-thumb">
-              <a href="glow/">
-                <img src="glow/teaser.png" alt="Modeling and Rendering Glow Discharge">
-              </a>
-            </div>
-            <div class="research-meta">
-              <div class="research-venue">SIGGRAPH 2025 (Conference)</div>
-              <div class="research-title"><a href="glow/"><h3>Modeling and Rendering Glow Discharge</h3></a></div>
-              <div class="research-authors"><strong>Venkataram Sivaram</strong> &middot; <a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a> &middot; <a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a></div>
-              <div class="research-description">Introduces a fast, approximate model for glow discharge, enabling interactive Monte Carlo rendering of emissive elements such as Neon lights.</div>
-            </div>
-          </div>
-          <div class="research-header">
-            <div class="research-thumb research-thumb--zoomed-white">
-              <a href="https://arxiv.org/abs/2411.17067">
-                <img src="media/research/geosplat.jpg" alt="Geometry Field Splatting with Gaussian Surfels">
-              </a>
-            </div>
-            <div class="research-meta">
-              <div class="research-venue">CVPR 2025</div>
-              <div class="research-title"><a href="https://arxiv.org/abs/2411.17067"><h3>Geometry Field Splatting with Gaussian Surfels</h3></a></div>
-              <div class="research-authors"><a href="https://raymondjiangkw.github.io/">Kaiwen Jiang</a> &middot; <strong>Venkataram Sivaram</strong> &middot; Cheng Peng &middot; <a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a></div>
-              <div class="research-description">Accurate geometric reconstruction of opaque surfaces from images using Gaussian surfels and a nearly exact differentiable renderer.</div>
-            </div>
-          </div>
-          <div class="research-header">
-            <div class="research-thumb research-thumb--zoomed-white">
-              <a href="ngf/">
-                <img src="media/research/ngf.jpg" alt="Neural Geometry Fields for Meshes">
-              </a>
-            </div>
-            <div class="research-meta">
-              <div class="research-venue">SIGGRAPH 2024 (Conference)</div>
-              <div class="research-title"><a href="ngf/"><h3>Neural Geometry Fields for Meshes</h3></a></div>
-              <div class="research-authors"><strong>Venkataram Sivaram</strong> &middot; <a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a> &middot; <a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a></div>
-              <div class="research-description">A neural representation for 3D mesh surfaces using coarse quadrangular patches and coordinate neural networks for detail refinement.</div>
-            </div>
-          </div>
-          <div class="research-header">
-            <div class="research-thumb">
-              <a href="https://weschang.com/publications/restir-dr/">
-                <img src="media/research/restir-dr.jpg" alt="Parameter-space ReSTIR for Differentiable and Inverse Rendering">
-              </a>
-            </div>
-            <div class="research-meta">
-              <div class="research-venue">SIGGRAPH 2023 (Conference)</div>
-              <div class="research-title"><a href="https://weschang.com/publications/restir-dr/"><h3>Parameter-space ReSTIR for Differentiable and Inverse Rendering</h3></a></div>
-              <div class="research-authors"><a href="https://weschang.com/">Wesley Chang</a> &middot; <strong>Venkataram Sivaram</strong> &middot; <a href="https://www.cim.mcgill.ca/~derek/">Derek Nowrouzezahrai</a> &middot; <a href="https://cs.uwaterloo.ca/~thachisu/">Toshiya Hachisuka</a> &middot; <a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a> &middot; <a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a></div>
-              <div class="research-description">Efficiently reuses Monte Carlo gradient samples between optimization steps for differentiable and inverse rendering.</div>
             </div>
           </div>
         </div>
@@ -421,114 +407,10 @@
         </div>
       </div>
 
-      <!-- Gallery -->
-      <div class="section" id="Gallery">
-        <div class="section-header">
-          <h2 style="text-align: left; margin-bottom: 15px;">
-            Photo Gallery
-          </h2>
-        </div>
-        <div class="gallery-carousel">
-          <div class="carousel-container">
-            <div class="carousel-slide active">
-              <img src="media/gallery/IMG_0671.png" alt="Gallery Image 1" class="carousel-image">
-              <div class="location-label">Yellowstone National Park, WY</div>
-            </div>
-            <div class="carousel-slide">
-              <img src="media/gallery/IMG_0687.png" alt="Gallery Image 2" class="carousel-image">
-              <div class="location-label">Yellowstone National Park, WY</div>
-            </div>
-            <div class="carousel-slide">
-              <img src="media/gallery/IMG_0688.png" alt="Gallery Image 3" class="carousel-image">
-              <div class="location-label">Yellowstone National Park, WY</div>
-            </div>
-            <div class="carousel-slide">
-              <img src="media/gallery/IMG_0878.png" alt="Gallery Image 4" class="carousel-image">
-              <div class="location-label">La Jolla, CA</div>
-            </div>
-            <div class="carousel-slide">
-              <img src="media/gallery/IMG_1091.png" alt="Gallery Image 5" class="carousel-image">
-              <div class="location-label">La Jolla, CA</div>
-            </div>
-            <div class="carousel-slide">
-              <img src="media/gallery/IMG_1222.png" alt="Gallery Image 6" class="carousel-image">
-              <div class="location-label">La Jolla, CA</div>
-            </div>
-            <div class="carousel-slide">
-              <img src="media/gallery/IMG_1280.png" alt="Gallery Image 7" class="carousel-image">
-              <div class="location-label">La Jolla, CA</div>
-            </div>
-          </div>
-          <div class="carousel-indicators gallery-indicators">
-            <button class="carousel-nav prev gallery-nav" onclick="changeSlide(-1)">
-              <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <div class="gallery-dots">
-              <span class="indicator active" onclick="goToSlide(0)"></span>
-              <span class="indicator" onclick="goToSlide(1)"></span>
-              <span class="indicator" onclick="goToSlide(2)"></span>
-              <span class="indicator" onclick="goToSlide(3)"></span>
-              <span class="indicator" onclick="goToSlide(4)"></span>
-              <span class="indicator" onclick="goToSlide(5)"></span>
-              <span class="indicator" onclick="goToSlide(6)"></span>
-            </div>
-            <button class="carousel-nav next gallery-nav" onclick="changeSlide(1)">
-              <i class="fa-solid fa-chevron-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
   <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-    const indicators = document.querySelectorAll('.gallery-carousel .indicator');
-    let autoSlideInterval;
-
-    function showSlide(n) {
-      slides.forEach(slide => {
-        slide.classList.remove('active');
-      });
-
-      indicators.forEach(indicator => {
-        indicator.classList.remove('active');
-      });
-
-      slides[n].classList.add('active');
-      indicators[n].classList.add('active');
-    }
-
-    function changeSlide(direction) {
-      currentSlide += direction;
-
-      if (currentSlide >= slides.length) {
-        currentSlide = 0;
-      }
-      if (currentSlide < 0) {
-        currentSlide = slides.length - 1;
-      }
-
-      showSlide(currentSlide);
-      resetAutoSlide();
-    }
-
-    function goToSlide(n) {
-      currentSlide = n;
-      showSlide(currentSlide);
-      resetAutoSlide();
-    }
-
-    function resetAutoSlide() {
-      clearInterval(autoSlideInterval);
-      autoSlideInterval = setInterval(() => {
-        changeSlide(1);
-      }, 5000);
-    }
-
-    resetAutoSlide();
-
     const projectsViewport = document.querySelector('.projects-viewport');
     const projectsTrack = document.querySelector('.projects-track');
     const projectCards = Array.from(document.querySelectorAll('.projects-track .project'));
@@ -664,16 +546,6 @@
       updateProjectCarousel();
     });
 
-    const carousel = document.querySelector('.gallery-carousel');
-    if (carousel) {
-      carousel.addEventListener('mouseenter', () => {
-        clearInterval(autoSlideInterval);
-      });
-
-      carousel.addEventListener('mouseleave', () => {
-        resetAutoSlide();
-      });
-    }
   </script>
 </body>
 

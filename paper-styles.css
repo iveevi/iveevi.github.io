@@ -1,9 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap");
-
-pre, code {
-  font-family: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+/* Make `button.paper-link` indistinguishable from the anchor pills. */
+button.paper-link {
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  line-height: inherit;
+  color: var(--ink-muted);
 }
 
-.bibtex-content {
-  font-family: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+button.paper-link:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+button.paper-link.is-copied {
+  border-color: var(--ink);
+  color: var(--ink);
 }
