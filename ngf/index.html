@@ -1,92 +1,82 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Neural Geometry Fields for Meshes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Geometry Fields for Meshes · V. Sivaram</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Roboto:wght@500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Fira+Sans:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../paper-styles.css">
   </head>
-
   <body>
-    <div class="container">
-      <div class="main-content">
-        <div class="section" id="Paper">
-          <div class="section-content">
-            <div class="paper-hero">
-              <h1 class="paper-title">Neural Geometry Fields for Meshes</h1>
-              <div class="paper-authors">
-                <strong>Venkataram Sivaram</strong> &middot; <a href="https://cseweb.ucsd.edu/~ravir/" target="_blank" rel="noopener">Ravi Ramamoorthi</a> &middot; <a href="https://cseweb.ucsd.edu/~tzli/" target="_blank" rel="noopener">Tzu-Mao Li</a>
-              </div>
-              <div class="paper-venue">ACM SIGGRAPH 2024 Conference Track</div>
-              <img src="teaser.png" alt="Neural Geometry Fields for Meshes teaser" class="paper-image">
-            </div>
-          </div>
-        </div>
+    <canvas id="mesh-bg"></canvas>
+    <main class="page">
 
-        <div class="section" id="TLDR">
-          <div class="section-content">
-            <div class="paper-abstract paper-abstract--tldr">
-              <span class="paper-abstract-label">TL;DR</span>
-              <p>
-                A neural representation for triangle meshes that encodes geometry as a coarse set of quadrangular patches together with coordinate networks that displace each patch to recover fine detail. Standard meshes are obtained by sampling the displacement field, and the representation yields substantial reductions in mesh memory footprint.
-              </p>
-            </div>
-          </div>
-        </div>
+      <a href="../#publications" class="paper-back">Back</a>
 
-        <div class="section" id="Abstract">
-          <div class="section-content">
-            <div class="paper-abstract paper-abstract--full">
-              <span class="paper-abstract-label">Abstract</span>
-              <p>
-                Recent work on using neural fields to represent surfaces has resulted in significant improvements in representational capability and computational efficiency. However, to our knowledge, most existing work has focused on implicit representations such as signed distance fields or volumes, and little work has explored their application to discrete surface geometry, i.e., 3D meshes, limiting the applicability of neural surface representations.
-                <br><br>
-                We present Neural Geometry Fields, a neural representation for discrete surface geometry represented by triangle meshes. Our idea is to represent the target surface using a coarse set of quadrangular patches, and add surface details using coordinate neural networks by displacing the patches. We then extract a traditional triangular mesh from a neural geometry field instance by sampling the displacement. We show that our representation excels in mesh compression, where it significantly reduces the memory footprint of meshes without compromising on surface details.
-              </p>
-            </div>
-            <div class="paper-links">
-              <a class="paper-link" href="pdf/main.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Paper</a>
-              <a class="paper-link" href="https://github.com/iveevi/ngf" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
-              <a class="paper-link" href="pdf/supplementary.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-paperclip"></i> Supplementary</a>
-              <button type="button" class="paper-link copy-bibtex" data-bibtex-source="#bibtex-source"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
-            </div>
-          </div>
+      <header class="paper-masthead">
+        <div class="paper-venue">ACM SIGGRAPH 2024 · Conference Track</div>
+        <h1 class="paper-title">Neural Geometry Fields for Meshes</h1>
+        <div class="paper-authors">
+          <strong>Venkataram Sivaram</strong>,
+          <a href="https://cseweb.ucsd.edu/~tzli/" target="_blank" rel="noopener">Tzu-Mao Li</a>,
+          <a href="https://cseweb.ucsd.edu/~ravir/" target="_blank" rel="noopener">Ravi Ramamoorthi</a>
         </div>
-
-        <div class="section" id="FastForward">
-          <div class="section-header">
-            <h2 style="text-align: left; margin-bottom: 15px;">Fast Forward</h2>
-          </div>
-          <div class="section-content">
-            <div class="paper-video">
-              <video controls preload="metadata">
-                <source src="../media/videos/ngf-ffwd.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
+        <div class="paper-actions">
+          <a class="paper-action" href="pdf/main.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Paper</a>
+          <a class="paper-action" href="https://github.com/iveevi/ngf" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          <a class="paper-action" href="pdf/supplementary.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-paperclip"></i> Supplementary</a>
+          <button type="button" class="paper-action copy-bibtex" data-bibtex-source="#bibtex-source"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
         </div>
+      </header>
 
-        <div class="section" id="Video">
-          <div class="section-header">
-            <h2 style="text-align: left; margin-bottom: 15px;">Supplementary Video</h2>
-          </div>
-          <div class="section-content">
-            <div class="paper-video">
-              <video controls preload="metadata">
-                <source src="../media/videos/ngf-supplementary.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
+      <figure class="paper-teaser">
+        <img src="teaser.png" alt="Neural Geometry Fields for Meshes teaser">
+        <figcaption>Coarse quad patches and per-patch displacement networks recover fine mesh detail.</figcaption>
+      </figure>
+
+      <section class="paper-section">
+        <h2>TL;DR</h2>
+        <p class="paper-tldr">
+          A neural representation for triangle meshes that encodes geometry as a coarse set of quadrangular patches together with coordinate networks that displace each patch to recover fine detail. Standard meshes are obtained by sampling the displacement field, and the representation yields substantial reductions in mesh memory footprint.
+        </p>
+      </section>
+
+      <section class="paper-section">
+        <h2>Abstract</h2>
+        <div class="paper-abstract">
+          <p>
+            Recent work on using neural fields to represent surfaces has resulted in significant improvements in representational capability and computational efficiency. However, to our knowledge, most existing work has focused on implicit representations such as signed distance fields or volumes, and little work has explored their application to discrete surface geometry, i.e., 3D meshes, limiting the applicability of neural surface representations.
+          </p>
+          <p>
+            We present Neural Geometry Fields, a neural representation for discrete surface geometry represented by triangle meshes. Our idea is to represent the target surface using a coarse set of quadrangular patches, and add surface details using coordinate neural networks by displacing the patches. We then extract a traditional triangular mesh from a neural geometry field instance by sampling the displacement. We show that our representation excels in mesh compression, where it significantly reduces the memory footprint of meshes without compromising on surface details.
+          </p>
         </div>
+      </section>
 
-      </div>
-    </div>
+      <section class="paper-section">
+        <h2>Fast Forward</h2>
+        <div class="paper-video">
+          <video controls preload="metadata">
+            <source src="../media/videos/ngf-ffwd.mp4" type="video/mp4">
+          </video>
+        </div>
+      </section>
+
+      <section class="paper-section">
+        <h2>Supplementary Video</h2>
+        <div class="paper-video">
+          <video controls preload="metadata">
+            <source src="../media/videos/ngf-supplementary.mp4" type="video/mp4">
+          </video>
+        </div>
+      </section>
+
+    </main>
+
     <script type="text/plain" id="bibtex-source">@inproceedings{10.1145/3641519.3657399,
   author = {Edavamadathil Sivaram, Venkataram and Li, Tzu-Mao and Ramamoorthi, Ravi},
   title = {Neural Geometry Fields For Meshes},
@@ -102,6 +92,7 @@
   keywords = {Neural representation, mesh compression, mesh simplification},
   series = {SIGGRAPH '24}
 }</script>
+    <script src="../mesh-bg.js"></script>
     <script src="../paper-video-controls.js"></script>
     <script src="../bibtex-copy.js"></script>
   </body>

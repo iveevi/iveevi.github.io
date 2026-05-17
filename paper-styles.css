@@ -1,19 +1,179 @@
-/* Make `button.paper-link` indistinguishable from the anchor pills. */
-button.paper-link {
-  background: transparent;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  line-height: inherit;
+/* Paper-page styling — extends styles.css for individual paper pages. */
+
+.paper-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
   color: var(--ink-muted);
+  margin-bottom: 36px;
+  border-bottom: 1px solid transparent;
 }
 
-button.paper-link:hover {
-  border-color: var(--ink);
+.paper-back:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.paper-back::before {
+  content: '\2190';
+  display: inline-block;
+  transition: transform 200ms;
+}
+
+.paper-back:hover::before {
+  transform: translateX(-3px);
+}
+
+.paper-masthead {
+  margin-bottom: 32px;
+}
+
+.paper-venue {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  font-style: italic;
+  margin-bottom: 14px;
+}
+
+.paper-title {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  margin: 0 0 18px;
+  color: var(--ink);
+  max-width: 880px;
+}
+
+.paper-authors {
+  font-size: 1.02rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+
+.paper-authors strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.paper-authors a {
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--line);
+}
+
+.paper-authors a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.paper-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 26px;
+  font-size: 0.92rem;
+}
+
+.paper-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  border-bottom: 1px solid var(--line);
+  transition: color 180ms, border-color 180ms;
+}
+
+.paper-action i {
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  transition: color 180ms;
+  width: 16px;
+  text-align: center;
+}
+
+.paper-action:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.paper-action:hover i { color: var(--accent); }
+.paper-action.is-copied {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.paper-teaser {
+  margin: 40px 0 60px;
+}
+
+.paper-teaser img {
+  width: 100%;
+  background: var(--paper-2);
+  border-radius: 2px;
+}
+
+.paper-teaser figcaption {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin-top: 12px;
+  font-style: italic;
+}
+
+.paper-section {
+  margin-bottom: 52px;
+}
+
+.paper-section:last-of-type { margin-bottom: 0; }
+
+.paper-section h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
   color: var(--ink);
 }
 
-button.paper-link.is-copied {
-  border-color: var(--ink);
+.paper-tldr {
+  font-size: 1.1rem;
+  line-height: 1.55;
   color: var(--ink);
+  margin: 0;
+  padding: 0 0 0 20px;
+  border-left: 2px solid var(--accent);
+  max-width: 760px;
 }
+
+.paper-abstract {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 760px;
+}
+
+.paper-abstract p {
+  margin: 0 0 14px;
+}
+
+.paper-abstract p:last-child { margin-bottom: 0; }
+
+.paper-video {
+  width: 100%;
+  background: var(--paper-2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.paper-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+script[type="text/plain"] { display: none; }

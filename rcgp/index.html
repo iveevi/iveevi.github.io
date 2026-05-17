@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCGP: Resource Contracts for Graphics Programming · V. Sivaram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Fira+Sans:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../paper-styles.css">
+  </head>
+  <body>
+    <canvas id="mesh-bg"></canvas>
+    <main class="page">
+
+      <a href="../#publications" class="paper-back">Back</a>
+
+      <header class="paper-masthead">
+        <div class="paper-venue">ACM SIGGRAPH 2026 · Journal Track (TOG)</div>
+        <h1 class="paper-title">RCGP: Resource Contracts for Graphics Programming</h1>
+        <div class="paper-authors">
+          <strong>Venkataram Sivaram</strong>,
+          <a href="https://people.csail.mit.edu/sbangaru/" target="_blank" rel="noopener">Sai Praveen Bangaru</a>,
+          <a href="https://cseweb.ucsd.edu/~ravir/" target="_blank" rel="noopener">Ravi Ramamoorthi</a>,
+          <a href="https://cseweb.ucsd.edu/~tzli/" target="_blank" rel="noopener">Tzu-Mao Li</a>,
+          <a href="https://people.csail.mit.edu/jrk/" target="_blank" rel="noopener">Jonathan Ragan-Kelley</a>,
+          <a href="https://people.csail.mit.edu/fredo/" target="_blank" rel="noopener">Frédo Durand</a>
+        </div>
+        <div class="paper-actions">
+          <a class="paper-action" href="pdf/main.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Paper</a>
+          <a class="paper-action" href="https://github.com/iveevi/rcgp" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          <button type="button" class="paper-action copy-bibtex" data-bibtex-source="#bibtex-source"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+        </div>
+      </header>
+
+      <figure class="paper-teaser">
+        <img src="teaser.png" alt="RCGP teaser">
+        <figcaption>A single-source-of-truth resource declaration drives shaders, descriptors, and command streams across a graphics pipeline, with contracts checked at compile time.</figcaption>
+      </figure>
+
+      <section class="paper-section">
+        <h2>TL;DR</h2>
+        <p class="paper-tldr">
+          A system for enforcing resource contracts &mdash; agreements on type, layout, binding location, and synchronization &mdash; between the components of a graphics program. Resources are declared once and exposed as statically introspectable contracts on modules, composed via combinators that check compatibility, and discharged by witnesses. Late, hard-to-debug failures like descriptor mismatches, layout drift, and missing barriers turn into compile-time diagnostics.
+        </p>
+      </section>
+
+      <section class="paper-section">
+        <h2>Abstract</h2>
+        <div class="paper-abstract">
+          <p>
+            Computer graphics applications are sophisticated heterogeneous programs that orchestrate numerous components, including shaders, pipelines, resource descriptors, and command streams. In modern graphics workflows, communication between these components is mediated by resources such as shader I/O, storage buffers, and resource bindings. To make this communication correct, developers must uphold resource contracts. These contracts cover agreements on type, layout, binding locations, synchronization requirements, and related properties. In standard practice, these contracts are satisfied implicitly through conventions. As a result, contract breaches are often detected too late, at runtime by validation layers, or worse, as visual artifacts in rendered output.
+          </p>
+          <p>
+            In this work, we present RCGP, a system that mechanistically enforces resource contracts between components of a graphics program. RCGP formalizes <em>contracts</em>, which are centralized through single-source-of-truth resource declarations, as statically introspectable units that can be verified. We map objects from distinct program components to <em>modules</em> that import and export contracts. Modules are then composed into larger components via <em>combinators</em>, which check compatibility between the corresponding contracts and compute the residual contracts for the result. Finally, RCGP upholds these contracts through a set of <em>witnesses</em>, which encode the necessary promises.
+          </p>
+          <p>
+            Using a prototype implementation in C++ and Vulkan, we demonstrate that this formulation converts common classes of late failures, such as descriptor-type mismatches, layout drift, and missing synchronization barriers, into early, actionable compile-time diagnostics.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <script type="text/plain" id="bibtex-source">@article{sivaram2026rcgp,
+  author    = {Sivaram, Venkataram and Bangaru, Sai Praveen and Ramamoorthi, Ravi and Li, Tzu-Mao and Ragan-Kelley, Jonathan and Durand, Fr\'{e}do},
+  title     = {{RCGP}: Resource Contracts for Graphics Programming},
+  journal   = {ACM Transactions on Graphics},
+  year      = {2026},
+  volume    = {45},
+  number    = {4},
+  articleno = {70},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA}
+}</script>
+    <script src="../mesh-bg.js"></script>
+    <script src="../paper-video-controls.js"></script>
+    <script src="../bibtex-copy.js"></script>
+  </body>
+</html>

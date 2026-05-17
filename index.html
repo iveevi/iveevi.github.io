@@ -1,552 +1,204 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venkataram Sivaram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Fira+Sans:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
 
-<html>
+    <canvas id="mesh-bg"></canvas>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Venkataram Sivaram</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Roboto:wght@500;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
-</head>
+    <main class="page">
 
-<body class="home-page">
-  <!-- Navigation Bar -->
-  <nav class="navigation">
-    <div class="nav-content">
-      <a href="#About" class="nav-link">
-        <i class="fa-solid fa-user"></i> About
-      </a>
-      <a href="#Research" class="nav-link">
-        <i class="fa-solid fa-brain"></i> Research
-      </a>
-      <a href="#Projects" class="nav-link">
-        <i class="fa-solid fa-diagram-project"></i> Projects
-      </a>
-    </div>
-  </nav>
+      <section class="profile">
+        <img class="profile-photo cast-shadow" src="media/miscellaneous/face.jpg" alt="Venkataram Sivaram">
+        <div class="profile-body">
+          <h1>Venkataram Sivaram</h1>
+          <div class="role">PhD student · MIT CSAIL</div>
 
-  <div class="container">
-    <div class="main-content">
-      <!-- About Section with Profile -->
-      <div class="section" id="About">
-        <div class="section-header">
-          <h2 style="text-align: left; margin-bottom: 15px;">
-            About
-          </h2>
-        </div>
-        <div class="section-content">
-          <div class="profile-header">
-            <img src="media/miscellaneous/face.jpg" alt="Venkataram Sivaram" class="profile-image">
-            <div class="profile-identity">
-              <h1>Venkataram Sivaram</h1>
-              <div class="social-links">
-                <a href="https://github.com/iveevi" class="social-link">
-                  <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/venkataram-sivaram-65a36a226" class="social-link">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="mailto:iveevi@mit.edu" class="social-link">
-                  <i class="fa-solid fa-envelope"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="profile-bio">
-            <p>
-		  I am a first-year PhD student at the Computer Science and
-		  Artificial Intelligence Lab (CSAIL) at
-		  Massachusetts Institute of Technology (MIT), advised by
-                  Professors <a href="https://people.csail.mit.edu/fredo/">Fredo Durand</a>
-                  and <a href="https://people.csail.mit.edu/jrk/">Jonathan-Ragan Kelley</a>.
-                  <br>
-                  <br>
-		  I graduated from UC San Diego (UCSD) in Spring of 2025 with a
-		  Bachelor of Science in Computer Science, earning the Honors
-		  with highest distinction and a minor in Mathematics. During
-		  this time, I was actively involved in Computer Graphics
-		  research at the
-                  <a href="https://visualcomputing.ucsd.edu/index.shtml">Center for Visual Computing</a>,
-                  where I was fortunate to be mentored by Professors
-                  <a href="https://cseweb.ucsd.edu/~ravir">Ravi Ramamoorthi</a> and
-                  <a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a>.
-                  <br>
-                  <br>
-                  My research interests span various topics in computer
-                  graphics, including neural graphics,
-                  differentiable rendering, and appearance modeling. I'm
-                  passionate about developing efficient algorithms for 3D
-                  graphics and am eagerly exploring the intersection of machine
-                  learning and computer graphics.
-                  <br>
-                  <br>
-		  Previously, I was an intern at NVIDIA during Summer 2024 and
-		  2025, where I worked with the <a href="https://shader-slang.org/">Slang</a>
-		  development team. I was also a teaching assistant for CSE
-		  167 at UCSD in Fall 2024 and Winter 2025.
-		  <br>
-		  <br>
-		  I have reviewed multiple articles for ACM SIGGRAPH and ACM TOG throughout 2024 and 2025.
-            </p>
+          <p>
+            I am a first-year PhD student at the Computer Science and Artificial Intelligence Lab (CSAIL) at Massachusetts Institute of Technology (MIT), advised by Professors <a href="https://people.csail.mit.edu/fredo/">Fredo Durand</a> and <a href="https://people.csail.mit.edu/jrk/">Jonathan-Ragan Kelley</a>.
+          </p>
+          <p>
+            I graduated from UC San Diego (UCSD) in Spring of 2025 with a Bachelor of Science in Computer Science, earning the Honors with highest distinction and a minor in Mathematics. During this time, I was actively involved in Computer Graphics research at the <a href="https://visualcomputing.ucsd.edu/index.shtml">Center for Visual Computing</a>, where I was fortunate to be mentored by Professors <a href="https://cseweb.ucsd.edu/~ravir">Ravi Ramamoorthi</a> and <a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a>.
+          </p>
+          <p>
+            My research interests span various topics in computer graphics, including neural graphics, differentiable rendering, and appearance modeling. I'm passionate about developing efficient algorithms for 3D graphics and am eagerly exploring the intersection of machine learning and computer graphics.
+          </p>
+
+          <div class="contacts">
+            <a href="mailto:iveevi@mit.edu"><i class="fa-solid fa-envelope"></i> iveevi@mit.edu</a>
+            <a href="https://github.com/iveevi"><i class="fa-brands fa-github"></i> github.com/iveevi</a>
+            <a href="https://www.linkedin.com/in/venkataram-sivaram-65a36a226"><i class="fa-brands fa-linkedin"></i> linkedin</a>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Research -->
-      <div class="section" id="Research">
-        <div class="section-header">
-          <h2 style="text-align: left; margin-bottom: 15px;">
-            Publications
-          </h2>
-        </div>
-        <div class="section-content">
-          <div class="research-header">
-            <div class="research-meta">
-              <div class="research-title-row">
-                <div class="research-title"><a href="glow/"><h3>Modeling and Rendering Glow Discharge</h3></a></div>
-                <div class="research-venue">SIGGRAPH 2025 (Conference)</div>
-              </div>
-              <div class="research-authors"><strong>Venkataram Sivaram</strong> &middot; <a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a> &middot; <a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a></div>
-              <div class="research-description">A model of glow discharge, the light-emitting electrostatic process underlying Neon lights and gas discharge lamps, formulated as a point-wise emission solver compatible with standard volume rendering. The model exposes a small set of interpretable parameters and reproduces the appearance of glow discharge across a range of gases.</div>
+      <section class="section" id="publications">
+        <h2>Publications</h2>
+        <ul class="pubs">
+          <li>
+            <a href="rcgp/"><img class="pub-teaser cast-shadow" src="rcgp/teaser.png" alt="RCGP teaser"></a>
+            <div class="pub-text">
+              <h3><a href="rcgp/">RCGP: Resource Contracts for Graphics Programming</a></h3>
+              <div class="authors"><strong>V. Sivaram</strong>, S. P. Bangaru, R. Ramamoorthi, T.-M. Li, J. Ragan-Kelley, F. Durand</div>
+              <div class="venue">ACM SIGGRAPH 2026 · Journal Track (TOG)</div>
+              <p class="summary">A system for enforcing resource contracts between components of a graphics program, turning descriptor mismatches, layout drift, and missing synchronization into compile-time diagnostics.</p>
             </div>
-          </div>
-          <div class="research-header">
-            <div class="research-meta">
-              <div class="research-title-row">
-                <div class="research-title"><a href="https://arxiv.org/abs/2411.17067"><h3>Geometry Field Splatting with Gaussian Surfels</h3></a></div>
-                <div class="research-venue">CVPR 2025</div>
-              </div>
-              <div class="research-authors"><a href="https://raymondjiangkw.github.io/">Kaiwen Jiang</a> &middot; <strong>Venkataram Sivaram</strong> &middot; Cheng Peng &middot; <a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a></div>
-              <div class="research-description">A differentiable renderer for surface reconstruction in which geometry is represented as a field of Gaussian surfels, avoiding the Taylor approximations used in prior formulations. The rendered color is continuous in the surfel parameters, and specular appearance is modeled through a spherical-harmonic encoding of reflection vectors.</div>
+          </li>
+          <li>
+            <a href="glow/"><img class="pub-teaser cast-shadow" src="glow/teaser.png" alt="Glow discharge rendering"></a>
+            <div class="pub-text">
+              <h3><a href="glow/">Modeling and Rendering Glow Discharge</a></h3>
+              <div class="authors"><strong>V. Sivaram</strong>, R. Ramamoorthi, T.-M. Li</div>
+              <div class="venue">ACM SIGGRAPH 2025 · Conference Track</div>
+              <p class="summary">A model of glow discharge — the light-emitting electrostatic process underlying Neon lights and gas discharge lamps — as a point-wise emission solver compatible with standard volume rendering.</p>
             </div>
-          </div>
-          <div class="research-header">
-            <div class="research-meta">
-              <div class="research-title-row">
-                <div class="research-title"><a href="ngf/"><h3>Neural Geometry Fields for Meshes</h3></a></div>
-                <div class="research-venue">SIGGRAPH 2024 (Conference)</div>
-              </div>
-              <div class="research-authors"><strong>Venkataram Sivaram</strong> &middot; <a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a> &middot; <a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a></div>
-              <div class="research-description">A neural representation for triangle meshes that encodes geometry as a coarse set of quadrangular patches together with coordinate networks that displace each patch to recover fine detail. Standard meshes are obtained by sampling the displacement field, and the representation yields substantial reductions in mesh memory footprint.</div>
+          </li>
+          <li>
+            <a href="https://arxiv.org/abs/2411.17067"><img class="pub-teaser cast-shadow" src="media/research/geosplat.jpg" alt="Geometry Field Splatting"></a>
+            <div class="pub-text">
+              <h3><a href="https://arxiv.org/abs/2411.17067">Geometry Field Splatting with Gaussian Surfels</a></h3>
+              <div class="authors">K. Jiang, <strong>V. Sivaram</strong>, C. Peng, R. Ramamoorthi</div>
+              <div class="venue">CVPR 2025</div>
+              <p class="summary">A differentiable renderer for surface reconstruction in which geometry is represented as a field of Gaussian surfels, avoiding the Taylor approximations used in prior formulations.</p>
             </div>
-          </div>
-          <div class="research-header">
-            <div class="research-meta">
-              <div class="research-title-row">
-                <div class="research-title"><a href="https://weschang.com/publications/restir-dr/"><h3>Parameter-space ReSTIR for Differentiable and Inverse Rendering</h3></a></div>
-                <div class="research-venue">SIGGRAPH 2023 (Conference)</div>
-              </div>
-              <div class="research-authors"><a href="https://weschang.com/">Wesley Chang</a> &middot; <strong>Venkataram Sivaram</strong> &middot; <a href="https://www.cim.mcgill.ca/~derek/">Derek Nowrouzezahrai</a> &middot; <a href="https://cs.uwaterloo.ca/~thachisu/">Toshiya Hachisuka</a> &middot; <a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a> &middot; <a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a></div>
-              <div class="research-description">Adapts ReSTIR-style temporal reuse to differentiable and inverse rendering by reformulating gradient estimation in parameter space, exploiting the gradual variation of scene parameters across gradient steps. A positivized resampled importance sampling scheme accommodates the signed integrands that arise in gradient computation.</div>
+          </li>
+          <li>
+            <a href="ngf/"><img class="pub-teaser cast-shadow" src="ngf/teaser.png" alt="Neural Geometry Fields"></a>
+            <div class="pub-text">
+              <h3><a href="ngf/">Neural Geometry Fields for Meshes</a></h3>
+              <div class="authors"><strong>V. Sivaram</strong>, T.-M. Li, R. Ramamoorthi</div>
+              <div class="venue">ACM SIGGRAPH 2024 · Conference Track</div>
+              <p class="summary">A neural representation for triangle meshes that encodes geometry as a coarse set of quadrangular patches together with coordinate networks that displace each patch to recover fine detail.</p>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Education -->
-      <div class="section" id="Education">
-        <div class="section-header">
-          <h2 style="text-align: left; margin-bottom: 15px;">
-            Education
-          </h2>
-        </div>
-        <div class="section-content">
-          <div class="experience-header" style="margin-bottom: 20px;">
-            <div class="logo-section">
-              <img src="media/logos/MIT.svg">
+          </li>
+          <li>
+            <a href="https://weschang.com/publications/restir-dr/"><img class="pub-teaser cast-shadow" src="media/research/restir-dr.jpg" alt="Parameter-space ReSTIR"></a>
+            <div class="pub-text">
+              <h3><a href="https://weschang.com/publications/restir-dr/">Parameter-space ReSTIR for Differentiable and Inverse Rendering</a></h3>
+              <div class="authors">W. Chang, <strong>V. Sivaram</strong>, D. Nowrouzezahrai, T. Hachisuka, R. Ramamoorthi, T.-M. Li</div>
+              <div class="venue">ACM SIGGRAPH 2023 · Conference Track</div>
+              <p class="summary">Adapts ReSTIR-style temporal reuse to differentiable and inverse rendering by reformulating gradient estimation in parameter space.</p>
             </div>
-            <div class="experience-title" style="width: 100%;">
-              <div style="position: relative; width: 100%;">
-                <h3 style="margin: 0; padding-right: 150px;">PhD, Computer Science</h3>
-                <span class="experience-period" style="position: absolute; right: 0; top: 0;">Fall 2025 to Present</span>
-              </div>
-              <div style="padding-top: 5px; color: #666;">
-                <b>Massachusetts Institute of Technology, CSAIL</b>
-              </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Education</h2>
+        <ul class="cv-list">
+          <li>
+            <div class="cv-period">2025 — present</div>
+            <div class="cv-detail">
+              <div class="headline">PhD, Computer Science</div>
+              <div class="sub">Massachusetts Institute of Technology, CSAIL</div>
             </div>
-          </div>
-          <div class="experience-header">
-            <div class="logo-section">
-              <img src="media/logos/UCSD.svg">
+          </li>
+          <li>
+            <div class="cv-period">2022 — 2025</div>
+            <div class="cv-detail">
+              <div class="headline">BS, Computer Science</div>
+              <div class="sub">UC San Diego · honors with highest distinction · minor in mathematics</div>
             </div>
-            <div class="experience-title" style="width: 100%;">
-              <div style="position: relative; width: 100%;">
-                <h3 style="margin: 0; padding-right: 150px;">Bachelor of Science, Computer Science</h3>
-                <span class="experience-period" style="position: absolute; right: 0; top: 0;">Fall 2022 to Spring 2025</span>
-              </div>
-              <div style="padding-top: 5px; color: #666;">
-                <b>UC San Diego, CSE</b>
-              </div>
-              <div style="padding-top: 5px; color: #666;">
-                Honors with highest distinction, Minor in Mathematics
-              </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Awards</h2>
+        <ul class="cv-list">
+          <li>
+            <div class="cv-period">2025</div>
+            <div class="cv-detail">
+              <div class="headline">EECS Great Educators Fellowship</div>
+              <div class="sub">Massachusetts Institute of Technology</div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Awards -->
-      <div class="section" id="Awards">
-        <div class="section-header">
-          <h2 style="text-align: left; margin-bottom: 15px;">
-            Awards
-          </h2>
-        </div>
-        <div class="section-content">
-          <div class="awards-grid">
-            <div class="experience-header awards-card">
-              <div class="logo-section">
-                <img src="media/logos/MIT.svg">
-              </div>
-              <div class="experience-title" style="width: 100%;">
-                <div style="position: relative; width: 100%;">
-                  <h3 style="margin: 0; padding-right: 150px;">
-                    <a href="https://cra.org/about/awards/outstanding-undergraduate-researcher-award/">
-                      EECS Great Educators Fellowship (MIT)</a>
-                  </h3>
-                  <span class="experience-period" style="position: absolute; right: 0; top: 0;">2025</span>
-                </div>
-              </div>
+          </li>
+          <li>
+            <div class="cv-period">2025</div>
+            <div class="cv-detail">
+              <div class="headline"><a href="https://cra.org/about/awards/outstanding-undergraduate-researcher-award/">Outstanding Undergraduate Researcher Award</a></div>
+              <div class="sub">Computing Research Association (CRA)</div>
             </div>
-
-            <div class="experience-header awards-card">
-              <div class="logo-section">
-                <img src="media/logos/CRA.png">
-              </div>
-              <div class="experience-title" style="width: 100%;">
-                <div style="position: relative; width: 100%;">
-                  <h3 style="margin: 0; padding-right: 150px;">
-                    <a href="https://cra.org/about/awards/outstanding-undergraduate-researcher-award/">Outstanding
-                      Undergraduate Researcher Award (CRA)</a>
-                  </h3>
-                  <span class="experience-period" style="position: absolute; right: 0; top: 0;">2025</span>
-                </div>
-              </div>
+          </li>
+          <li>
+            <div class="cv-period">2024</div>
+            <div class="cv-detail">
+              <div class="headline"><a href="https://cse.ucsd.edu/undergraduate/cse-undergraduate-student-awards">CSE Undergraduate Student Award for Excellence in Research</a></div>
+              <div class="sub">UC San Diego, CSE Department</div>
             </div>
-
-            <div class="experience-header awards-card">
-              <div class="logo-section">
-                <img src="media/logos/UCSD.svg">
-              </div>
-              <div class="experience-title" style="width: 100%;">
-                <div style="position: relative; width: 100%;">
-                  <h3 style="margin: 0; padding-right: 150px;">
-                    <a href="https://cse.ucsd.edu/undergraduate/cse-undergraduate-student-awards">CSE Undergraduate
-                      Student Award for Excellence in Research (UCSD)</a>
-                  </h3>
-                  <span class="experience-period" style="position: absolute; right: 0; top: 0;">2024</span>
-                </div>
-              </div>
+          </li>
+          <li>
+            <div class="cv-period">2024</div>
+            <div class="cv-detail">
+              <div class="headline"><a href="https://cra.org/about/awards/outstanding-undergraduate-researcher-award/#tab-id-2">Honorable Mention, Outstanding Undergraduate Researcher Award</a></div>
+              <div class="sub">Computing Research Association (CRA)</div>
             </div>
+          </li>
+        </ul>
+      </section>
 
-            <div class="experience-header awards-card">
-              <div class="logo-section">
-                <img src="media/logos/CRA.png">
-              </div>
-              <div class="experience-title" style="width: 100%;">
-                <div style="position: relative; width: 100%;">
-                  <h3 style="margin: 0; padding-right: 150px;">
-                    <a href="https://cra.org/about/awards/outstanding-undergraduate-researcher-award/#tab-id-2">Honorable
-                      Mention, Outstanding Undergraduate Researcher Award (CRA)</a>
-                  </h3>
-                  <span class="experience-period" style="position: absolute; right: 0; top: 0;">2024</span>
-                </div>
-              </div>
+      <section class="section">
+        <h2>Work</h2>
+        <ul class="cv-list">
+          <li>
+            <div class="cv-period">Summer 2025</div>
+            <div class="cv-detail">
+              <div class="headline">Research Intern, <a href="https://shader-slang.org/">Slang</a> Compiler Team</div>
+              <div class="sub">NVIDIA · shader-language tooling and code generation</div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Projects -->
-      <div class="section" id="Projects">
-        <div class="section-header">
-          <h2 style="text-align: left; margin-bottom: 15px;">
-            Open Source Projects
-          </h2>
-        </div>
-        <div class="section-content">
-          <div class="projects-carousel">
-            <div class="projects-viewport">
-              <div class="projects-track">
-                <div class="project">
-                  <div class="project-title">
-                    <a href="https://github.com/iveevi/javelin"><h3>Javelin</h3></a>
-                  </div>
-                  <div class="project-description">
-                    Just-in-time shader programming embedded in C++ using metaprogramming and operator overloading techniques.
-                  </div>
-                  <div class="tag-section">
-                    <span class="tag cpp"></span>
-                    <span class="tag vulkan"></span>
-                    <span class="tag glsl"></span>
-                    <span class="tag cmake"></span>
-                  </div>
-                </div>
-                <div class="project">
-                  <div class="project-title">
-                    <a href="https://github.com/iveevi/howler"><h3>Howler</h3></a>
-                  </div>
-                  <div class="project-description">
-                    Light-weight logging and error reporting system with a structured and configurable format. Integrates naturally into existing debuggers.
-                  </div>
-                  <div class="tag-section">
-                    <span class="tag cpp"></span>
-                  </div>
-                </div>
-                <div class="project">
-                  <div class="project-title">
-                    <a href="https://github.com/iveevi/nabu"><h3>Nabu</h3></a>
-                  </div>
-                  <div class="project-description">
-                    Parser combinator framework for C++ that interoperates with user-defined types using metaprogramming and memoization for effiency.
-                  </div>
-                  <div class="tag-section">
-                    <span class="tag cpp"></span>
-                  </div>
-                </div>
-                <div class="project">
-                  <div class="project-title">
-                    <a href="https://github.com/iveevi/kobra"><h3>Kobra</h3></a>
-                  </div>
-                  <div class="project-description">
-                    Research-oriented rendering engine written with C++ and Vulkan, with implementations for modern algorithms like ReSTIR.
-                  </div>
-                  <div class="tag-section">
-                    <span class="tag cpp"></span>
-                    <span class="tag vulkan"></span>
-                    <span class="tag cuda"></span>
-                    <span class="tag glsl"></span>
-                    <span class="tag cmake"></span>
-                  </div>
-                </div>
-                <div class="project">
-                  <div class="project-title">
-                    <a href="https://github.com/iveevi/littlevk"><h3>littlevk</h3></a>
-                  </div>
-                  <div class="project-description">
-                    Lightweight, single-header C++ wrapper for Vulkan to reduce boilerplate code and accelerate graphics application development.
-                  </div>
-                  <div class="tag-section">
-                    <span class="tag cpp"></span>
-                    <span class="tag vulkan"></span>
-                  </div>
-                </div>
-                <div class="project">
-                  <div class="project-title">
-                    <a href="https://github.com/iveevi/zhetapi"><h3>Zhetapi</h3></a>
-                  </div>
-                  <div class="project-description">
-                    Machine learning and numerical analysis library written in C++ for scientific computing. Includes a user friendly Python-like scripting language.
-                  </div>
-                  <div class="tag-section">
-                    <span class="tag cpp"></span>
-                    <span class="tag cuda"></span>
-                    <span class="tag cmake"></span>
-                  </div>
-                </div>
-                <div class="project">
-                  <div class="project-title">
-                    <a href="https://github.com/iveevi/smake"><h3>SMake</h3></a>
-                  </div>
-                  <div class="project-description">
-                    Simple YAML-based build system for C/C++ projects. Provides automatic dependency detection, and cross-platform compilation support.
-                  </div>
-                  <div class="tag-section">
-                    <span class="tag python"></span>
-                  </div>
-                </div>
-                <div class="project">
-                  <div class="project-title">
-                    <a href="https://github.com/iveevi/metacpp"><h3>metacpp</h3></a>
-                  </div>
-                  <div class="project-description">
-                    Experiments on the limits of C++ metaprogramming. Benchmarks multiple implementations of a compile-time Lisp evaluator.
-                  </div>
-                  <div class="tag-section">
-                    <span class="tag cpp"></span>
-                  </div>
-                </div>
-                <div class="project">
-                  <div class="project-title">
-                    <a href="https://github.com/iveevi/tuicpp"><h3>tuicpp</h3></a>
-                  </div>
-                  <div class="project-description">
-                    Wrapper library for ncurses that offers intuitive abstractions for common constructs such as text windows, prompts, and tables.
-                  </div>
-                  <div class="tag-section">
-                    <span class="tag cpp"></span>
-                  </div>
-                </div>
-                <div class="project">
-                  <div class="project-title">
-                    <a href="https://github.com/iveevi/murphy"><h3>Murphy</h3></a>
-                  </div>
-                  <div class="project-description">
-                    Exploratory project for efficiently deforming curves to match a target silhouette using differentiable rasterization.
-                  </div>
-                  <div class="tag-section">
-                    <span class="tag cpp"></span>
-                  </div>
-                </div>
-              </div>
+          </li>
+          <li>
+            <div class="cv-period">Summer 2024</div>
+            <div class="cv-detail">
+              <div class="headline">Research Intern, <a href="https://shader-slang.org/">Slang</a> Compiler Team</div>
+              <div class="sub">NVIDIA · shader-language tooling and code generation</div>
             </div>
-            <div class="carousel-indicators projects-indicators">
-              <button class="carousel-nav prev projects-nav" onclick="changeProjectSlide(-1)">
-                <i class="fa-solid fa-chevron-left"></i>
-              </button>
-              <div class="projects-dots"></div>
-              <button class="carousel-nav next projects-nav" onclick="changeProjectSlide(1)">
-                <i class="fa-solid fa-chevron-right"></i>
-              </button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Academic Service</h2>
+        <ul class="cv-list">
+          <li>
+            <div class="cv-period">2024 — 2026</div>
+            <div class="cv-detail">
+              <div class="headline">Reviewer · ACM SIGGRAPH</div>
             </div>
-          </div>
-        </div>
-      </div>
+          </li>
+          <li>
+            <div class="cv-period">2024 — 2025</div>
+            <div class="cv-detail">
+              <div class="headline">Reviewer · ACM Transactions on Graphics</div>
+            </div>
+          </li>
+          <li>
+            <div class="cv-period">Winter 2025</div>
+            <div class="cv-detail">
+              <div class="headline">Teaching Assistant · CSE 167, Computer Graphics</div>
+              <div class="sub">UC San Diego</div>
+            </div>
+          </li>
+          <li>
+            <div class="cv-period">Fall 2024</div>
+            <div class="cv-detail">
+              <div class="headline">Teaching Assistant · CSE 167, Computer Graphics</div>
+              <div class="sub">UC San Diego</div>
+            </div>
+          </li>
+        </ul>
+      </section>
 
-    </div>
-  </div>
+    </main>
 
-  <script>
-    const projectsViewport = document.querySelector('.projects-viewport');
-    const projectsTrack = document.querySelector('.projects-track');
-    const projectCards = Array.from(document.querySelectorAll('.projects-track .project'));
-    const projectsIndicators = document.querySelector('.projects-indicators');
-    const projectsDots = document.querySelector('.projects-dots');
-    const projectsNavButtons = document.querySelectorAll('.projects-nav');
-    let projectIndex = 0;
-    let projectAutoSlideInterval;
-
-    function getProjectGap() {
-      if (!projectsTrack) {
-        return 0;
-      }
-      const style = window.getComputedStyle(projectsTrack);
-      const gap = parseFloat(style.columnGap || style.gap || 0);
-      return Number.isNaN(gap) ? 0 : gap;
-    }
-
-    function getVisibleProjectCount() {
-      return 2;
-    }
-
-    function getMaxProjectIndex() {
-      return Math.max(0, projectCards.length - getVisibleProjectCount());
-    }
-
-    function getProjectStepSize() {
-      if (!projectCards.length) {
-        return 0;
-      }
-      const cardWidth = projectCards[0].getBoundingClientRect().width;
-      const gap = getProjectGap();
-      if (cardWidth) {
-        return cardWidth + gap;
-      }
-      if (projectsViewport) {
-        return projectsViewport.clientWidth / getVisibleProjectCount();
-      }
-      return 0;
-    }
-
-    function buildProjectIndicators() {
-      if (!projectsDots) {
-        return;
-      }
-      const count = getMaxProjectIndex() + 1;
-      projectsDots.innerHTML = '';
-      for (let i = 0; i < count; i += 1) {
-        const indicator = document.createElement('span');
-        indicator.className = `indicator${i === projectIndex ? ' active' : ''}`;
-        indicator.setAttribute('aria-label', `Project slide ${i + 1}`);
-        indicator.addEventListener('click', () => goToProjectSlide(i));
-        projectsDots.appendChild(indicator);
-      }
-    }
-
-    function updateProjectCarousel() {
-      if (!projectsTrack) {
-        return;
-      }
-      const maxIndex = getMaxProjectIndex();
-      if (projectIndex > maxIndex) {
-        projectIndex = maxIndex;
-      }
-      const step = getProjectStepSize();
-      projectsTrack.style.transform = `translateX(-${projectIndex * step}px)`;
-      const indicators = projectsDots ? projectsDots.querySelectorAll('.indicator') : [];
-      indicators.forEach((indicator, index) => {
-        indicator.classList.toggle('active', index === projectIndex);
-      });
-      const hideControls = maxIndex === 0;
-      if (projectsIndicators) {
-        projectsIndicators.style.display = hideControls ? 'none' : 'flex';
-      }
-      projectsNavButtons.forEach(button => {
-        button.style.display = hideControls ? 'none' : '';
-      });
-    }
-
-    function changeProjectSlide(direction) {
-      if (!projectCards.length) {
-        return;
-      }
-      const maxIndex = getMaxProjectIndex();
-      projectIndex += direction;
-      if (projectIndex > maxIndex) {
-        projectIndex = 0;
-      }
-      if (projectIndex < 0) {
-        projectIndex = maxIndex;
-      }
-      updateProjectCarousel();
-      resetProjectAutoSlide();
-    }
-
-    function goToProjectSlide(n) {
-      projectIndex = n;
-      updateProjectCarousel();
-      resetProjectAutoSlide();
-    }
-
-    function resetProjectAutoSlide() {
-      if (!projectCards.length) {
-        return;
-      }
-      clearInterval(projectAutoSlideInterval);
-      projectAutoSlideInterval = setInterval(() => {
-        const maxIndex = getMaxProjectIndex();
-        projectIndex = maxIndex ? (projectIndex + 1) % (maxIndex + 1) : 0;
-        updateProjectCarousel();
-      }, 6000);
-    }
-
-    buildProjectIndicators();
-    updateProjectCarousel();
-    if (projectCards.length) {
-      resetProjectAutoSlide();
-    }
-
-    const projectsCarousel = document.querySelector('.projects-carousel');
-    if (projectsCarousel) {
-      projectsCarousel.addEventListener('mouseenter', () => {
-        clearInterval(projectAutoSlideInterval);
-      });
-
-      projectsCarousel.addEventListener('mouseleave', () => {
-        resetProjectAutoSlide();
-      });
-    }
-
-    window.addEventListener('resize', () => {
-      buildProjectIndicators();
-      updateProjectCarousel();
-    });
-
-  </script>
-</body>
-
+    <script src="mesh-bg.js"></script>
+  </body>
 </html>
