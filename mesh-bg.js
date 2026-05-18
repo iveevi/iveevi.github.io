@@ -310,7 +310,7 @@
       // affected.
       vec2 uv01 = p / u_resolution;
       float r = abs(uv01.x - 0.5);
-      v_edge = smoothstep(0.10, 0.30, r);
+      v_edge = smoothstep(0.20, 0.38, r);
 
       vec2 clip = uv01 * 2.0 - 1.0;
       clip.y = -clip.y;
