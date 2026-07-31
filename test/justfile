@@ -1,0 +1,13 @@
+trunk := home_directory() / ".cargo/bin/trunk"
+
+shaders:
+    mkdir -p gen
+    for shader in splatfit backdrop; do \
+        slangc src/shaders/$shader.slang -I src/shaders -target wgsl -o gen/$shader.wgsl; \
+    done
+
+build: shaders
+    {{trunk}} build --release --public-url ./
+
+serve: shaders
+    {{trunk}} serve
