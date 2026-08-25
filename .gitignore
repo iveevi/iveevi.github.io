@@ -1,0 +1,4 @@
+target/
+dist/
+index.html
+gen/shell.html

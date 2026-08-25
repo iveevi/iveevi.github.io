@@ -1,0 +1,73 @@
+[[work]]
+period = "Summer 2024 & 2025"
+icon = "logos/NVIDIA.png"
+title = "3D Graphics Software Intern, Slang Compiler Team"
+summary = "Worked at NVIDIA on the [Slang](https://shader-slang.org/) shader compiler's code generation and surrounding tooling across two summers, largely where one language's semantics have to survive translation into a backend that does not share them."
+
+[[work]]
+period = "Fall 2024, Winter 2025"
+icon = "logos/UCSD.svg"
+title = "Teaching Assistant, CSE 167"
+summary = "Taught computer graphics twice at UC San Diego, from rasterization and shading through ray tracing and global illumination. Ran sections and office hours, and wrote and graded the programming assignments."
+
+[[work]]
+period = "2024–2026"
+icon = "logos/SIGGRAPH.png"
+title = "Reviewer"
+summary = "Review submissions for ACM SIGGRAPH and ACM Transactions on Graphics, mostly in rendering, geometry processing, and appearance modeling."
+
+[[award]]
+period = "2025"
+icon = "logos/MIT.svg"
+title = "EECS Great Educators Fellowship"
+summary = "Awarded by the MIT EECS department to incoming graduate students with a demonstrated commitment to teaching."
+
+[[award]]
+period = "2025"
+icon = "logos/CRA.png"
+title = "Outstanding Undergraduate Researcher Award"
+url = "https://cra.org/about/awards/outstanding-undergraduate-researcher-award/"
+summary = "A national award from the [Computing Research Association](https://cra.org/) recognizing undergraduates across North America who show outstanding potential in computing research."
+
+[[award]]
+period = "2024"
+icon = "logos/UCSD.svg"
+title = "CSE Undergraduate Student Award for Excellence in Research"
+url = "https://cse.ucsd.edu/undergraduate/cse-undergraduate-student-awards"
+summary = "Departmental award from the UC San Diego CSE department for sustained undergraduate research, for work at the [Center for Visual Computing](https://visualcomputing.ucsd.edu/)."
+
+[[award]]
+period = "2024"
+icon = "logos/CRA.png"
+title = "Honorable Mention, Outstanding Undergraduate Researcher Award"
+url = "https://cra.org/about/awards/outstanding-undergraduate-researcher-award/#tab-id-2"
+summary = "Honorable mention in the same [Computing Research Association](https://cra.org/) competition the prior year."
+
+[[other]]
+title = "Projective Shape Metamorphosis With Optimal Transport"
+venue = "Bachelor's Thesis"
+year = "2025"
+url = "other/Butterfly.pdf"
+links = [{ label = "Full thesis", url = "other/PSMWOT.pdf" }]
+summary = "Morphing one shape into another from outlines alone usually needs derivatives, which outlines do not give up easily. Can it be done without them? Treating each outline as a pile of mass and moving one onto the other pushes the vertices directly."
+
+[[other]]
+title = "TokenFormer: A Scalable Architecture For Transformers"
+venue = "UC San Diego · LIGN 167"
+year = "2024"
+url = "other/TokenFormer.pdf"
+summary = "A report on TokenFormer (Wang et al., 2024), which treats a transformer's parameters as attention tokens so the model can grow without retraining from scratch."
+
+[[other]]
+title = "Mamba: A Global Illumination Solution for Diffuse and Specular Radiance"
+venue = "UC San Diego · CSE 168"
+year = "2023"
+url = "other/Mamba_GI.pdf"
+summary = "A global illumination method that keeps light probes in hash tables rather than a dense grid, buying higher probe density with fast updates and cheap neighbor lookups."
+
+[[other]]
+title = "World Space Spatio-Temporal Reuse"
+venue = "UC San Diego · CSE 294"
+year = "2022"
+url = "other/World_Space_Spatiotemporal_Reuse.pdf"
+summary = "A ReSTIR variant that stores samples in world space rather than on screen, via a k-d tree or uniform grid, so they survive leaving the frame and can still be reused."

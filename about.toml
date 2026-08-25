@@ -1,0 +1,5 @@
+paragraphs = [
+    "I am a second-year PhD student at the Computer Science and Artificial Intelligence Lab (CSAIL) at MIT, advised by Professors [Fredo Durand](https://people.csail.mit.edu/fredo/) and [Jonathan Ragan-Kelley](https://people.csail.mit.edu/jrk/).",
+    "I graduated from UC San Diego in Spring 2025 with a B.S. in Computer Science (Honors with highest distinction) and a minor in Mathematics. There I did computer graphics research at the [Center for Visual Computing](https://visualcomputing.ucsd.edu/index.shtml), mentored by Professors [Ravi Ramamoorthi](https://cseweb.ucsd.edu/~ravir) and [Tzu-Mao Li](https://cseweb.ucsd.edu/~tzli/).",
+    "My research interests span neural graphics, differentiable rendering, and appearance modeling, with a focus on efficient algorithms for 3D graphics at the intersection of machine learning and computer graphics.",
+]

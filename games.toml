@@ -1,0 +1,54 @@
+[[tier]]
+name = "S"
+games = [
+    { title = "Hollow Knight", app = "367520", hours = "272h" },
+    { title = "Just Cause 3", app = "225540", hours = "226h" },
+    { title = "Sekiro: Shadows Die Twice", app = "814380", hours = "132h" },
+    { title = "Final Fantasy VII Rebirth", app = "2909400", hours = "88h" },
+    { title = "Ghost of Tsushima Director's Cut", app = "2215430", hours = "74h" },
+    { title = "Bad North: Jotunn Edition", app = "688420", hours = "42h" },
+    { title = "Sleeping Dogs: Definitive Edition", app = "307690", hours = "17h" },
+]
+
+[[tier]]
+name = "A"
+games = [
+    { title = "Geometry Dash", app = "322170", hours = "118h" },
+    { title = "Hades", app = "1145360", hours = "110h" },
+    { title = "Just Cause 4", app = "517630", hours = "100h" },
+    { title = "Clair Obscur: Expedition 33", app = "1903340", hours = "92h" },
+    { title = "Forza Horizon 5", app = "1551360", hours = "85h" },
+    { title = "Elden Ring", app = "1245620", hours = "59h" },
+    { title = "Kingdom Two Crowns", app = "701160", hours = "55h" },
+    { title = "Final Fantasy VII Remake Intergrade", app = "1462040", hours = "39h" },
+    { title = "Rise of the Tomb Raider", app = "391220", hours = "35h" },
+    { title = "Hollow Knight: Silksong", app = "1030300", hours = "33h" },
+    { title = "DiRT Rally 2.0", app = "690790", hours = "33h" },
+    { title = "Tomb Raider", app = "203160", hours = "33h" },
+    { title = "Celeste", app = "504230", hours = "32h" },
+    { title = "Shadow of the Tomb Raider", app = "750920", hours = "32h" },
+    { title = "Metal Gear Solid V: The Phantom Pain", app = "287700", hours = "30h" },
+    { title = "Devil May Cry 5", app = "601150", hours = "26h" },
+    { title = "Risk of Rain 2", app = "632360", hours = "23h" },
+    { title = "ClusterTruck", app = "397950", hours = "16h" },
+    { title = "Crisis Core: Final Fantasy VII Reunion", app = "1608070", hours = "16h" },
+    { title = "Red Dead Redemption 2", app = "1174180", hours = "16h" },
+    { title = "Metal Gear Rising: Revengeance", app = "235460", hours = "14h" },
+    { title = "Final Fantasy XV", app = "637650", hours = "4h" },
+]
+
+[[tier]]
+name = "B"
+games = [
+    { title = "TrackMania Nations Forever", app = "11020", hours = "61h" },
+    { title = "Just Cause 2", app = "8190", hours = "36h" },
+    { title = "Battlefield V", app = "1238810", hours = "33h" },
+    { title = "Trackmania", app = "2225070", hours = "22h" },
+    { title = "Kingdoms and Castles", app = "569480", hours = "18h" },
+    { title = "Deus Ex: Mankind Divided", app = "337000", hours = "15h" },
+    { title = "Sniper Elite 4", app = "312660", hours = "12h" },
+    { title = "Kingdom: Classic", app = "368230", hours = "12h" },
+    { title = "Devil May Cry HD Collection", app = "631510", hours = "12h" },
+    { title = "Sniper Elite 5", app = "1029690", hours = "3h" },
+    { title = "Buckshot Roulette", app = "2835570", hours = "2h" },
+]

@@ -1,0 +1,44 @@
+[[publication]]
+title = "RCGP: Resource Contracts for Graphics Programming"
+authors = "Venkataram Sivaram, Sai Praveen Bangaru, Ravi Ramamoorthi, Tzu-Mao Li, Jonathan Ragan-Kelley, Frédo Durand"
+icon = "logos/SIGGRAPH.png"
+venue = "ACM SIGGRAPH · Journal Track (TOG)"
+year = "2026"
+url = "#/rcgp"
+summary = "A graphics program is many parts that must agree on how memory is shaped and shared, and today they agree only by convention. What if the compiler checked instead? Declaring each resource once, as a contract, catches mismatches at build time rather than as a corrupted frame."
+
+[[publication]]
+title = "Modeling and Rendering Glow Discharge"
+authors = "Venkataram Sivaram, Ravi Ramamoorthi, Tzu-Mao Li"
+icon = "logos/SIGGRAPH.png"
+venue = "ACM SIGGRAPH · Conference Track"
+year = "2025"
+url = "#/glow"
+summary = "Renderers model how light bounces in great detail, but rarely how it is made. Can a neon tube be rendered from the physics that lights it? Simulating the discharge directly gives its uneven, characteristic glow, with a few knobs for different gases."
+
+[[publication]]
+title = "Geometry Field Splatting with Gaussian Surfels"
+authors = "Kaiwen Jiang, Venkataram Sivaram, Cheng Peng, Ravi Ramamoorthi"
+icon = "logos/CVF.png"
+venue = "CVPR"
+year = "2025"
+url = "https://arxiv.org/abs/2411.17067"
+summary = "Reconstructing 3D shape from photos with Gaussian blobs tends to smooth away fine detail. Is that loss inherent, or just an approximation in the math? Removing the approximation sharpens the recovered surface at no extra cost."
+
+[[publication]]
+title = "Neural Geometry Fields for Meshes"
+authors = "Venkataram Sivaram, Tzu-Mao Li, Ravi Ramamoorthi"
+icon = "logos/SIGGRAPH.png"
+venue = "ACM SIGGRAPH · Conference Track"
+year = "2024"
+url = "#/ngf"
+summary = "Neural networks compress 3D shape well, but usually into formats no standard renderer can draw. Can a mesh go in and come back out a mesh? Storing a coarse cage plus a small network that adds the detail shrinks the file substantially and rebuilds the original."
+
+[[publication]]
+title = "Parameter-space ReSTIR for Differentiable and Inverse Rendering"
+authors = "Wesley Chang, Venkataram Sivaram, Derek Nowrouzezahrai, Toshiya Hachisuka, Ravi Ramamoorthi, Tzu-Mao Li"
+icon = "logos/SIGGRAPH.png"
+venue = "ACM SIGGRAPH · Conference Track"
+year = "2023"
+url = "https://weschang.com/publications/restir-dr/"
+summary = "ReSTIR makes lighting cheap by recycling samples between nearby pixels and frames. Does the trick still work when you need derivatives, as inverse rendering does? Recycling in parameter space instead carries the speedup over."
