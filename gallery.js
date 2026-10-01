@@ -27,7 +27,7 @@
         place(img, p, t);
         const d = still.matches ? 0 : 380;
         img.animate([{ transform: at(thumb.getBoundingClientRect(), t) }, { transform: img.style.transform }], { duration: d, easing: ease });
-        box.animate([{ backgroundColor: "#fff0" }, {}], { duration: d, easing: ease });
+        box.animate([{ backgroundColor: "#f6efe000" }, {}], { duration: d, easing: ease });
         p.animate([{ opacity: 0 }, { opacity: 0, offset: 0.5 }, { opacity: 1 }], { duration: d });
         thumb.style.visibility = "hidden";
         cur = i;
@@ -39,7 +39,7 @@
         const b = box, img = b.querySelector("img"), thumb = figs[cur].querySelector("img"), t = fit(thumb);
         box = null;
         const d = still.matches ? 0 : 320;
-        b.animate([{}, { backgroundColor: "#fff0" }], { duration: d, easing: ease, fill: "forwards" });
+        b.animate([{}, { backgroundColor: "#f6efe000" }], { duration: d, easing: ease, fill: "forwards" });
         b.querySelector("p").animate([{}, { opacity: 0 }], { duration: d / 2, fill: "forwards" });
         img.animate([{ transform: img.style.transform }, { transform: at(thumb.getBoundingClientRect(), t) }], { duration: d, easing: ease, fill: "forwards" }).onfinish = () => {
             thumb.style.visibility = "";

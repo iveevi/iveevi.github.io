@@ -1,10 +1,10 @@
 :root {
     --font: "Fira Sans Condensed", sans-serif;
     --size: 18px;
-    --ground: #fff;
-    --ink: #1b1b1f;
-    --muted: #5d6068;
-    --accent: #d9442b;
+    --ground: #f6efe0;
+    --ink: #1c1b2c;
+    --muted: #56546a;
+    --accent: #4b4a72;
 }
 
 body {
@@ -179,7 +179,7 @@ pre {
     position: fixed;
     inset: 0;
     z-index: 10;
-    background: #fffffff7;
+    background: #f6efe0f7;
     cursor: zoom-out;
 }
 
@@ -253,8 +253,8 @@ pre {
 html {
     --e: calc(50% - min(378px, 50% - 18px));
     background:
-        linear-gradient(to right, #fff0 calc(var(--e) - 180px), #ffffff1c calc(var(--e) - 130px), #ffffff97 calc(var(--e) - 30px), #fffb calc(var(--e) + 20px), #fffb calc(100% - var(--e) - 20px), #ffffff97 calc(100% - var(--e) + 30px), #ffffff1c calc(100% - var(--e) + 130px), #fff0 calc(100% - var(--e) + 180px)),
-        url(assets/bg.webp) center top / 1920px repeat,
+        linear-gradient(to right, rgba(246, 239, 224, 0) calc(var(--e) - 180px), rgba(246, 239, 224, 0.11) calc(var(--e) - 130px), rgba(246, 239, 224, 0.59) calc(var(--e) - 30px), rgba(246, 239, 224, 0.7) calc(var(--e) + 20px), rgba(246, 239, 224, 0.7) calc(100% - var(--e) - 20px), rgba(246, 239, 224, 0.59) calc(100% - var(--e) + 30px), rgba(246, 239, 224, 0.11) calc(100% - var(--e) + 130px), rgba(246, 239, 224, 0) calc(100% - var(--e) + 180px)),
+        url(assets/bg-bone.webp) center top / 1920px repeat,
         var(--ground);
 }
 

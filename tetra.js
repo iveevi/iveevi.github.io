@@ -95,7 +95,7 @@
             ctx.moveTo(P[i][0], P[i][1]);
             ctx.lineTo(P[j][0], P[j][1]);
             ctx.setLineDash(vis ? [] : [3, 4]);
-            ctx.strokeStyle = vis ? "rgba(27,27,31,0.55)" : "rgba(27,27,31,0.3)";
+            ctx.strokeStyle = vis ? "rgba(28,27,44,0.55)" : "rgba(28,27,44,0.3)";
             ctx.lineWidth = 1.2;
             ctx.stroke();
         }
@@ -112,11 +112,11 @@
             ctx.arc(P[i][0], P[i][1], 3.5, 0, 7);
             ctx.fill();
             ctx.lineWidth = 4;
-            ctx.strokeStyle = "rgba(255,255,255,0.9)";
+            ctx.strokeStyle = "rgba(246,239,224,0.9)";
             ctx.lineJoin = "round";
             const lines = a.name.split(" "), y0 = y - ((lines.length - 1) * 14) / 2 + (dy > l * 0.35 ? 7 : dy < -l * 0.35 ? -7 : 0);
             lines.forEach((ln, k) => ctx.strokeText(ln, x, y0 + k * 14));
-            ctx.fillStyle = "#1b1b1f";
+            ctx.fillStyle = "#1c1b2c";
             lines.forEach((ln, k) => ctx.fillText(ln, x, y0 + k * 14));
         });
         ctx.globalAlpha = 1;
@@ -129,7 +129,7 @@
             ctx.fillStyle = `rgb(${p.c})`;
             ctx.fill();
             ctx.lineWidth = 2;
-            ctx.strokeStyle = "#fff";
+            ctx.strokeStyle = "#f6efe0";
             ctx.stroke();
         }
         ctx.globalAlpha = 1;
@@ -170,10 +170,10 @@
             if (a2 > 0) ctx.lineTo(x1 + sx * L * a2, y1);
             ctx.lineWidth = 3.5;
             ctx.lineJoin = "round";
-            ctx.strokeStyle = "rgba(255,255,255,0.85)";
+            ctx.strokeStyle = "rgba(246,239,224,0.85)";
             ctx.stroke();
             ctx.lineWidth = 1.2;
-            ctx.strokeStyle = "#1b1b1f";
+            ctx.strokeStyle = "#1c1b2c";
             ctx.stroke();
             if (a2 > 0) {
                 ctx.save();
@@ -184,9 +184,9 @@
                 ctx.textBaseline = "alphabetic";
                 const tx = x1 + sx * 2, ty = y1 - 4;
                 ctx.lineWidth = 4;
-                ctx.strokeStyle = "rgba(255,255,255,0.85)";
+                ctx.strokeStyle = "rgba(246,239,224,0.85)";
                 lines.forEach((ln, i) => ctx.strokeText(ln, tx, ty - (lines.length - 1 - i) * lh));
-                ctx.fillStyle = "#1b1b1f";
+                ctx.fillStyle = "#1c1b2c";
                 lines.forEach((ln, i) => ctx.fillText(ln, tx, ty - (lines.length - 1 - i) * lh));
                 ctx.restore();
             }
