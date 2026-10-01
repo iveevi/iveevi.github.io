@@ -24,38 +24,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Rust
-        run: rustup target add wasm32-unknown-unknown
-
-      - name: Cache cargo
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.cargo/registry
-            ~/.cargo/git
-            target
-          key: ${{ runner.os }}-cargo-${{ hashFiles('Cargo.lock') }}
-
-      - name: Install trunk
-        uses: jetli/trunk-action@v0.5.0
-        with:
-          version: latest
-
-      - name: Generate shell
-        run: |
-          cargo run --quiet --bin shell > gen/shell.html
-          python3 -c "import pathlib; t=pathlib.Path('index.template.html').read_text(); s=pathlib.Path('gen/shell.html').read_text(); pathlib.Path('index.html').write_text(t.replace('<!--shell-->', s))"
-
-      - name: Build
-        run: trunk build --release --public-url ./
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist'
+          path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modeling and Rendering Glow Discharge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="paper">
+<h1>Modeling and Rendering Glow Discharge</h1>
+<p class="authors"><b>Venkataram Sivaram</b>, <a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a>, <a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a></p>
+<p class="venue-line"><img class="venue" src="../assets/logos/SIGGRAPH-mark.png" alt="">ACM SIGGRAPH 2025 · Conference Track</p>
+<p class="paper-links"><a href="../assets/papers/glow/main.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Paper</a> · <a href="../assets/papers/glow/supplementary.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>Supplementary</a> · <a href="../assets/papers/glow/slides.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Slides</a> · <a href="https://github.com/iveevi/glow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Code</a> · <a href="#bibtex" class="copy-bib"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>BibTeX</a></p>
+<img src="../assets/papers/glow/teaser.png" alt="Teaser" class="teaser">
+
+<section class="fold open">
+<h2><button type="button" aria-expanded="true">Abstract</button></h2>
+<div class="reveal"><div class="reveal-inner">
+<p>Previous research in material models for surface and volume scattering has enabled highly realistic scenes in modern rendering systems. However, there has been comparatively little study of light sources in computer graphics despite their critical importance in illuminating and bringing life into these scenes. In the real world, photons are emitted through numerous physical processes including combustion, incandescence, and fluorescence. The qualities of light produced in each of these processes are unique to their physics, making them interesting to study individually.</p>
+<p>In this work, we propose a model for glow discharge, a form of light-emitting electrostatic discharge commonly found in Neon lights and gas discharge lamps. We take inspiration from works in computational physics and develop an efficient point-wise solver for the emission due to glow discharge suitable for traditional volume rendering systems. Our model distills the complex mechanics of this process into a set of flexible and interpretable parameters. We demonstrate that our model can replicate the visual qualities of glow discharge under varying gases.</p>
+</div></div>
+</section>
+<section class="fold open">
+<h2><button type="button" aria-expanded="true">Fast Forward</button></h2>
+<div class="reveal"><div class="reveal-inner">
+<video class="ffwd" src="../assets/papers/glow/ffwd.mp4" poster="../assets/papers/glow/ffwd.jpg" width="1920" height="1080" autoplay muted loop playsinline></video>
+</div></div>
+</section>
+<p class="home-link"><a href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</a></p>
+<pre id="bibtex" hidden>@inproceedings{10.1145/3721238.3730674,
+  author    = {Edavamadathil Sivaram, Venkataram and Ramamoorthi, Ravi and Li, Tzu-Mao},
+  title     = {Modeling and Rendering Glow Discharge},
+  year      = {2025},
+  isbn      = {9798400715402},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  url       = {https://doi.org/10.1145/3721238.3730674},
+  doi       = {10.1145/3721238.3730674},
+  booktitle = {Proceedings of the Special Interest Group on Computer Graphics and Interactive Techniques Conference Conference Papers},
+  articleno = {38},
+  numpages  = {11},
+  series    = {SIGGRAPH Conference Papers &#x27;25}
+}</pre>
+<script src="../fold.js"></script>
+<script src="../bib.js"></script>
+<script src="../ffwd.js"></script>
+</body>
+</html>

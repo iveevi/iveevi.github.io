@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RCGP: Resource Contracts for Graphics Programming</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="paper">
+<h1>RCGP: Resource Contracts for Graphics Programming</h1>
+<p class="authors"><b>Venkataram Sivaram</b>, <a href="https://people.csail.mit.edu/sbangaru/">Sai Praveen Bangaru</a>, <a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a>, <a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a>, <a href="https://people.csail.mit.edu/jrk/">Jonathan Ragan-Kelley</a>, <a href="https://people.csail.mit.edu/fredo/">Frédo Durand</a></p>
+<p class="venue-line"><img class="venue" src="../assets/logos/SIGGRAPH-mark.png" alt="">ACM SIGGRAPH 2026 · Journal Track (TOG)</p>
+<p class="paper-links"><a href="../assets/papers/rcgp/main.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Paper</a> · <a href="../assets/papers/rcgp/slides.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Slides</a> · <a href="https://github.com/iveevi/rcgp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Code</a> · <a href="#bibtex" class="copy-bib"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>BibTeX</a></p>
+<img src="../assets/papers/rcgp/teaser.png" alt="Teaser" class="teaser">
+
+<section class="fold open">
+<h2><button type="button" aria-expanded="true">Abstract</button></h2>
+<div class="reveal"><div class="reveal-inner">
+<p>Computer graphics applications are sophisticated heterogeneous programs that orchestrate numerous components, including shaders, pipelines, resource descriptors, and command streams. In modern graphics workflows, communication between these components is mediated by resources such as shader I/O, storage buffers, and resource bindings. To make this communication correct, developers must uphold resource contracts. These contracts cover agreements on type, layout, binding locations, synchronization requirements, and related properties. In standard practice, these contracts are satisfied implicitly through conventions. As a result, contract breaches are often detected too late, at runtime by validation layers, or worse, as visual artifacts in rendered output.</p>
+<p>In this work, we present RCGP, a system that mechanistically enforces resource contracts between components of a graphics program. RCGP formalizes contracts, which are centralized through single-source-of-truth resource declarations, as statically introspectable units that can be verified. We map objects from distinct program components to modules that import and export contracts. Modules are then composed into larger components via combinators, which check compatibility between the corresponding contracts and compute the residual contracts for the result. Finally, RCGP upholds these contracts through a set of witnesses, which encode the necessary promises.</p>
+<p>Using a prototype implementation in C++ and Vulkan, we demonstrate that this formulation converts common classes of late failures, such as descriptor-type mismatches, layout drift, and missing synchronization barriers, into early, actionable compile-time diagnostics.</p>
+</div></div>
+</section>
+<section class="fold open">
+<h2><button type="button" aria-expanded="true">Fast Forward</button></h2>
+<div class="reveal"><div class="reveal-inner">
+<video class="ffwd" src="../assets/papers/rcgp/ffwd.mp4" poster="../assets/papers/rcgp/ffwd.jpg" width="1920" height="1080" autoplay muted loop playsinline></video>
+</div></div>
+</section>
+<p class="home-link"><a href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</a></p>
+<pre id="bibtex" hidden>@article{sivaram2026rcgp,
+  author    = {Sivaram, Venkataram and Bangaru, Sai Praveen and Ramamoorthi, Ravi and Li, Tzu-Mao and Ragan-Kelley, Jonathan and Durand, Fr\&#x27;{e}do},
+  title     = {{RCGP}: Resource Contracts for Graphics Programming},
+  journal   = {ACM Transactions on Graphics},
+  year      = {2026},
+  volume    = {45},
+  number    = {4},
+  articleno = {70},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA}
+}</pre>
+<script src="../fold.js"></script>
+<script src="../bib.js"></script>
+<script src="../ffwd.js"></script>
+</body>
+</html>

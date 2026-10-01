@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neural Geometry Fields for Meshes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="paper">
+<h1>Neural Geometry Fields for Meshes</h1>
+<p class="authors"><b>Venkataram Sivaram</b>, <a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a>, <a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a></p>
+<p class="venue-line"><img class="venue" src="../assets/logos/SIGGRAPH-mark.png" alt="">ACM SIGGRAPH 2024 · Conference Track</p>
+<p class="paper-links"><a href="../assets/papers/ngf/main.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Paper</a> · <a href="../assets/papers/ngf/supplementary.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>Supplementary</a> · <a href="../assets/papers/ngf/slides.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Slides</a> · <a href="https://github.com/iveevi/ngf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Code</a> · <a href="#bibtex" class="copy-bib"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>BibTeX</a></p>
+<img src="../assets/papers/ngf/teaser.png" alt="Teaser" class="teaser">
+
+<section class="fold open">
+<h2><button type="button" aria-expanded="true">Abstract</button></h2>
+<div class="reveal"><div class="reveal-inner">
+<p>Recent work on using neural fields to represent surfaces has resulted in significant improvements in representational capability and computational efficiency. However, to our knowledge, most existing work has focused on implicit representations such as signed distance fields or volumes, and little work has explored their application to discrete surface geometry, i.e., 3D meshes, limiting the applicability of neural surface representations.</p>
+<p>We present Neural Geometry Fields, a neural representation for discrete surface geometry represented by triangle meshes. Our idea is to represent the target surface using a coarse set of quadrangular patches, and add surface details using coordinate neural networks by displacing the patches. We then extract a traditional triangular mesh from a neural geometry field instance by sampling the displacement. We show that our representation excels in mesh compression, where it significantly reduces the memory footprint of meshes without compromising on surface details.</p>
+</div></div>
+</section>
+<section class="fold open">
+<h2><button type="button" aria-expanded="true">Fast Forward</button></h2>
+<div class="reveal"><div class="reveal-inner">
+<video class="ffwd" src="../assets/papers/ngf/ffwd.mp4" poster="../assets/papers/ngf/ffwd.jpg" width="1920" height="1080" autoplay muted loop playsinline></video>
+</div></div>
+</section>
+<p class="home-link"><a href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</a></p>
+<pre id="bibtex" hidden>@inproceedings{10.1145/3641519.3657399,
+  author    = {Edavamadathil Sivaram, Venkataram and Li, Tzu-Mao and Ramamoorthi, Ravi},
+  title     = {Neural Geometry Fields For Meshes},
+  year      = {2024},
+  isbn      = {9798400705250},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  url       = {https://doi.org/10.1145/3641519.3657399},
+  doi       = {10.1145/3641519.3657399},
+  booktitle = {ACM SIGGRAPH 2024 Conference Papers},
+  articleno = {29},
+  numpages  = {11},
+  keywords  = {Neural representation, mesh compression, mesh simplification},
+  series    = {SIGGRAPH &#x27;24}
+}</pre>
+<script src="../fold.js"></script>
+<script src="../bib.js"></script>
+<script src="../ffwd.js"></script>
+</body>
+</html>
